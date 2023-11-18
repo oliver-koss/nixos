@@ -10,14 +10,24 @@ with lib;
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./funk.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.loader.systemd-boot = {
+    enable = true;
+    memtest86.enable = true;
+    netbootxyz.enable = true;
+    extraEntries = {
+      "windows.conf" = ''
+        title Windows
+        efi /efi/
+      '';
+    };
+  };
 
   networking.hostName = "oliver-nix"; # Define your hostname.
   # Pick only one of the below networking options.
@@ -25,7 +35,7 @@ with lib;
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
-  time.timeZone = "Europe/Vienna";
+  time.timeZone = "Europe/Berlin";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -47,13 +57,11 @@ with lib;
   };
   services.xserver.desktopManager.gnome.enable = true;
 
-  nix.settings.experimental-features = "nix-command flakes";
 
   # Gnome bits
   services.gnome.core-os-services.enable = true;
   services.gnome.core-utilities.enable = true;
-  services.gnome.core-shell.enable = true;
-  services.gnome.games.enable = true;
+  
 
   # Configure keymap in X11
   services.xserver.layout = "de";
@@ -134,8 +142,5 @@ with lib;
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
 
-              nixpkgs.config.permittedInsecurePackages = [
-                "pulsar-1.106.0"
-              ];
-
 }
+
