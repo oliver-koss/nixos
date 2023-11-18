@@ -50,12 +50,6 @@ with lib;
 
   nix.settings.experimental-features = "nix-command flakes";
 
-  # Gnome bits
-  services.gnome.core-os-services.enable = true;
-  services.gnome.core-utilities.enable = true;
-  services.gnome.core-shell.enable = true;
-  services.gnome.games.enable = true;
-
   # Configure keymap in X11
   services.xserver.layout = "de";
   # services.xserver.xkbOptions = "eurosign:e,caps:escape";
