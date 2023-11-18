@@ -101,6 +101,7 @@ with lib;
     git
     gnome.gedit
     pulsar
+    yaru-theme
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

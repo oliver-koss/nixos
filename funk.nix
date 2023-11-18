@@ -5,5 +5,6 @@
     # qLog
     wsjtx
     qdmr
+    fldigi
   ];
 }
