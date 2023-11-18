@@ -10,6 +10,7 @@ with lib;
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./apps.nix
       ./funk.nix
     ];
 
@@ -135,7 +136,7 @@ with lib;
   system.stateVersion = "23.05"; # Did you read the comment?
 
               nixpkgs.config.permittedInsecurePackages = [
-                "pulsar-1.106.0"
+                "pulsar-1.109.0"
               ];
 
 }
