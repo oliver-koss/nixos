@@ -19,5 +19,6 @@
     hypnotix
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
+    gnome-tweaks
   ]);
 }

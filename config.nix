@@ -20,6 +20,14 @@ with lib;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.loader.systemd-boot.netbootxyz.enable = true;
+  boot.loader.systemd-boot.memtest86.enable = true;
+
+  boot.loader.systemd-boot.extraEntries."grub.conf" = ''
+    title   Grub
+    linux   /EFI/ubuntu/shimx64.efi
+  '';
+
   networking.hostName = "oliver-nix"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
