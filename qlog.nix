@@ -10,6 +10,7 @@
 , qtwebchannel
 , hamlib
 , qtkeychain
+, pkg-config
 }:
 
 stdenv.mkDerivation rec {
@@ -23,6 +24,8 @@ stdenv.mkDerivation rec {
     hash = "sha256-g7WgFQPMOaD+3YllZqpykslmPYT/jNVK7/1xaPdbti4=";
     fetchSubmodules = true;
   };
+
+  env.NIX_LDFLAGS = "-lhamlib";
 
   buildInputs = [
     qtbase
@@ -38,5 +41,6 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     wrapQtAppsHook
     qmake
+    pkg-config
   ];
 }
