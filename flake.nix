@@ -1,9 +1,10 @@
 {
-  description = "Oliver's nix config";
+  description = "Oliver's NixOS config";
 
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-23.05";
@@ -17,15 +18,18 @@
     # nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nixos-hardware, ... }@inputs: {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
       # FIXME replace with your hostname
       oliver-nix = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
-        # > Our main nixos configuration file <
-        modules = [ ./config.nix ];
+        modules = [
+          nixos-hardware.nixosModules.common-pc-laptop-ssd
+          # > Our main nixos configuration file <
+          ./config.nix
+        ];
       };
     };
 
