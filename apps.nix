@@ -11,12 +11,17 @@
 
   environment.systemPackages = (with pkgs; [
     prusa-slicer
+    openscad
     element-desktop
     tdesktop
     libreoffice
     prismlauncher
     htop
     hypnotix
+    rhythmbox
+    darktable
+    calibre
+    googleearth-pro
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
