@@ -142,4 +142,10 @@ with lib;
                 "pulsar-1.109.0"
               ];
 
+#prometheus service
+  services.prometheus = {
+    enable   = true;
+    port     = 9090;
+  };
 }
+

@@ -21,7 +21,7 @@
     rhythmbox
     darktable
     calibre
-    googleearth-pro
+    prometheus
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
