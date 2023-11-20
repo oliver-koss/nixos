@@ -5,5 +5,6 @@
     wine
     wineWowPackages.stable
     winetricks
+    wineWowPackages.staging
   ];
 }
