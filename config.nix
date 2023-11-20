@@ -12,6 +12,7 @@ with lib;
       ./hardware-configuration.nix
       ./apps.nix
       ./funk.nix
+      ./wine.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -68,7 +69,7 @@ with lib;
   # Enable sound.
   security.rtkit.enable = true;
   xdg.portal.enable = true;
-  sound.enable = true;
+  sound.enable = false;
   hardware.pulseaudio.enable = mkForce false;
   services.pipewire = {
     enable = true;

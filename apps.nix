@@ -23,6 +23,7 @@
     calibre
     prometheus
     nextcloud-client
+    gimp
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
