@@ -22,6 +22,7 @@
     darktable
     calibre
     prometheus
+    nextcloud-client
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks

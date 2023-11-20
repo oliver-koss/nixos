@@ -66,6 +66,8 @@ with lib;
   services.printing.enable = true;
 
   # Enable sound.
+  security.rtkit.enable = true;
+  xdg.portal.enable = true;
   sound.enable = true;
   hardware.pulseaudio.enable = mkForce false;
   services.pipewire = {
