@@ -69,7 +69,7 @@ with lib;
   # Enable sound.
   security.rtkit.enable = true;
   xdg.portal.enable = true;
-  sound.enable = false;
+  sound.enable = true;
   hardware.pulseaudio.enable = mkForce false;
   services.pipewire = {
     enable = true;
@@ -79,6 +79,7 @@ with lib;
       support32Bit = true;
     };
   };
+  hardware.bluetooth.enable = true;
 
   programs.steam.enable = true;
 
