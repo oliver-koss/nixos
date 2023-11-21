@@ -5,7 +5,6 @@
     wine
     wineWowPackages.stable
     winetricks
-    wineWowPackages.staging
     (wine.override { wineBuild = "wine64"; })
   ];
 }
