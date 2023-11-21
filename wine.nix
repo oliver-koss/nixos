@@ -2,8 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    wine
-    wineWowPackages.stable
+    wine64
     winetricks
     (wine.override { wineBuild = "wine64"; })
   ];
