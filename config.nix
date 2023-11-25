@@ -74,8 +74,6 @@ with lib;
    print-manager
  ];
 
-  nix.settings.experimental-features = "nix-command flakes";
-
   virtualisation.waydroid.enable = true;
   # Configure keymap in X11
   services.xserver.layout = "de";

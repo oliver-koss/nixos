@@ -13,5 +13,7 @@ with lib;
       (builtins.readFile ./oliver.pub);
   };
 
+  nix.settings.experimental-features = "nix-command flakes";
+
   security.sudo.wheelNeedsPassword = false;
 }
