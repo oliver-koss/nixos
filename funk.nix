@@ -6,5 +6,9 @@
     wsjtx
     qdmr
     fldigi
+    tqsl
+    rtl-sdr
+    sdrangel
+    sdrpp
   ];
 }

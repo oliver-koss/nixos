@@ -24,6 +24,11 @@
     prometheus
     nextcloud-client
     gimp
+    geogebra6
+    filezilla
+    python3
+    esptool
+    go
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks

@@ -55,10 +55,27 @@ with lib;
     enable = true;
     wayland = true;
   };
+  
   services.xserver.desktopManager.gnome.enable = true;
+
+#  services.xserver.displayManager.sddm.enable = true;
+#  services.xserver.desktopManager.plasma5.enable = true;
+#  programs.ssh.askPassword = pkgs.lib.mkForce "pkgs.plasma5.ksshaskpass.out/bin/ksshaskpass";
+
+  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+   elisa
+   gwenview
+   okular
+   oxygen
+   khelpcenter
+   konsole
+   plasma-browser-integration
+   print-manager
+ ];
 
   nix.settings.experimental-features = "nix-command flakes";
 
+  virtualisation.waydroid.enable = true;
   # Configure keymap in X11
   services.xserver.layout = "de";
   # services.xserver.xkbOptions = "eurosign:e,caps:escape";
