@@ -10,6 +10,7 @@ with lib;
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./base.nix
       ./apps.nix
       ./funk.nix
       ./wine.nix
@@ -104,14 +105,14 @@ with lib;
   services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.oliver = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+  # users.users.oliver = {
+  #  isNormalUser = true;
+  #  extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   #   packages = with pkgs; [
   #     firefox
   #     tree
   #   ];
-  };
+  # };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -136,9 +137,6 @@ with lib;
   };
 
   # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

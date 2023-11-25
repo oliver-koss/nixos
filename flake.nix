@@ -22,13 +22,20 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      # FIXME replace with your hostname
       oliver-nix = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         modules = [
           nixos-hardware.nixosModules.common-pc-laptop-ssd
           # > Our main nixos configuration file <
           ./config.nix
+        ];
+      };
+
+      oliver-server = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
+        modules = [
+          # > Our main nixos configuration file <
+          ./server.nix
         ];
       };
     };
