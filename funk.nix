@@ -10,5 +10,6 @@
     rtl-sdr
     sdrangel
     sdrpp
+    pat
   ];
 }

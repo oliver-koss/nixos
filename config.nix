@@ -14,7 +14,11 @@ with lib;
       ./apps.nix
       ./funk.nix
       ./wine.nix
+      ./pat.service.nix
+      ./builder.nix
     ];
+
+  systemd.services.pat.wantedBy = mkForce [];
 
   nixpkgs.config.allowUnfree = true;
 
