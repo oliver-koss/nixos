@@ -15,5 +15,16 @@ with lib;
 
   nix.settings.experimental-features = "nix-command flakes";
 
+  nixpkgs.overlays = [(import ./overlay.nix)];
   security.sudo.wheelNeedsPassword = false;
+
+  networking.nftables.enable = true;
+
+  mkg.mod = {
+    yggdrasil = {
+      enable = true;
+      port = 15237;
+      peers = [ "tcp://ygg.mkg20001.io:80" "tls://ygg.mkg20001.io:443" ];
+    };
+  };
 }

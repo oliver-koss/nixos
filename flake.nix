@@ -10,6 +10,9 @@
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    mkg-mod.url = "github:mkg20001/mkg-mod/master";
+    mkg-mod.inputs.nixpkgs.follows = "nixpkgs";
+
     # TODO: Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
 
@@ -18,13 +21,14 @@
     # nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { nixpkgs, home-manager, nixos-hardware, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nixos-hardware, mkg-mod, ... }@inputs: {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
       oliver-nix = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         modules = [
+          mkg-mod.nixosModules.yggdrasil
           nixos-hardware.nixosModules.common-pc-laptop-ssd
           # > Our main nixos configuration file <
           ./config.nix
@@ -34,6 +38,7 @@
       oliver-server = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         modules = [
+          mkg-mod.nixosModules.yggdrasil
           # > Our main nixos configuration file <
           ./server.nix
         ];

@@ -29,7 +29,6 @@
 
   networking.useDHCP = false;
   networking.interfaces.eth0.useDHCP = true;
-  networking.nftables.enable = true;
 
   virtualisation.lxc.nestedContainer = true;
   networking.useNetworkd = true;

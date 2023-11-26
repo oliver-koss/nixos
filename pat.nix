@@ -1,5 +1,6 @@
-{fetchFromGithub
+{fetchFromGitHub
 , buildGoModule
+, lib
 }:
 
 buildGoModule rec {
@@ -10,8 +11,8 @@ buildGoModule rec {
     owner = "la5nta";
     repo = "pat";
     rev = "v${version}";
-    hash = "";
+    hash = "sha256-wNWqqGc4mf3z0ejMpU+jWhqCbjNJ2b6+pbBjDYKwKK8=";
   };
-
-subPackages = ["cmd"];
+vendorHash = "sha256-m5yb6+TfRApw0ZROx9ZA3RPiKV+1DHo/73CNQpIfMlU=";
+#subPackages = ["cmd"];
 }

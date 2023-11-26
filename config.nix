@@ -56,7 +56,7 @@ with lib;
     enable = true;
     wayland = true;
   };
-  
+
   services.xserver.desktopManager.gnome.enable = true;
 
 #  services.xserver.displayManager.sddm.enable = true;
@@ -165,4 +165,3 @@ with lib;
     port     = 9090;
   };
 }
-

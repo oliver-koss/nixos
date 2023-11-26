@@ -21,6 +21,27 @@
         "type": "github"
       }
     },
+    "mkg-mod": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1700957423,
+        "narHash": "sha256-T341W4k162D9V8u8tRyt4LDZzl7umN1XdJhlzu8BWl0=",
+        "owner": "mkg20001",
+        "repo": "mkg-mod",
+        "rev": "b34004a59ebde8b4b38d25781a38b6c0e89aed8c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mkg20001",
+        "ref": "master",
+        "repo": "mkg-mod",
+        "type": "github"
+      }
+    },
     "nixos-hardware": {
       "locked": {
         "lastModified": 1700559156,
@@ -56,6 +77,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "mkg-mod": "mkg-mod",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs"
       }
