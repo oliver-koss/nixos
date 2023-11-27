@@ -40,11 +40,6 @@ with lib;
     };
   };
 
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 8080 ];
-  };
-
   nix.settings.trusted-users = [ "root" "@wheel" ];
 
   environment.systemPackages = with pkgs; [
