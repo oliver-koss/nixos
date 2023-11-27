@@ -29,7 +29,20 @@ with lib;
       port = 15237;
       peers = [ "tcp://ygg.mkg20001.io:80" "tls://ygg.mkg20001.io:443" ];
     };
+    firewall-ips = {
+      enable = true;
+      ips = [ "200:8825:6543:5fbf:bf60:fbae:9266:b552" ];
+    };
   };
 
   nix.settings.trusted-users = [ "root" "@wheel" ];
+
+  environment.systemPackages = with pkgs; [
+    git
+    mtr
+    tcpdump
+    htop
+  ];
+
+  services.netdata.enable = true;
 }

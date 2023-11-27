@@ -29,6 +29,7 @@
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         modules = [
           mkg-mod.nixosModules.yggdrasil
+          mkg-mod.nixosModules.firewall-ips
           nixos-hardware.nixosModules.common-pc-laptop-ssd
           # > Our main nixos configuration file <
           ./config.nix
@@ -39,6 +40,7 @@
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         modules = [
           mkg-mod.nixosModules.yggdrasil
+          mkg-mod.nixosModules.firewall-ips
           # > Our main nixos configuration file <
           ./server.nix
         ];
@@ -48,6 +50,7 @@
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         modules = [
           mkg-mod.nixosModules.yggdrasil
+          mkg-mod.nixosModules.firewall-ips
           # > Our main nixos configuration file <
           ./pi.nix
         ];
