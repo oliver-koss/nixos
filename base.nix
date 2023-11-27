@@ -13,6 +13,9 @@ with lib;
       (builtins.readFile ./oliver.pub);
   };
 
+  users.users.root.openssh.authorizedKeys.keys = splitString "\n"
+    (builtins.readFile ./oliver.pub);
+
   nix.settings.experimental-features = "nix-command flakes";
 
   nixpkgs.overlays = [(import ./overlay.nix)];
@@ -27,4 +30,6 @@ with lib;
       peers = [ "tcp://ygg.mkg20001.io:80" "tls://ygg.mkg20001.io:443" ];
     };
   };
+
+  nix.settings.trusted-users = [ "root" "@wheel" ];
 }
