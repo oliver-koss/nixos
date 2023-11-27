@@ -11,6 +11,7 @@ with lib;
     [ # Include the results of the hardware scan.
       ./base.nix
       ./builder.nix
+      ./pi-apps.nix
       ./pat.service.nix
       "${modulesPath}/installer/sd-card/sd-image-aarch64-new-kernel-no-zfs-installer.nix"
     ];
