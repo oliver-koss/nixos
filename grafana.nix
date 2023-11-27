@@ -40,4 +40,6 @@ in
   };
 
   users.users.nginx.extraGroups = [ "grafana" ];
+
+  networking.firewall.allowedTCPPorts =  [ 80 443 ];
 }
