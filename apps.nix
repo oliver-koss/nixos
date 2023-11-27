@@ -28,6 +28,7 @@
     filezilla
     python3
     esptool
+    gparted
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks

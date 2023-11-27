@@ -43,6 +43,15 @@
           ./server.nix
         ];
       };
+
+      oliver-pi = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
+        modules = [
+          mkg-mod.nixosModules.yggdrasil
+          # > Our main nixos configuration file <
+          ./pi.nix
+        ];
+      };
     };
 
     # Standalone home-manager configuration entrypoint

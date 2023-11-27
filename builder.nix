@@ -8,8 +8,10 @@ with lib;
     hostName = "aarch64.mkg20001.io";
     system = "aarch64-linux";
     protocol = "ssh-ng";
-    maxJobs = 4;
+    maxJobs = 12;
     speedFactor = 2;
+    sshKey = "/root/.ssh/id_ed25519";
+    sshUser = "oliver";
     supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
     mandatoryFeatures = [ ];
    }
