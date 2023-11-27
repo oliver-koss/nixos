@@ -33,4 +33,7 @@
   networking.hostName = "oliver-server";
 
   system.stateVersion = "24.05"; # Did you read the comment?
+
+  security.acme.acceptTerms = true;
+  security.acme.defaults.email = "oliver.koss06@gmail.com";
 }
