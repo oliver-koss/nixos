@@ -31,7 +31,12 @@ with lib;
     };
     firewall-ips = {
       enable = true;
-      ips = [ "200:8825:6543:5fbf:bf60:fbae:9266:b552" ];
+      ips = [
+        # laptop
+        "200:8825:6543:5fbf:bf60:fbae:9266:b552"
+        # servers
+        "206:c97d:47a1:ff37:9cc6:df87:3c8a:3fd9"
+      ];
     };
   };
 

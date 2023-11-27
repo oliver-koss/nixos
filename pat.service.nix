@@ -12,4 +12,5 @@ with lib;
       StateDirectory = "pat";
     };
   };
+environment.systemPackages = with pkgs; [pat];
 } #am Ende kein ; , da Datei eh aus

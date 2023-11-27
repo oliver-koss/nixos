@@ -75,6 +75,7 @@ with lib;
   programs.mtr.enable = true;
 
   # List services that you want to enable:
+  zramSwap.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
