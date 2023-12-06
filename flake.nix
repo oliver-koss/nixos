@@ -7,6 +7,9 @@
     #nixpkgs.url = "github:oliver-koss/nixpkgs/lcd-i2c";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
+    xnix.url = "git+https://git.xeredo.it/xeredo/xnix.git";
+    xnix.inputs.nixpkgs.follows = "nixpkgs";
+
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +25,7 @@
     # nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { nixpkgs, home-manager, nixos-hardware, mkg-mod, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nixos-hardware, mkg-mod, xnix, ... }@inputs: {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
@@ -42,6 +45,7 @@
         modules = [
           mkg-mod.nixosModules.yggdrasil
           mkg-mod.nixosModules.firewall-ips
+          "${xnix}/defaults/services/nextcloud.nix"
           # > Our main nixos configuration file <
           ./server.nix
         ];

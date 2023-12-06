@@ -1,5 +1,27 @@
 {
   "nodes": {
+    "acme": {
+      "inputs": {
+        "nix-node-package": "nix-node-package",
+        "nixpkgs": [
+          "xnix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1697198256,
+        "narHash": "sha256-ZIG5nDw+0HAOMYkfyg/d2QYV6M5dowNxqYJwzs8FNl4=",
+        "ref": "refs/heads/master",
+        "rev": "5e6e4850cc0d4dfccbfc1c4cb4c7297f5fa14c72",
+        "revCount": 57,
+        "type": "git",
+        "url": "https://git.xeredo.it/xeredo/nixdeploy/acme-distributor"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.xeredo.it/xeredo/nixdeploy/acme-distributor"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -18,6 +40,22 @@
         "owner": "nix-community",
         "ref": "release-23.05",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "mkg": {
+      "locked": {
+        "lastModified": 1614068235,
+        "narHash": "sha256-Dr0PgVPKTzjywh0nLaY8KWk41jJe/vJE4bzf+LF/1zg=",
+        "owner": "mkg20001",
+        "repo": "mkg-nix",
+        "rev": "12824e22b2942f912348c940fc8572120e8a67b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mkg20001",
+        "ref": "master",
+        "repo": "mkg-nix",
         "type": "github"
       }
     },
@@ -42,13 +80,77 @@
         "type": "github"
       }
     },
+    "nix-node-package": {
+      "locked": {
+        "lastModified": 1645439390,
+        "narHash": "sha256-mYkNbWBzQkv7O0mVZ4llqo9ZNeeo/IWPJk5WMa34SgQ=",
+        "owner": "mkg20001",
+        "repo": "nix-node-package",
+        "rev": "03285e212016db5f28530563b58cfcc5706ff73f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mkg20001",
+        "ref": "master",
+        "repo": "nix-node-package",
+        "type": "github"
+      }
+    },
+    "nix-node-package_2": {
+      "locked": {
+        "lastModified": 1694372307,
+        "narHash": "sha256-18dhHWJfa0QB0fPsaYvRwGd86BVn6xMkN6mDmiDKack=",
+        "owner": "mkg20001",
+        "repo": "nix-node-package",
+        "rev": "97ac59276f12f768062e4eb336fc77079d5fb6a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mkg20001",
+        "ref": "master",
+        "repo": "nix-node-package",
+        "type": "github"
+      }
+    },
+    "nix-node-package_3": {
+      "locked": {
+        "lastModified": 1631348881,
+        "narHash": "sha256-bG/wwzf14M1aCNVaL/KD1F+3uiY734d6G23g4eLWBI8=",
+        "owner": "mkg20001",
+        "repo": "nix-node-package",
+        "rev": "7e149259a3ff32b68dff3ddcb697a906b03e2bca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mkg20001",
+        "ref": "master",
+        "repo": "nix-node-package",
+        "type": "github"
+      }
+    },
+    "nix-node-package_4": {
+      "locked": {
+        "lastModified": 1645439390,
+        "narHash": "sha256-mYkNbWBzQkv7O0mVZ4llqo9ZNeeo/IWPJk5WMa34SgQ=",
+        "owner": "mkg20001",
+        "repo": "nix-node-package",
+        "rev": "03285e212016db5f28530563b58cfcc5706ff73f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mkg20001",
+        "ref": "master",
+        "repo": "nix-node-package",
+        "type": "github"
+      }
+    },
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1701250978,
-        "narHash": "sha256-ohu3cz4edjpGxs2qUTgbs0WrnewOX4crnUJNEB6Jox4=",
+        "lastModified": 1701656485,
+        "narHash": "sha256-xDFormrGCKKGqngHa2Bz1GTeKlFMMjLnHhTDRdMJ1hs=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "8772491ed75f150f02552c60694e1beff9f46013",
+        "rev": "fa194fc484fd7270ab324bb985593f71102e84d1",
         "type": "github"
       },
       "original": {
@@ -60,16 +162,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1701467193,
-        "narHash": "sha256-XEWtNEdMDnL6PLkbWOx7IbOYa8I845+eQ5nnJY3/oqc=",
-        "owner": "oliver-koss",
+        "lastModified": 1701693815,
+        "narHash": "sha256-7BkrXykVWfkn6+c1EhFA3ko4MLi3gVG0p9G96PNnKTM=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "eecc2530d9853a84ae55507b5db22bc40a164723",
+        "rev": "09ec6a0881e1a36c29d67497693a67a16f4da573",
         "type": "github"
       },
       "original": {
-        "owner": "oliver-koss",
-        "ref": "lcd-i2c",
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -79,7 +181,77 @@
         "home-manager": "home-manager",
         "mkg-mod": "mkg-mod",
         "nixos-hardware": "nixos-hardware",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "xnix": "xnix"
+      }
+    },
+    "xnix": {
+      "inputs": {
+        "acme": "acme",
+        "mkg": "mkg",
+        "nix-node-package": "nix-node-package_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "xup": "xup",
+        "xzar-client": "xzar-client"
+      },
+      "locked": {
+        "lastModified": 1701460217,
+        "narHash": "sha256-N22gJYI++WnHIqTZbkJP4LAn5FQZ4BVOIKg8k9/0kA0=",
+        "ref": "refs/heads/master",
+        "rev": "a836f98b8d20fe1cb314a958bf9bca02e00e3209",
+        "revCount": 192,
+        "type": "git",
+        "url": "https://git.xeredo.it/xeredo/xnix.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.xeredo.it/xeredo/xnix.git"
+      }
+    },
+    "xup": {
+      "inputs": {
+        "nix-node-package": "nix-node-package_3",
+        "nixpkgs": [
+          "xnix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1636544190,
+        "narHash": "sha256-VHMQO6ur98QF+z14aYgPcS5gh5PV+cEQFthwkRaJR+8=",
+        "ref": "refs/heads/master",
+        "rev": "b2b2d7c70810d47d57594c8b171cb9bf2b5aad02",
+        "revCount": 50,
+        "type": "git",
+        "url": "https://git.xeredo.it/xeredo/xup"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.xeredo.it/xeredo/xup"
+      }
+    },
+    "xzar-client": {
+      "inputs": {
+        "nix-node-package": "nix-node-package_4",
+        "nixpkgs": [
+          "xnix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1679591128,
+        "narHash": "sha256-RVyQM9yTWin06ZG83ha6hET3AypHn9xbLzzlfP/6FB4=",
+        "ref": "refs/heads/master",
+        "rev": "ad4fc7382d89cc73221b8fd0859be5875e9dd782",
+        "revCount": 37,
+        "type": "git",
+        "url": "https://git.xeredo.it/xeredo/xzar/xzar-client"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.xeredo.it/xeredo/xzar/xzar-client"
       }
     }
   },
