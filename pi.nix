@@ -13,6 +13,7 @@ with lib;
       ./builder.nix
       ./pi-apps.nix
       ./pat.service.nix
+      ./status.service.nix
       "${modulesPath}/installer/sd-card/sd-image-aarch64-new-kernel-no-zfs-installer.nix"
     ];
 
@@ -61,6 +62,11 @@ with lib;
     };
   };
   hardware.bluetooth.enable = true;
+  services.udev.extraRules = ''
+    KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+  '';
+  users.groups.i2c = {};
+  users.users.oliver.extraGroups = [ "i2c" ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   # users.users.oliver = {

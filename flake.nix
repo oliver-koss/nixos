@@ -4,6 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    #nixpkgs.url = "github:oliver-koss/nixpkgs/lcd-i2c";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     # Home manager

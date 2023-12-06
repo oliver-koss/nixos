@@ -29,6 +29,12 @@
     python3
     esptool
     gparted
+    ipscan
+    youtube-dl
+    ffmpeg
+    tartube
+    nix-init
+    gh #github CLI Tool
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks

@@ -11,5 +11,7 @@
     sdrangel
     sdrpp
     pat
+    hamlib_4
+    qsstv
   ];
 }
