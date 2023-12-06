@@ -45,6 +45,7 @@
         modules = [
           mkg-mod.nixosModules.yggdrasil
           mkg-mod.nixosModules.firewall-ips
+          "${xnix}/defaults/services/sso.nix"
           "${xnix}/defaults/services/nextcloud.nix"
           # > Our main nixos configuration file <
           ./server.nix

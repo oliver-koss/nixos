@@ -11,6 +11,8 @@
       "${modulesPath}/virtualisation/lxc-container.nix"
       ./base.nix
       ./grafana.nix
+      ./admin-pw.nix
+      ./nextcloud.nix
     ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
@@ -24,7 +26,6 @@
   networking.useDHCP = false;
   networking.interfaces.eth0.useDHCP = true;
 
-  virtualisation.lxc.nestedContainer = true;
   networking.useNetworkd = true;
 
   networking.resolvconf.enable = false;
@@ -36,4 +37,10 @@
 
   security.acme.acceptTerms = true;
   security.acme.defaults.email = "oliver.koss06@gmail.com";
+
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.rebootWindow.lower = "04:00";
+  system.autoUpgrade.rebootWindow.upper = "06:00";
+  system.autoUpgrade.flake = "github:oliver-koss/nixos/master";
 }
