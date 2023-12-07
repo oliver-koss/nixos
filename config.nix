@@ -16,6 +16,7 @@ with lib;
       ./wine.nix
       ./pat.service.nix
       ./builder.nix
+      ./node_exporter.service.nix
     ];
 
   systemd.services.pat.wantedBy = mkForce [];
@@ -170,5 +171,15 @@ with lib;
   services.prometheus = {
     enable   = true;
     port     = 9090;
+    configText = "
+      global:
+        scrape_interval: 10s
+
+      scrape_configs:
+        - job_name: 'prometheus'
+          scrape_interval: 5s
+          static_configs:
+          - targets: ['localhost:9100']
+    ";
   };
 }

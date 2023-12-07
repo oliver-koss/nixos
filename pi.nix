@@ -14,6 +14,7 @@ with lib;
       ./pi-apps.nix
       ./pat.service.nix
       ./status.service.nix
+      ./node_exporter.service.nix
       "${modulesPath}/installer/sd-card/sd-image-aarch64-new-kernel-no-zfs-installer.nix"
     ];
 
@@ -107,5 +108,15 @@ with lib;
     services.prometheus = {
       enable   = true;
       port     = 9090;
+      configText = "
+        global:
+          scrape_interval: 10s
+
+        scrape_configs:
+          - job_name: 'prometheus'
+            scrape_interval: 5s
+            static_configs:
+            - targets: ['localhost:9100']
+      ";
     };
 }

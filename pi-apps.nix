@@ -6,10 +6,11 @@
     hamlib
     wget
     sshfs
+    prometheus
+    prometheus-node-exporter
     #status
     (python3.withPackages(p: with p; [
       rpi-gpio2
-      lcd-i2c
       rplcd
       libgpiod
       #machine
