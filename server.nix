@@ -39,8 +39,8 @@
   security.acme.defaults.email = "oliver.koss06@gmail.com";
 
   system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = true;
-  system.autoUpgrade.rebootWindow.lower = "04:00";
-  system.autoUpgrade.rebootWindow.upper = "06:00";
+  # system.autoUpgrade.allowReboot = true;
+  # system.autoUpgrade.rebootWindow.lower = "04:00";
+  # system.autoUpgrade.rebootWindow.upper = "06:00";
   system.autoUpgrade.flake = "github:oliver-koss/nixos/master";
 }
