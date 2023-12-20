@@ -103,7 +103,10 @@ with lib;
       support32Bit = true;
     };
   };
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    settings.general.experimental = true;
+    };
 
   programs.steam.enable = true;
 
@@ -113,7 +116,7 @@ with lib;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   # users.users.oliver = {
   #  isNormalUser = true;
-  #  extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+  #  extraGroups = [ "dialout" ];
   #   packages = with pkgs; [
   #     firefox
   #     tree
@@ -165,6 +168,7 @@ with lib;
 
               nixpkgs.config.permittedInsecurePackages = [
                 "pulsar-1.109.0"
+                "googleearth-pro-7.3.4.8248"
               ];
 
 #prometheus service

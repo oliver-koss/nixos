@@ -35,6 +35,16 @@
     tartube
     nix-init
     gh #github CLI Tool
+    openjdk8-bootstrap
+    googleearth-pro
+    arduino
+    r3ctl
+    tor-browser
+    libglibutil
+    stdenv
+    poetry
+    discord
+    python311Packages.bluepy
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
