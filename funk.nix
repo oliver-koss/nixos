@@ -13,5 +13,6 @@
     pat
     hamlib_4
     qsstv
+    xastir
   ];
 }

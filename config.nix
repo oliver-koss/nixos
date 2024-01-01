@@ -132,7 +132,7 @@ with lib;
     google-chrome
     wsjtx
     git
-    gnome.gedit
+    gedit
     pulsar
     yaru-theme
   ];

@@ -45,6 +45,10 @@
     poetry
     discord
     python311Packages.bluepy
+    nanovna-saver
+    minetest
+    viking
+    marble
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
