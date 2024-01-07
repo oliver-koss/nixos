@@ -2,7 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    (if pkgs ? qlog then pkgs.qlog else pkgs.qt6Packages.callPackage ./qlog.nix {})
+    #(if pkgs ? qlog then pkgs.qlog else pkgs.qt6Packages.callPackage ./qlog.nix {})
+    qlog
     wsjtx
     qdmr
     fldigi

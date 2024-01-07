@@ -49,6 +49,13 @@
     minetest
     viking
     marble
+    ncdu
+    yt-dlp #youtube-dl
+    gst_all_1.gstreamer
+    gst_all_1.gst-libav
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-ugly
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks

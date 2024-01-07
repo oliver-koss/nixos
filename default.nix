@@ -2,7 +2,8 @@ let
   pkgs = import <nixpkgs> {};
 in
 with pkgs;
-{qlog = qt6Packages.callPackage ./qlog.nix {};
+{
+qlog = qt6Packages.callPackage ./qlog.nix {};
 pat = callPackage ./pat.nix {};
 ardopc = callPackage ./ardopc.nix {};
 ardopc-init = callPackage ./ardopc-init.nix {};

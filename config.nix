@@ -186,4 +186,14 @@ with lib;
           - targets: ['localhost:9100']
     ";
   };
+#  hardware.printers = {
+#  ensurePrinters = [
+#    {
+#      name = "EOS2-300-nix";
+#      location = "Home";
+#      deviceUri = "usb://cab/EOS2/300?serial=35320090038";
+#      model = "/etc/nixos/cab_EOS2_300.ppd";
+#    }
+#  ];
+#};
 }
