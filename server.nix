@@ -13,7 +13,11 @@
       ./grafana.nix
       ./admin-pw.nix
       ./nextcloud.nix
+      ./server-apps.nix
+      ./pufferpanel.nix
     ];
+
+  virtualisation.docker.enable = true;
 
   nixpkgs.hostPlatform = "x86_64-linux";
 
