@@ -25,7 +25,7 @@
     # nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { nixpkgs, home-manager, nixos-hardware, mkg-mod, xnix, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nixos-hardware, mkg-mod, xnix, ... }@inputs: rec {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
@@ -52,15 +52,15 @@
         ];
       };
 
-      oliver-pi = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
-        modules = [
-          mkg-mod.nixosModules.yggdrasil
-          mkg-mod.nixosModules.firewall-ips
-          # > Our main nixos configuration file <
-          ./pi.nix
-        ];
-      };
+#      oliver-pi = nixpkgs.lib.nixosSystem {
+#        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
+#        modules = [
+#          mkg-mod.nixosModules.yggdrasil
+#          mkg-mod.nixosModules.firewall-ips
+#          # > Our main nixos configuration file <
+#          ./pi.nix
+#        ];
+#      };
     };
 
     legacyPackages.x86_64-linux = {
