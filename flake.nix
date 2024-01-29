@@ -63,6 +63,12 @@
       };
     };
 
+    legacyPackages.x86_64-linux = {
+      all = nixpkgs.legacyPackages.x86_64-linux.releaseTools.aggregate {
+        name = "all-devices";
+        constituents = map (c: c.config.system.build.toplevel) (builtins.attrValues nixosConfigurations);
+      };
+    };
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
  #   homeConfigurations = {
