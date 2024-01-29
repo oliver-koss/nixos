@@ -62,6 +62,17 @@ with lib;
     wayland = true;
   };
 
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+
   services.xserver.desktopManager.gnome.enable = true;
 
 #  services.xserver.displayManager.sddm.enable = true;
@@ -82,7 +93,6 @@ with lib;
    print-manager
  ];
 
-  virtualisation.waydroid.enable = true;
   # Configure keymap in X11
   services.xserver.layout = "de";
   # services.xserver.xkbOptions = "eurosign:e,caps:escape";

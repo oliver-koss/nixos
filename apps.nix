@@ -30,7 +30,6 @@
     esptool
     gparted
     ipscan
-    youtube-dl
     ffmpeg
     tartube
     nix-init
@@ -51,11 +50,14 @@
     marble
     ncdu
     yt-dlp #youtube-dl
+    mediathekview
+    audacity
     gst_all_1.gstreamer
     gst_all_1.gst-libav
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
+    blender
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
