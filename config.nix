@@ -17,6 +17,7 @@ with lib;
       ./pat.service.nix
       ./builder.nix
       ./node_exporter.service.nix
+      ./gpu.nix
     ];
 
   systemd.services.pat.wantedBy = mkForce [];
