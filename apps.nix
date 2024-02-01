@@ -52,6 +52,7 @@
     yt-dlp #youtube-dl
     mediathekview
     audacity
+    jetbrains.clion
     gst_all_1.gstreamer
     gst_all_1.gst-libav
     gst_all_1.gst-plugins-good
