@@ -8,15 +8,13 @@ with lib;
       "panel.oliver-koss.at" = {
         enableACME = true;
         forceSSL = true;
-        locations."/".proxyPass = "http://localhost:8080";
       };
     };
 
     services.pufferpanel = {
       enable = true;
       environment = {
-        PUFFER_WEB_HOST = "localhost:8080";
-	PUFFER_PANEL_EMAIL_USERNAME = "Oli_550";
+        PUFFER_WEB_HOST = "0.0.0.0:8080";
       };
     };
 
