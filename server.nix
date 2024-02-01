@@ -15,6 +15,7 @@
       ./nextcloud.nix
       ./server-apps.nix
       ./pufferpanel.nix
+      ./asterisk.nix
     ];
 
   virtualisation.docker.enable = true;
