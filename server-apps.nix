@@ -9,6 +9,6 @@
     pufferpanel
     redis
     docker-compose
-    asterisk-stable
+    asterisk
   ]);
 }
