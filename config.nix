@@ -182,6 +182,9 @@ with lib;
                 "googleearth-pro-7.3.4.8248"
               ];
 
+#kdeconnect
+  programs.kdeconnect.enable = true;
+
 #prometheus service
   services.prometheus = {
     enable   = true;
