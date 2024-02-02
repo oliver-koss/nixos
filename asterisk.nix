@@ -2,11 +2,8 @@
 {
   services.asterisk = {
     enable = true;
-    confFiles =
-      [
-      ./asterisk/extensions.conf
-      ./asterisk/pjsip.conf
-      ./asterisk/sip.conf
-      ];
+    confFiles = {
+      "./asterisk/extensions.conf"
+    };
   };
 }
