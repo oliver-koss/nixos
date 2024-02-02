@@ -54,7 +54,7 @@
         password=backoffice
         username=backoffice
         [backoffice](aor_dynamic)
-        '';
+      '';
       "extensions.conf" = ''
         [from-internal]
         ; dial the lecture rooms & backoffice
@@ -72,7 +72,7 @@
         same  =>     n,Hangup()
         ; note: "n" is a keyword meaning "the last line's value, plus 1"
         ; "same" is a keyword referring to the last-defined extension
-        '';
+      '';
     };
   };
 }
