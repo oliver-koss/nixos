@@ -18,7 +18,6 @@ with lib;
       ./builder.nix
       ./node_exporter.service.nix
       ./gpu.nix
-      ./asterisk
     ];
 
   systemd.services.pat.wantedBy = mkForce [];

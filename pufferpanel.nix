@@ -2,7 +2,7 @@
 
 with lib;
 
-  {
+{
   config = {
     services.nginx.virtualHosts = {
       "panel.oliver-koss.at" = {
@@ -16,14 +16,10 @@ with lib;
       enable = true;
       environment = {
         PUFFER_WEB_HOST = "localhost:8080";
-	PUFFER_PANEL_EMAIL_USERNAME = "Oli_550";
+	      PUFFER_PANEL_EMAIL_USERNAME = "Oli_550";
       };
     };
 
-#  services.sso.server = "";
-#  services.sso.enable = false;
-
-  networking.firewall.allowedTCPPorts =  [ 8080 443 ];
-
+    networking.firewall.allowedTCPPorts =  [ 8080 443 ];
   };
-  }
+}

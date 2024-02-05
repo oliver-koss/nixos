@@ -34,6 +34,8 @@
         modules = [
           mkg-mod.nixosModules.yggdrasil
           mkg-mod.nixosModules.firewall-ips
+          nixos-hardware.nixosModules.common-cpu-amd
+          # nixos-hardware.nixosModules.common-gpu-nvidia
           nixos-hardware.nixosModules.common-pc-laptop-ssd
           # > Our main nixos configuration file <
           ./config.nix

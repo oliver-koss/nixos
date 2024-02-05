@@ -61,6 +61,7 @@
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
     blender
+    jdownloader
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
