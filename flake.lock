@@ -146,11 +146,11 @@
     },
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1706834982,
-        "narHash": "sha256-3CfxA7gZ+DVv/N9Pvw61bV5Oe/mWfxYPyVQGqp9TMJA=",
+        "lastModified": 1707211557,
+        "narHash": "sha256-LTKTzZ6fM5j8XWXf51IMBzDaOaJg9kYWLUZxoIhzRN8=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "83e571bb291161682b9c3ccd48318f115143a550",
+        "rev": "6e5cc385fc8cf5ca6495d70243074ccdea9f64c7",
         "type": "github"
       },
       "original": {
@@ -162,11 +162,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1706550542,
-        "narHash": "sha256-UcsnCG6wx++23yeER4Hg18CXWbgNpqNXcHIo5/1Y+hc=",
+        "lastModified": 1707268954,
+        "narHash": "sha256-2en1kvde3cJVc3ZnTy8QeD2oKcseLFjYPLKhIGDanQ0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "97b17f32362e475016f942bbdfda4a4a72a8a652",
+        "rev": "f8e2ebd66d097614d51a56a755450d4ae1632df1",
         "type": "github"
       },
       "original": {
@@ -197,11 +197,11 @@
         "xzar-client": "xzar-client"
       },
       "locked": {
-        "lastModified": 1704228189,
-        "narHash": "sha256-g0Med4NSeg3/rDyjPoDBU3L+AkToTVL7fRKlcOpmk+8=",
+        "lastModified": 1706897259,
+        "narHash": "sha256-gD0wXzBlJqqJqskf+JdZ0MwzslkuOcP512T7oLBeWP0=",
         "ref": "refs/heads/master",
-        "rev": "9a2b1912643fc4a902f67b504d65129d16fe920e",
-        "revCount": 198,
+        "rev": "4cf5f3945f26de653d3bd0203f6802c4879664ce",
+        "revCount": 204,
         "type": "git",
         "url": "https://git.xeredo.it/xeredo/xnix.git"
       },

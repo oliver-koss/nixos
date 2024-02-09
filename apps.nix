@@ -26,7 +26,7 @@
     gimp
     geogebra6
     filezilla
-    python3
+#    (python3.withPackages(ps: [ m365py ]))
     esptool
     gparted
     ipscan
@@ -43,7 +43,6 @@
     stdenv
     poetry
     discord
-    python311Packages.bluepy
     nanovna-saver
     minetest
     viking
@@ -53,6 +52,7 @@
     mediathekview
     audacity
     jetbrains.clion
+    jetbrains.pycharm-community
     twinkle
     vlc
     gst_all_1.gstreamer

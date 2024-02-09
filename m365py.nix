@@ -3,10 +3,10 @@
 , fetchFromGitHub
 }:
 
-python3.pkgs.buildPythonApplication rec {
+python3.pkgs.buildPythonPackage rec {
   pname = "m365py";
   version = "unstable-2019-07-08";
-  pyproject = true;
+  format = "setuptools";
 
   src = fetchFromGitHub {
     owner = "AntonHakansson";
@@ -15,9 +15,10 @@ python3.pkgs.buildPythonApplication rec {
     hash = "sha256-0VhuSnGDoXDkTt9WaeTuI3bvEJmZ/ZqIl/V92y9oJBg=";
   };
 
-  nativeBuildInputs = [
-    python3.pkgs.setuptools
+  BuildInputs = [
     python3.pkgs.wheel
+    python3.pkgs.bluepy
+#    python3.pkgs.pip
   ];
 
   pythonImportsCheck = [ "m365py" ];
@@ -25,7 +26,7 @@ python3.pkgs.buildPythonApplication rec {
   meta = with lib; {
     description = "A lightweight python library to receive parsed BLE Xiaomi M365 scooter(Version=V1.3.8) messages using bluepy";
     homepage = "https://github.com/AntonHakansson/m365py";
-    license = licenses.unfree; # FIXME: nix-init did not found a license
+    license = licenses.mit; # FIXME: nix-init did not found a license
     maintainers = with maintainers; [ ];
     mainProgram = "m365py";
   };
