@@ -62,6 +62,9 @@
     gst_all_1.gst-plugins-ugly
     blender
     jdownloader
+    helvum
+    pavucontrol
+    pulsemixer
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
