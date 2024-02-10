@@ -10,5 +10,6 @@
     redis
     docker-compose
     asterisk
+    cloudlog
   ]);
 }

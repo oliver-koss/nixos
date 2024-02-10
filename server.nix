@@ -16,6 +16,7 @@
       ./server-apps.nix
       ./pufferpanel.nix
       ./asterisk
+#      ./cloudlog.nix
     ];
 
   virtualisation.docker.enable = true;
