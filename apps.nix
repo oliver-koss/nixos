@@ -26,7 +26,10 @@
     gimp
     geogebra6
     filezilla
-#    (python3.withPackages(ps: [ m365py ]))
+    (python3.withPackages(ps: [
+#      (python3.pkgs.callPackage ./ninebot {})
+       ]))
+    (writeShellScriptBin "ninebot" "exec python3 -m ninebot_ble \"$@\"")
     esptool
     gparted
     ipscan
@@ -65,6 +68,7 @@
     helvum
     pavucontrol
     pulsemixer
+    torrential
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
