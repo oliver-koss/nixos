@@ -1,11 +1,11 @@
 { lib
 , buildPythonPackage
 , bluepy
-, cryptography
 , setuptools
 , wheel
 , fetchFromGitHub
 , callPackage
+, cryptography
 }:
 
 buildPythonPackage rec {
@@ -27,10 +27,15 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [
     bluepy
-    (callPackage ./crypto_36.nix {})
+    # (callPackage ./crypto_36.nix {})
+    cryptography
   ];
 
   pythonImportsCheck = [ "miauth" ];
+
+  postPatch = ''
+    sed "s|cryptography.*|cryptography|g" -i requirements.txt
+  '';
 
   meta = with lib; {
     description = "Authenticate and interact with Xiaomi devices over BLE";

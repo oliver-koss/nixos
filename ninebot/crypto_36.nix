@@ -13,5 +13,9 @@
     hash = "sha256-Y6TuW7AryVgSvZ6G8WNoDIvi+0tvx8ZlEYF5qB0jfNk=";
   };
 
+  patches = [];
+
+  postPatch = "true";
+
   pytestCheckPhase = "true";
 })
