@@ -16,7 +16,7 @@ with lib;
       enable = true;
       environment = {
         PUFFER_WEB_HOST = "localhost:8080";
-	      PUFFER_PANEL_EMAIL_USERNAME = "Oli_550";
+        PUFFER_PANEL_REGISTRATIONENABLED = "false";
       };
     };
 
