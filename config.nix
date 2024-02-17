@@ -210,5 +210,7 @@ with lib;
 #    }
 #  ];
 #};
+  boot.supportedFilesystems = [ "ntfs" ];
+
   networking.firewall.allowedTCPPorts =  [ 5060 5062 ];
 }
