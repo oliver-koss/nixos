@@ -12,9 +12,9 @@ with lib;
       ./base.nix
       ./builder.nix
       ./pi-apps.nix
-      ./pat.service.nix
-      ./status.service.nix
-      ./node_exporter.service.nix
+#      ./pat.service.nix
+#      ./status.service.nix
+#      ./node_exporter.service.nix
       "${modulesPath}/installer/sd-card/sd-image-aarch64-new-kernel-no-zfs-installer.nix"
     ];
 

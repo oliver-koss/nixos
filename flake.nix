@@ -54,15 +54,15 @@
         ];
       };
 
-#      oliver-pi = nixpkgs.lib.nixosSystem {
-#        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
-#        modules = [
-#          mkg-mod.nixosModules.yggdrasil
-#          mkg-mod.nixosModules.firewall-ips
-#          # > Our main nixos configuration file <
-#          ./pi.nix
-#        ];
-#      };
+      oliver-pi = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
+        modules = [
+          mkg-mod.nixosModules.yggdrasil
+          mkg-mod.nixosModules.firewall-ips
+          # > Our main nixos configuration file <
+          ./pi.nix
+        ];
+      };
     };
 
     legacyPackages.x86_64-linux = {

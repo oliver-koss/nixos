@@ -16,5 +16,6 @@
       #machine
       #pico-i2c-lcd #Unterstrich zu Bindestrich ersetzten und alles klein
     ]))
+    (python3.pkgs.callPackage ./ninebot {})
   ]);
 }
