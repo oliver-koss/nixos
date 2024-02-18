@@ -62,7 +62,7 @@ with lib;
       support32Bit = true;
     };
   };
-  hardware.bluetooth.enable = true;
+#  hardware.bluetooth.enable = true;
   services.udev.extraRules = ''
     KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
   '';
@@ -103,6 +103,15 @@ with lib;
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
+
+  systemd.services.btattach = {
+    before = [ "bluetooth.service" ];
+    after = [ "dev-ttyAMA0.device" ];
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.bluez}/bin/btattach -B /dev/ttyAMA0 -P bcm -S 3000000";
+    };
+  };
 
   #prometheus service
     services.prometheus = {

@@ -13,7 +13,7 @@
       #rpi-gpio2
       #rplcd
       #libgpiod
-      (python3.pkgs.callPackage ./ninebot {})
+#      (python3.pkgs.callPackage ./ninebot {})
       #machine
       #pico-i2c-lcd #Unterstrich zu Bindestrich ersetzten und alles klein
     ]))
