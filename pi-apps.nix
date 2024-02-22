@@ -8,6 +8,8 @@
     sshfs
     prometheus
     prometheus-node-exporter
+    ncdu
+    wireguard-tools
     #status
     (python3.withPackages(p: with p; [
       #rpi-gpio2

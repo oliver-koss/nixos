@@ -12,6 +12,7 @@ with lib;
       ./base.nix
       ./builder.nix
       ./pi-apps.nix
+      ./wireguard.nix
 #      ./pat.service.nix
 #      ./status.service.nix
 #      ./node_exporter.service.nix
