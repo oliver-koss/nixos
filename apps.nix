@@ -68,7 +68,7 @@
     helvum
     pavucontrol
     pulsemixer
-    torrential
+    transmission-gtk
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks

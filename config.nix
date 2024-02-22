@@ -18,6 +18,7 @@ with lib;
       ./builder.nix
       ./node_exporter.service.nix
       ./gpu.nix
+      ./incus.nix
     ];
 
   systemd.services.pat.wantedBy = mkForce [];
@@ -62,6 +63,9 @@ with lib;
     enable = true;
     wayland = true;
   };
+
+  virtualisation.incus.enable = true;
+  virtualisation.incus.ui.enable = true;
 
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {

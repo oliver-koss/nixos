@@ -27,7 +27,7 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [
     bluepy
-    # (callPackage ./crypto_36.nix {})
+     (callPackage ./crypto_36.nix {})
     cryptography
   ];
 
