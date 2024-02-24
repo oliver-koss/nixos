@@ -15,7 +15,7 @@ with lib;
       ./wireguard.nix
 #      ./pat.service.nix
 #      ./status.service.nix
-#      ./node_exporter.service.nix
+      ./node_exporter.service.nix
       "${modulesPath}/installer/sd-card/sd-image-aarch64-new-kernel-no-zfs-installer.nix"
     ];
 
