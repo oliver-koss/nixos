@@ -51,8 +51,19 @@
   system.autoUpgrade.flake = "github:oliver-koss/nixos/master";
 
   services.prometheus = {
-    enable = true;
-    port = 9001;
+    enable   = true;
+    port     = 9090;
+    configText = "
+      global:
+        scrape_interval: 10s
+
+      scrape_configs:
+        - job_name: 'prometheus'
+          scrape_interval: 5s
+          static_configs:
+          - targets: ['localhost:9100']
+    ";
   };
+
 
 }
