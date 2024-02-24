@@ -17,6 +17,7 @@
       ./pufferpanel.nix
       ./asterisk
 #      ./cloudlog.nix
+      ./node_exporter.service.nix
     ];
 
   virtualisation.docker.enable = true;
