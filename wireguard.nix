@@ -38,7 +38,7 @@
       peers = [
         # List of allowed peers.
         { # Oliver Laptop
-          publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINY/nLnSsoDqoNecVOqiYxsLbXIjhlptsCc84qfGKgrO root@oliver-nix";
+          publicKey = "qEgB9hT8EFqL274SAqX3gfUlDxu88u+YrH8m7YyGUhs=";
           allowedIPs = [ "10.100.0.3/32" ];
         }
       ];

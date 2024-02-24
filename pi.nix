@@ -129,4 +129,9 @@ with lib;
             - targets: ['localhost:9100']
       ";
     };
+  services.sonarr = {
+    enable = true;
+    openFirewall = false;
+    dataDir = "/sonarr";
+  };
 }

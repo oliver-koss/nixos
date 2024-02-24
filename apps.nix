@@ -69,6 +69,7 @@
     pavucontrol
     pulsemixer
     transmission-gtk
+    rpi-imager #raspberry pi imager
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
