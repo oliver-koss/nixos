@@ -16,6 +16,7 @@ with lib;
 #      ./pat.service.nix
 #      ./status.service.nix
       ./node_exporter.service.nix
+      ./fritz.nix
       "${modulesPath}/installer/sd-card/sd-image-aarch64-new-kernel-no-zfs-installer.nix"
     ];
 
@@ -134,4 +135,7 @@ with lib;
     openFirewall = false;
     dataDir = "/sonarr";
   };
+
+#  nixpkgs.config.allowUnsupportedSystem = true;
+
 }
