@@ -1,3 +1,7 @@
+{ lib, ... }:
+
+with lib;
+
 {
   services.transmission = {
     enable = true;
@@ -15,5 +19,10 @@
       rpc-bind-address = "200:5128:b507:a7c8:2ca3:599b:3bb:40ab";
       incomplete-dir = "/storage/Downloading";
     };
+  };
+
+  systemd.services.transmission.serviceConfig = {
+    BindPaths = mkForce [ "/var/lib/transmission/.config/transmission-daemon" "/storage" "/run" ];
+    BindReadOnlyPaths = mkForce [ "/nix/store" "/etc" ];
   };
 }
