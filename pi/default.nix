@@ -2,6 +2,7 @@
   imports = [
     ./nginx.nix
     ./rar.nix
+    ./storage.nix
     ./transmission.nix
   ];
 

@@ -11,6 +11,9 @@ in
 {
   services.nginx.enable = true;
 
+  networking.firewall.allowedTCPPorts = [ 80 443 ];
+  networking.firewall.allowedUDPPorts = [ 443 ];
+
   services.nginx.virtualHosts = {
     "watch.oliver-koss.at" = h {
       locations."/" = {
