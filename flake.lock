@@ -4,6 +4,27 @@
       "inputs": {
         "nix-node-package": "nix-node-package",
         "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1697198256,
+        "narHash": "sha256-ZIG5nDw+0HAOMYkfyg/d2QYV6M5dowNxqYJwzs8FNl4=",
+        "ref": "refs/heads/master",
+        "rev": "5e6e4850cc0d4dfccbfc1c4cb4c7297f5fa14c72",
+        "revCount": 57,
+        "type": "git",
+        "url": "https://git.xeredo.it/xeredo/nixdeploy/acme-distributor"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.xeredo.it/xeredo/nixdeploy/acme-distributor"
+      }
+    },
+    "acme_2": {
+      "inputs": {
+        "nix-node-package": "nix-node-package_2",
+        "nixpkgs": [
           "xnix",
           "nixpkgs"
         ]
@@ -98,6 +119,22 @@
     },
     "nix-node-package_2": {
       "locked": {
+        "lastModified": 1645439390,
+        "narHash": "sha256-mYkNbWBzQkv7O0mVZ4llqo9ZNeeo/IWPJk5WMa34SgQ=",
+        "owner": "mkg20001",
+        "repo": "nix-node-package",
+        "rev": "03285e212016db5f28530563b58cfcc5706ff73f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mkg20001",
+        "ref": "master",
+        "repo": "nix-node-package",
+        "type": "github"
+      }
+    },
+    "nix-node-package_3": {
+      "locked": {
         "lastModified": 1694372307,
         "narHash": "sha256-18dhHWJfa0QB0fPsaYvRwGd86BVn6xMkN6mDmiDKack=",
         "owner": "mkg20001",
@@ -112,7 +149,7 @@
         "type": "github"
       }
     },
-    "nix-node-package_3": {
+    "nix-node-package_4": {
       "locked": {
         "lastModified": 1631348881,
         "narHash": "sha256-bG/wwzf14M1aCNVaL/KD1F+3uiY734d6G23g4eLWBI8=",
@@ -128,7 +165,7 @@
         "type": "github"
       }
     },
-    "nix-node-package_4": {
+    "nix-node-package_5": {
       "locked": {
         "lastModified": 1645439390,
         "narHash": "sha256-mYkNbWBzQkv7O0mVZ4llqo9ZNeeo/IWPJk5WMa34SgQ=",
@@ -178,6 +215,7 @@
     },
     "root": {
       "inputs": {
+        "acme": "acme",
         "home-manager": "home-manager",
         "mkg-mod": "mkg-mod",
         "nixos-hardware": "nixos-hardware",
@@ -187,9 +225,9 @@
     },
     "xnix": {
       "inputs": {
-        "acme": "acme",
+        "acme": "acme_2",
         "mkg": "mkg",
-        "nix-node-package": "nix-node-package_2",
+        "nix-node-package": "nix-node-package_3",
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -212,7 +250,7 @@
     },
     "xup": {
       "inputs": {
-        "nix-node-package": "nix-node-package_3",
+        "nix-node-package": "nix-node-package_4",
         "nixpkgs": [
           "xnix",
           "nixpkgs"
@@ -234,7 +272,7 @@
     },
     "xzar-client": {
       "inputs": {
-        "nix-node-package": "nix-node-package_4",
+        "nix-node-package": "nix-node-package_5",
         "nixpkgs": [
           "xnix",
           "nixpkgs"

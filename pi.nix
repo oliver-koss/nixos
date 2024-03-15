@@ -17,6 +17,7 @@ with lib;
 #      ./status.service.nix
       ./node_exporter.service.nix
       "${modulesPath}/installer/sd-card/sd-image-aarch64-new-kernel-no-zfs-installer.nix"
+      ./pi
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -146,25 +147,6 @@ with lib;
     extraGroups = [ "wheel" "dialout" "incus-admin" ]; # Enable ‘sudo’ for the user.
     openssh.authorizedKeys.keys = splitString "\n"
       (builtins.readFile ./maciej.pub);
-  };
-
-
-  services.transmission = {
-    enable = true;
-
-    openFirewall = true;
-    openRPCPort = true;
-    openPeerPorts = true;
-
-    credentialsFile = "/var/lib/secrets/transmission/settings.json";
-
-    settings = {
-      download-dir = "/storage/Torrents";
-      watch-dir = "/storage/Incoming";
-      watch-dir-enabled = true;
-      rpc-bind-address = "200:5128:b507:a7c8:2ca3:599b:3bb:40ab";
-      incomplete-dir = "/storage/Downloading";
-    };
   };
 
   mkg.mod.yggdrasil.peers = mkForce [ "tcp://v4.ygg.mkg20001.io:80" "tls://v4.ygg.mkg20001.io:443" "tcp://168.119.72.237:29553" ];

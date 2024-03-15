@@ -17,6 +17,9 @@
     mkg-mod.url = "github:mkg20001/mkg-mod/master";
     mkg-mod.inputs.nixpkgs.follows = "nixpkgs";
 
+    acme.url = "git+https://git.xeredo.it/xeredo/nixdeploy/acme-distributor";
+    acme.inputs.nixpkgs.follows = "nixpkgs";
+
     # TODO: Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
 
@@ -25,7 +28,7 @@
     # nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs = { nixpkgs, home-manager, nixos-hardware, mkg-mod, xnix, ... }@inputs: rec {
+  outputs = { nixpkgs, home-manager, nixos-hardware, mkg-mod, xnix, acme, ... }@inputs: rec {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
@@ -59,6 +62,7 @@
         modules = [
           mkg-mod.nixosModules.yggdrasil
           mkg-mod.nixosModules.firewall-ips
+          acme.nixosModules.acme-shim
           # > Our main nixos configuration file <
           ./pi.nix
         ];

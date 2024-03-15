@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ inputs, config, pkgs, lib, ... }:
 
 with lib;
 
@@ -21,7 +21,7 @@ with lib;
 
   nix.settings.experimental-features = "nix-command flakes";
 
-  nixpkgs.overlays = [(import ./overlay.nix)];
+  nixpkgs.overlays = [(import ./overlay.nix) inputs.acme.overlay ];
   security.sudo.wheelNeedsPassword = false;
 
   networking.nftables.enable = true;
