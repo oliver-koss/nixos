@@ -23,7 +23,7 @@ jobs:
         with:
           name: oliver
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
-#      - run: "curl https://jit6.mkg20001.io | env JIT6_TOKEN=${{ secrets.JIT6_TOKEN }} bash -"
+      - run: "curl https://jit6.mkg20001.io | env JIT6_TOKEN=${{ secrets.JIT6_TOKEN }} bash -"
       - run: nix flake update
 #      - run: nix build .#all
       - uses: stefanzweifel/git-auto-commit-action@v4
