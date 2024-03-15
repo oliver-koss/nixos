@@ -4,4 +4,5 @@ final: prev: {
   status = prev.callPackage ./lcd-status.nix {};
   m365py = prev.callPackage ./m365py.nix {};
   jdownloader = prev.callPackage ./jdownloader {};
+  fritzbox-exporter = prev.callPackage ./fritzbox {};
 }

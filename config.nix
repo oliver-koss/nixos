@@ -78,7 +78,11 @@ with lib;
   };
 
 
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver = {
+    desktopManager.gnome.enable = true;
+#    displayManager.sddm.enable = true;
+#    desktopManager.plasma5.enable = true;
+  };
 
 #  services.xserver.displayManager.sddm.enable = true;
 #  services.xserver.desktopManager.plasma5.enable = true;
@@ -182,8 +186,10 @@ with lib;
   system.stateVersion = "23.05"; # Did you read the comment?
 
               nixpkgs.config.permittedInsecurePackages = [
+                "pulsar-1.114.0"
                 "pulsar-1.109.0"
                 "googleearth-pro-7.3.4.8248"
+                "python-2.7.18.7"
               ];
 
 #kdeconnect

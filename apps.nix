@@ -28,7 +28,7 @@
     filezilla
     (python3.withPackages(ps: [
 #      (python3.pkgs.callPackage ./ninebot {})
-       ]))
+      ]))
     (writeShellScriptBin "ninebot" "exec python3 -m ninebot_ble \"$@\"")
     esptool
     gparted
@@ -63,13 +63,25 @@
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
-    blender
+#    blender
     jdownloader
     helvum
     pavucontrol
     pulsemixer
     transmission-gtk
     rpi-imager #raspberry pi imager
+    ffmpeg
+#    fritzbox-exporter
+    screen
+    dnsmasq
+    putty
+    python2
+    uucp
+    ppp
+    glxinfo
+    wireguard-tools
+    kdenlive
+    usbutils
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
