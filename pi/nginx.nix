@@ -32,6 +32,12 @@ in
         proxyPass = "http://localhost:8989/";
       };
     };
+
+    "bazarr.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:6767/";
+      };
+    };
   };
 
 }
