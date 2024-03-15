@@ -133,11 +133,11 @@ with lib;
             - targets: ['localhost:9133']
       ";
     };
-  services.sonarr = {
-    enable = true;
-    openFirewall = false;
-    dataDir = "/sonarr";
-    };
+#  services.sonarr = {
+#    enable = true;
+#    openFirewall = false;
+#    dataDir = "/sonarr";
+#    };
 
 #  nixpkgs.config.allowUnsupportedSystem = true;
 
