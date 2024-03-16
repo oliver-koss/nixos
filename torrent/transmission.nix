@@ -16,7 +16,7 @@ with lib;
       download-dir = "/storage/Torrents";
       watch-dir = "/storage/Incoming";
       watch-dir-enabled = true;
-      rpc-bind-address = "200:5128:b507:a7c8:2ca3:599b:3bb:40ab";
+      rpc-bind-address = "::";
       incomplete-dir = "/storage/Downloading";
     };
   };
