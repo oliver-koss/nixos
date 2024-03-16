@@ -67,6 +67,17 @@
           ./pi.nix
         ];
       };
+
+      oliver-nuc = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
+        modules = [
+          mkg-mod.nixosModules.yggdrasil
+          mkg-mod.nixosModules.firewall-ips
+          acme.nixosModules.acme-shim
+          # > Our main nixos configuration file <
+          ./nuc.nix
+        ];
+      };
     };
 
     legacyPackages.x86_64-linux = {
