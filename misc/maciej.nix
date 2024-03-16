@@ -1,3 +1,7 @@
+{ lib, ... }:
+
+with lib;
+
 {
   users.users.maciej = {
     isNormalUser = true;

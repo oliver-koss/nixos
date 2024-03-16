@@ -10,8 +10,7 @@ with lib;
   imports =
     [ # Include the results of the hardware scan.
       ./base.nix
-      ./builder.nix
-      ./pi-apps.nix
+      ./misc/builder.nix
       ./wireguard.nix
 #      ./pat.service.nix
 #      ./status.service.nix
@@ -19,6 +18,7 @@ with lib;
       "${modulesPath}/installer/sd-card/sd-image-aarch64-new-kernel-no-zfs-installer.nix"
       ./misc/maciej.nix
       ./misc/ygg-v4.nix
+      ./pi
     ];
 
   nixpkgs.config.allowUnfree = true;
