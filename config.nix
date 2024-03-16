@@ -15,7 +15,7 @@ with lib;
       ./funk.nix
       ./wine.nix
       ./pat.service.nix
-      ./builder.nix
+      ./misc/builder.nix
       ./node_exporter.service.nix
       ./gpu.nix
       ./incus.nix

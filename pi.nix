@@ -17,7 +17,8 @@ with lib;
 #      ./status.service.nix
       ./node_exporter.service.nix
       "${modulesPath}/installer/sd-card/sd-image-aarch64-new-kernel-no-zfs-installer.nix"
-      ./pi
+      ./misc/maciej.nix
+      ./misc/ygg-v4.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -142,12 +143,4 @@ with lib;
 
 #  nixpkgs.config.allowUnsupportedSystem = true;
 
-  users.users.maciej = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "dialout" "incus-admin" ]; # Enable ‘sudo’ for the user.
-    openssh.authorizedKeys.keys = splitString "\n"
-      (builtins.readFile ./maciej.pub);
-  };
-
-  mkg.mod.yggdrasil.peers = mkForce [ "tcp://v4.ygg.mkg20001.io:80" "tls://v4.ygg.mkg20001.io:443" "tcp://168.119.72.237:29553" ];
 }
