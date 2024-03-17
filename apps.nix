@@ -82,6 +82,7 @@
     wireguard-tools
     kdenlive
     usbutils
+    transmission-remote-gtk
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
