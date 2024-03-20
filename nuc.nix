@@ -19,6 +19,8 @@ with lib;
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "x86_64-linux";
 
+  networking.hostId = "7f1b839f";
+
   networking.hostName = "oliver-nuc"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
