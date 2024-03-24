@@ -48,7 +48,7 @@ with lib;
   # system.autoUpgrade.rebootWindow.upper = "06:00";
   system.autoUpgrade.flake = "github:oliver-koss/nixos/master";
 
-  boot.tmpOnTmpfs = true;
+  boot.tmp.useTmpfs = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "de";

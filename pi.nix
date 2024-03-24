@@ -45,7 +45,7 @@ with lib;
   #   useXkbConfig = true; # use xkbOptions in tty.
   # };
 
-  boot.tmpOnTmpfs = true;
+  boot.tmp.useTmpfs = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "de";
