@@ -42,6 +42,12 @@ with lib;
   #   useXkbConfig = true; # use xkbOptions in tty.
   # };
 
+  system.autoUpgrade.enable = true;
+  # system.autoUpgrade.allowReboot = true;
+  # system.autoUpgrade.rebootWindow.lower = "04:00";
+  # system.autoUpgrade.rebootWindow.upper = "06:00";
+  system.autoUpgrade.flake = "github:oliver-koss/nixos/master";
+
   boot.tmpOnTmpfs = true;
 
   # Configure keymap in X11
