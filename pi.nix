@@ -30,6 +30,9 @@ with lib;
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
   networking.wireless.enable = mkForce false;
 
+  nix.gc.automatic = true;
+  nix.gc.options = "--delete-older-than 14d";
+
   # Set your time zone.
   time.timeZone = "Europe/Vienna";
 

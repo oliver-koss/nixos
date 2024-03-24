@@ -42,6 +42,9 @@ with lib;
   #   useXkbConfig = true; # use xkbOptions in tty.
   # };
 
+  nix.gc.automatic = true;
+  nix.gc.options = "--delete-older-than 14d";
+
   system.autoUpgrade.enable = true;
   # system.autoUpgrade.allowReboot = true;
   # system.autoUpgrade.rebootWindow.lower = "04:00";
