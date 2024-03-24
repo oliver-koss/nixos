@@ -9,6 +9,10 @@ jobs:
   update:
     strategy:
       max-parallel: 1
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
