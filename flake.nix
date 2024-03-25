@@ -73,6 +73,7 @@
         modules = [
           mkg-mod.nixosModules.yggdrasil
           mkg-mod.nixosModules.firewall-ips
+          nixos-hardware.nixosModules.common-cpu-intel
           acme.nixosModules.acme-shim
           # > Our main nixos configuration file <
           ./nuc.nix
