@@ -15,6 +15,7 @@ with lib;
       ./misc/ygg-v4.nix
       ./torrent
       ./nuc/nginx.nix
+      ./node_exporter.service.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
