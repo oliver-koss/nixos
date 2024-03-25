@@ -14,6 +14,7 @@ with lib;
       ./misc/maciej.nix
       ./misc/ygg-v4.nix
       ./torrent
+      ./nuc/nginx.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -110,4 +111,7 @@ with lib;
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
+ 
+  virtualisation.docker.enable = true;
+
 }
