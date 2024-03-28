@@ -87,11 +87,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1710690400,
-        "narHash": "sha256-DS5m5t9Z+r9YbWJGGQzjM8EzOTWF2llhKD2be+fCTb4=",
+        "lastModified": 1711560527,
+        "narHash": "sha256-Qt+4ZiN10mja1YGemVsVd6VbrwmnJIs8lcNSX6M7EOk=",
         "owner": "mkg20001",
         "repo": "mkg-mod",
-        "rev": "90c1d72b53e0b40196d6bd69ba182f7519e77344",
+        "rev": "b922ffba381de26df36107f1ef8333b215cf5e09",
         "type": "github"
       },
       "original": {
