@@ -28,7 +28,9 @@
     filezilla
     (python3.withPackages(ps: [
 #      (python3.pkgs.callPackage ./ninebot {})
+      pyserial
       ]))
+    python311Packages.pyserial
     (writeShellScriptBin "ninebot" "exec python3 -m ninebot_ble \"$@\"")
     esptool
     gparted
@@ -39,7 +41,7 @@
     gh #github CLI Tool
     openjdk8-bootstrap
     googleearth-pro
-    arduino
+    arduino-ide
     r3ctl
     tor-browser
     libglibutil
