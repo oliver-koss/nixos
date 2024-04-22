@@ -18,6 +18,7 @@
       ./asterisk
 #      ./cloudlog.nix
       ./node_exporter.service.nix
+      ./wordpress.nix
     ];
 
   virtualisation.docker.enable = true;
@@ -63,6 +64,10 @@
           scrape_interval: 5s
           static_configs:
           - targets: ['localhost:9100']
+        - job_name: 'prometheus-nuc'
+          scrape_interval: 5s
+          static_configs:
+          - targets: ['nuc.oliver-koss.at:9100']
     ";
   };
 
