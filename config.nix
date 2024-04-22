@@ -21,6 +21,8 @@ with lib;
       ./incus.nix
     ];
 
+  services.wordpress.sites."localhost" = {};
+
   systemd.services.pat.wantedBy = mkForce [];
 
   nixpkgs.config.allowUnfree = true;
@@ -189,7 +191,8 @@ with lib;
                 "pulsar-1.114.0"
                 "pulsar-1.109.0"
                 "googleearth-pro-7.3.4.8248"
-                "python-2.7.18.7"
+                "python-2.7.18.8"
+		"clion-2024.1"
               ];
 
 #kdeconnect
@@ -208,6 +211,10 @@ with lib;
           scrape_interval: 5s
           static_configs:
           - targets: ['localhost:9100']
+        - job_name: 'ESP32'
+          scrape_interval: 5s
+          static_configs:
+          - targets: ['192.168.43.31']
     ";
   };
 #  hardware.printers = {

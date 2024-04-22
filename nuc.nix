@@ -16,10 +16,13 @@ with lib;
       ./torrent
       ./nuc/nginx.nix
       ./node_exporter.service.nix
+      ./minecraft.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "x86_64-linux";
+
+  services.transmission.enable = mkForce false;
 
   networking.hostId = "7f1b839f";
 
@@ -112,7 +115,7 @@ with lib;
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
- 
+
   virtualisation.docker.enable = true;
 
 }
