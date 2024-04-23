@@ -30,25 +30,6 @@
     });
 
 
-
-
-    
-  wwp386 = (fetchTheme {
-    name = "wp386";
-    version = "1.1";
-    hash = "sha256-FLoiykImurF1YmPhuzqODIFf6isusWe46RG+VnBCAEI=";
-  });
-
-  wp386 = pkgs.stdenv.mkDerivation rec {
-    name = "wp386";
-    version = "1.1";
-    src = pkgs.fetchzip {
-      url = "https://downloads.wordpress.org/theme/wp386.1.1.zip";
-      hash = "sha256-FLoiykImurF1YmPhuzqODIFf6isusWe46RG+VnBCAEI=";
-    };
-    installPhase = "mkdir -p $out; cp -R * $out/";
-  };
-
   retro = pkgs.stdenv.mkDerivation rec {
     name = "retro";
     version = "0.6";
@@ -58,8 +39,6 @@
     };
     installPhase = "mkdir -p $out; cp -R * $out/";
   };
-
-
 
   in {
 
@@ -74,7 +53,6 @@
       sites."blog.oliver-koss.at" = {
 #        languages = [ pkgs.wordpressPackages.languages.en_GB ];
         themes = {
-          inherit wp386;
           inherit retro;
         };
           settings = {

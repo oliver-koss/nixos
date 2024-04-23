@@ -82,7 +82,6 @@
     screen
     dnsmasq
     putty
-    python2
     uucp
     ppp
     glxinfo
@@ -93,5 +92,7 @@
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
+  ]) ++ (with pkgs.gnomeExtensions; [
+    appindicator
   ]);
 }
