@@ -40,6 +40,14 @@
     installPhase = "mkdir -p $out; cp -R * $out/";
   };
 
+  smntcs-retro = (fetchTheme {
+    name = "smntcs-retro";
+    version = "43";
+    hash = "sha256-6i5ASHcXMoAK7v7G4d9nbLR5zNTceItNppHB7cB7Bgo=";
+  });
+
+
+
   in {
 
   services = {
@@ -53,7 +61,7 @@
       sites."blog.oliver-koss.at" = {
 #        languages = [ pkgs.wordpressPackages.languages.en_GB ];
         themes = {
-          inherit retro;
+          inherit smntcs-retro;
         };
           settings = {
             WPLANG = "en_GB";
