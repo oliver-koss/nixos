@@ -50,6 +50,9 @@ with lib;
     mtr
     tcpdump
     htop
+    neofetch
+    p7zip
+    ncdu
   ];
 
   services.netdata.enable = true;

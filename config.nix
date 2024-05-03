@@ -21,11 +21,12 @@ with lib;
       ./incus.nix
     ];
 
-  services.wordpress.sites."localhost" = {};
+#  services.wordpress.sites."localhost" = {};
 
   systemd.services.pat.wantedBy = mkForce [];
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowBroken = true;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -34,9 +35,9 @@ with lib;
   boot.loader.systemd-boot.netbootxyz.enable = true;
   boot.loader.systemd-boot.memtest86.enable = true;
 
-  boot.loader.systemd-boot.extraEntries."grub.conf" = ''
-    title   Grub
-    linux   /EFI/ubuntu/shimx64.efi
+  boot.loader.systemd-boot.extraEntries."windows.conf" = ''
+    title   Windows
+    linux   /EFI/Microsoft/Boot/bootmgfw.efi
   '';
 
   networking.hostName = "oliver-nix"; # Define your hostname.
@@ -83,12 +84,12 @@ with lib;
   services.xserver = {
     desktopManager.gnome.enable = true;
 #    displayManager.sddm.enable = true;
-#    desktopManager.plasma5.enable = true;
+    desktopManager.plasma5.enable = true;
   };
 
 #  services.xserver.displayManager.sddm.enable = true;
 #  services.xserver.desktopManager.plasma5.enable = true;
-#  programs.ssh.askPassword = pkgs.lib.mkForce "pkgs.plasma5.ksshaskpass.out/bin/ksshaskpass";
+  programs.ssh.askPassword = pkgs.lib.mkForce "pkgs.plasma5.ksshaskpass.out/bin/ksshaskpass";
 
   # allow building pi stuffs on laptop
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];

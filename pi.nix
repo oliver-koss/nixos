@@ -14,7 +14,7 @@ with lib;
       ./wireguard.nix
 #      ./pat.service.nix
 #      ./status.service.nix
-      ./node_exporter.service.nix
+#      ./node_exporter.service.nix
       "${modulesPath}/installer/sd-card/sd-image-aarch64-new-kernel-no-zfs-installer.nix"
       ./misc/maciej.nix
       ./misc/ygg-v4.nix
@@ -121,7 +121,7 @@ with lib;
 
   #prometheus service
     services.prometheus = {
-      enable   = true;
+      enable   = false;
       port     = 9090;
       configText = "
         global:

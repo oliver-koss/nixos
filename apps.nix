@@ -89,6 +89,8 @@
     kdenlive
     usbutils
     transmission-remote-gtk
+    gpsbabel-gui #garmin-integration
+#    zombietrackergps
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
