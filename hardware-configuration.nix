@@ -14,11 +14,6 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/944686b5-9353-44da-a12b-ec5f52ff5ec4";
-      fsType = "ext4";
-    };
-
-  fileSystems."/home" =
     { device = "/dev/disk/by-uuid/cc87ee24-f7f8-4562-83f7-81669281510d";
       fsType = "ext4";
     };
@@ -29,6 +24,8 @@
     };
 
   swapDevices = [ ];
+
+  # services.displayManager.defaultSession = "plasma-wayland";
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
