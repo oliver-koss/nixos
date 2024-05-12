@@ -146,4 +146,7 @@ with lib;
 
 #  nixpkgs.config.allowUnsupportedSystem = true;
 
+  hardware.opengl = {
+    enable = true;
+  };
 }
