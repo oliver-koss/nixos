@@ -17,7 +17,7 @@ with lib;
       ./nuc/nginx.nix
       ./node_exporter.service.nix
       ./minecraft.nix
-      ./pi/kodi.nix
+#      ./pi/kodi.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
