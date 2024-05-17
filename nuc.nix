@@ -23,7 +23,7 @@ with lib;
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "x86_64-linux";
 
-  services.transmission.enable = mkForce false;
+#  services.transmission.enable = mkForce false;
 
   networking.hostId = "7f1b839f";
 
@@ -119,4 +119,8 @@ with lib;
 
   virtualisation.docker.enable = true;
 
+  services.prometheus.exporters.fritzbox = {
+    enable = true;
+    gatewayAddress = "192.168.178.1";
+  };
 }

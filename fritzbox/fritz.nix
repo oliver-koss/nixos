@@ -4,8 +4,8 @@ with lib;
 
 {
   systemd.services.fritzbox_exporter = {
-    path = with pkgs; [fritzbox_exporter];
-    script = "HOME=$STATE_DIRECTORY fritzbox_exporter -h"; #script welches läuft
+    path = with pkgs; [fritz-exporter];
+    script = "HOME=$STATE_DIRECTORY fritzexporter -h"; #script welches läuft
     wantedBy = [ "multi-user.target"]; #Starte mit diesen Dienst, multi-user = Systemstart
     after = ["network.target"]; #Started nach diesem Dienst; requires = starte nur wenn das andere Läuft
 

@@ -96,5 +96,7 @@
     gnome-tweaks
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
+  ]) ++ (with pkgs.libsForQt5; [
+    ksshaskpass
   ]);
 }

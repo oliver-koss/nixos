@@ -11,7 +11,7 @@ in
 {
   services.nginx.enable = true;
 
-  networking.firewall.allowedTCPPorts = [ 4000 ];
+  networking.firewall.allowedTCPPorts = [ 80 443 ];
 
   services.nginx.virtualHosts = {
     "immich.oliver-koss.at" = h {
@@ -20,12 +20,4 @@ in
       };
     };
   };
-  services.nginx.virtualHosts = {
-    "dash.oliver-koss.at" = h {
-      locations."/" = {
-        proxyPass = "http://localhost:4000/";
-      };
-    };
-  };
-
 }
