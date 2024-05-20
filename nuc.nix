@@ -15,6 +15,7 @@ with lib;
       ./misc/ygg-v4.nix
       ./torrent
       ./nuc/nginx.nix
+      ./nuc/wg.nix
       ./node_exporter.service.nix
       ./minecraft.nix
 #      ./pi/kodi.nix
