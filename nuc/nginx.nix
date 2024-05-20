@@ -4,8 +4,8 @@ with lib;
 
 let
   h = a: a // {
-    enableACME = false;
-    forceSSL = false;
+    enableACME = true;
+    forceSSL = true;
   };
 in
 {
@@ -20,4 +20,14 @@ in
       };
     };
   };
+
+  services.nginx.virtualHosts = {
+    "usenet.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:8080/";
+      };
+    };
+  };
+
+
 }

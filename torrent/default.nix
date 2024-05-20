@@ -4,6 +4,7 @@
     ./rar.nix
     ./storage.nix
     ./transmission.nix
+    ./sabnzbd.nix
   ];
 
   security.acme.distributor-server = "https://acme.s.xeredo.it";
