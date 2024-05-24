@@ -44,6 +44,12 @@ in
         proxyPass = "http://localhost:9696/";
       };
     };
+
+    "jellyseerr.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:5055/";
+      };
+    };
   };
 
 }

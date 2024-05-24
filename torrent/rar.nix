@@ -8,4 +8,5 @@
   services.sonarr.enable = true;
   services.bazarr.enable = true;
   services.prowlarr.enable = true;
+  services.jellyseerr.enable = true;
 }

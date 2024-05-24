@@ -91,6 +91,7 @@
     transmission-remote-gtk
     gpsbabel-gui #garmin-integration
 #    zombietrackergps
+    gnucash
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
