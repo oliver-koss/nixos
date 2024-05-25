@@ -26,7 +26,7 @@
   systemd.network.networks."10-wan" = {
     matchConfig.Name = "ens3";
     address = [
-      "2a09:7c47:0:15::1/64"
+      "2a09:7c47:0:15::1/32"
       "45.144.31.173/24"
     ];
     routes = [
