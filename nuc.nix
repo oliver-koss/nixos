@@ -14,6 +14,7 @@ with lib;
       ./misc/maciej.nix
       ./misc/ygg-v4.nix
       ./torrent
+      ./torrent/ns.nix
       ./nuc/nginx.nix
       ./nuc/wg.nix
       ./node_exporter.service.nix

@@ -13,6 +13,7 @@
     ../misc/maciej.nix
     ../misc/ygg-v4.nix
 
+    ./wg.nix
    ];
 
   # boot.loader.grub.device = "/dev/sda";
@@ -25,7 +26,7 @@
   systemd.network.networks."10-wan" = {
     matchConfig.Name = "ens3";
     address = [
-      "2a09:7c47:0:15::1/32"
+      "2a09:7c47:0:15::1/64"
       "45.144.31.173/24"
     ];
     routes = [
@@ -38,7 +39,7 @@
   system.stateVersion = "24.11";
   nixpkgs.hostPlatform = "x86_64-linux";
   networking.useDHCP = false;
-  networking.useNetworkd = true;  
+  networking.useNetworkd = true;
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;

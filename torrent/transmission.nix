@@ -25,4 +25,6 @@ with lib;
     BindPaths = mkForce [ "/var/lib/transmission/.config/transmission-daemon" "/storage" "/run" ];
     BindReadOnlyPaths = mkForce [ "/nix/store" "/etc" ];
   };
+
+  torrentNS = [ "transmission" ];
 }
