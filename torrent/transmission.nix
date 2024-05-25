@@ -18,6 +18,8 @@ with lib;
       watch-dir-enabled = true;
       rpc-bind-address = "::";
       incomplete-dir = "/storage/Downloading";
+      speed-limit-up = 1618;
+      speed-limit-up-enabled = true;
     };
   };
 
