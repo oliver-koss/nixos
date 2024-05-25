@@ -37,5 +37,14 @@ in
     };
   };
 
+  services.nginx.virtualHosts = {
+    "yt.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:8000/";
+      };
+    };
+  };
+
+
 
 }

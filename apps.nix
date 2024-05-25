@@ -21,7 +21,7 @@
     rhythmbox
     darktable
     calibre
-    prometheus
+#    prometheus
     nextcloud-client
     gimp
     geogebra6
@@ -45,13 +45,13 @@
     arduino-ide #new IDE
     arduino #old IDE
     r3ctl
-    tor-browser
+ #   tor-browser
     libglibutil
     stdenv
     poetry
     discord
     nanovna-saver
-    minetest
+ #   minetest
     viking
     marble
     ncdu
@@ -62,7 +62,7 @@
     jetbrains.clion
 
     jetbrains.pycharm-community
-    jetbrains-toolbox
+#    jetbrains-toolbox
     twinkle
     vlc
     gst_all_1.gstreamer
@@ -92,6 +92,7 @@
     gpsbabel-gui #garmin-integration
 #    zombietrackergps
     gnucash
+    lutris
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
