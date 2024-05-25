@@ -74,6 +74,7 @@
     		type nat hook prerouting priority dstnat; policy accept;
         ip daddr 45.144.31.173 tcp dport { 80, 443, 9091, 51413 } dnat to 10.7.0.2
         ip daddr 45.144.31.173 udp dport { 443, 51413 } dnat to 10.7.0.2
+        ip6 daddr 2a09:7c47:0:15::1 udp dport { 443, 51413 } dnat to 2a09:7c47:0:15::2
     	}
     '';
   };
