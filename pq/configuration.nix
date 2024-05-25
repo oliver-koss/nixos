@@ -39,4 +39,10 @@
   nixpkgs.hostPlatform = "x86_64-linux";
   networking.useDHCP = false;
   networking.useNetworkd = true;  
+
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.rebootWindow.lower = "04:00";
+  system.autoUpgrade.rebootWindow.upper = "06:00";
+  system.autoUpgrade.flake = "github:oliver-koss/nixos/master";
 }
