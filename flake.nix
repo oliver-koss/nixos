@@ -20,6 +20,9 @@
     acme.url = "git+https://git.xeredo.it/xeredo/nixdeploy/acme-distributor";
     acme.inputs.nixpkgs.follows = "nixpkgs";
 
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
+
     # TODO: Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
 
@@ -77,6 +80,18 @@
           acme.nixosModules.acme-shim
           # > Our main nixos configuration file <
           ./nuc.nix
+        ];
+      };
+
+      pq-vpn = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
+        modules = [
+          mkg-mod.nixosModules.yggdrasil
+          mkg-mod.nixosModules.firewall-ips
+          nixos-hardware.nixosModules.common-cpu-intel
+          acme.nixosModules.acme-shim
+          # > Our main nixos configuration file <
+          ./pq/configuration.nix
         ];
       };
     };
