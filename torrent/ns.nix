@@ -15,6 +15,8 @@ in {
         RemainAfterExit = true;
         ExecStart = "${ns} up";
         ExecStop = "${ns} down";
+        RestartSec = 30;
+        Restart = "always";
       };
 
       path = with pkgs; [
