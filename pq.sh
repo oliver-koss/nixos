@@ -2,4 +2,4 @@
 
 set -euxo pipefail
 
-nixos-rebuild --flake .#pq-vpn --use-substitutes --target-host 45.144.31.173 --use-remote-sudo switch
+nixos-rebuild --flake .#pq-vpn --use-substitutes --target-host pq.furrytel.me --use-remote-sudo switch

@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set -euo pipefail
+
 case "$1" in
   up)
     ip netns add tz
