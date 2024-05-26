@@ -125,4 +125,5 @@ with lib;
     enable = true;
     gatewayAddress = "192.168.178.1";
   };
+  hardware.enableRedistributableFirmware = true;
 }

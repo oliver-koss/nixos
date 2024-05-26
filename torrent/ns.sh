@@ -4,6 +4,9 @@ set -euo pipefail
 
 case "$1" in
   up)
+    ip l d tzouter || true
+    ip netns delete tz || true
+
     ip netns add tz
     ip link add dev tzouter type veth peer name tzinner netns tz
       ip a a fd07::1/64 dev tzouter
