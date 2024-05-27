@@ -93,6 +93,7 @@
 #    zombietrackergps
     gnucash
     lutris
+    jellyfin-media-player
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
