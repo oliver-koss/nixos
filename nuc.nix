@@ -34,7 +34,7 @@ with lib;
 
   services.docuum = {
     enable = true;
-    threshold = "6 GB";
+    threshold = "10 GB";
   };
 
 #  services.transmission.enable = mkForce false;
