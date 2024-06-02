@@ -32,6 +32,11 @@ with lib;
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "x86_64-linux";
 
+  services.docuum = {
+    enable = true;
+    threshold = "2 GB";
+  };
+
 #  services.transmission.enable = mkForce false;
 
   networking.hostId = "7f1b839f";
