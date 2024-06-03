@@ -3,6 +3,7 @@
     enable = true;
     openFirewall = true;
   };
+  systemd.services.jellyfin.serviceConfig.SupplementaryGroups = [ "sabnzbd" ];
 
   services.radarr.enable = true;
   services.sonarr.enable = true;

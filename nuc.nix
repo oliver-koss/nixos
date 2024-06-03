@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running `nixos-help`).
 
-{ config, pkgs, lib, modulesPath, ... }:
+{ inputs, config, pkgs, lib, modulesPath, ... }:
 
 with lib;
 
@@ -20,10 +20,22 @@ with lib;
       ./node_exporter.service.nix
       ./minecraft.nix
 #      ./pi/kodi.nix
+
+    inputs.disko.nixosModules.disko
+    ./nuc/disko.nix
+    ({
+      _module.args.disks = [ "/dev/disk/by-id/ata-Intenso_SSD_Sata_III_2022042201044" ];
+    })
+
     ];
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = "x86_64-linux";
+
+  services.docuum = {
+    enable = true;
+    threshold = "10 GB";
+  };
 
 #  services.transmission.enable = mkForce false;
 
