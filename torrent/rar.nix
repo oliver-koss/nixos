@@ -10,4 +10,6 @@
   services.bazarr.enable = true;
   services.prowlarr.enable = true;
   services.jellyseerr.enable = true;
+  services.readarr.enable = true;
+  services.lidarr.enable = true;
 }

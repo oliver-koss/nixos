@@ -50,6 +50,18 @@ in
         proxyPass = "http://localhost:5055/";
       };
     };
+
+    "readarr.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:8787/";
+      };
+    };
+
+    "lidarr.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:8686/";
+      };
+    };
   };
 
 }
