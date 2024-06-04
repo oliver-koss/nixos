@@ -2,8 +2,10 @@
 
 {
   environment.systemPackages = with pkgs; [
-    wine64
+    wineWowPackages.stable
+#    wine64
     winetricks
-    (wine.override { wineBuild = "wine64"; })
+    protonup-qt
+#    (wine.override { wineBuild = "wine64"; })
   ];
 }
