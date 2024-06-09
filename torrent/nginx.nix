@@ -21,6 +21,12 @@ in
       };
     };
 
+    "transmission.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://10.0.7.2:9091/";
+      };
+    };
+
     "radarr.oliver-koss.at" = h {
       locations."/" = {
         proxyPass = "http://localhost:7878/";
