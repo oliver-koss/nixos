@@ -10,7 +10,8 @@
     "net.ipv6.conf.all.proxy_ndp" = "1";
   };
 
-  networking.firewall.allowedUDPPorts = [ 1111 ];
+  networking.firewall.allowedUDPPorts = [ 1111 51413 ];
+  networking.firewall.allowedTCPPorts = [ 51413 ];
   networking.firewall.trustedInterfaces = [ "wg0" ];
   networking.firewall.filterForward = true;
   networking.firewall.extraForwardRules = ''
@@ -71,11 +72,11 @@
       }
 
       chain PREROUTING {
-    		type nat hook prerouting priority dstnat; policy accept;
-        ip daddr 45.144.31.173 tcp dport { 80, 443, 51413 } dnat to 10.7.0.2
-        ip daddr 45.144.31.173 udp dport { 443, 51413 } dnat to 10.7.0.2
-        ip6 daddr 2a09:7c47:0:15::1 udp dport { 443, 51413 } dnat to 2a09:7c47:0:15::2
-    	}
+        type nat hook prerouting priority dstnat; policy accept;
+        ip daddr 45.144.31.173 tcp dport { 51413 } dnat to 10.7.0.2
+        ip daddr 45.144.31.173 udp dport { 51413 } dnat to 10.7.0.2
+        ip6 daddr 2a09:7c47:0:15::1 udp dport { 51413 } dnat to 2a09:7c47:0:15::2
+      }
     '';
   };
 
