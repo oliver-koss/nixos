@@ -11,6 +11,13 @@
               size = "1M";
               type = "EF02"; # for grub MBR
             };
+            swap = {
+              size = "2G";
+              content = {
+                type = "swap";
+                discardPolicy = "both";
+              };
+            };
             root = {
               size = "100%";
               content = {
