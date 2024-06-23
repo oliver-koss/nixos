@@ -45,6 +45,11 @@ in
     };
   };
 
-
-
+  services.nginx.virtualHosts = {
+    "tubearch.mkg20001.io" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:8333/";
+      };
+    };
+  };
 }
