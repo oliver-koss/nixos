@@ -20,7 +20,7 @@
               size = "100%";
               content = {
                 type = "zfs";
-                pool = "zroot";
+                pool = "rtorrent";
               };
             };
           };
@@ -28,7 +28,7 @@
       };
     };
     zpool = {
-      zroot = {
+      rtorrent = {
         type = "zpool";
         options = {
           autotrim = "on";
@@ -51,7 +51,7 @@
             type = "zfs_fs";
             mountpoint = "/";
             options.mountpoint = "legacy";
-            # postCreateHook = "zfs snapshot zroot/root@blank";
+            # postCreateHook = "zfs snapshot rtorrent/root@blank";
           };
           nix = {
             type = "zfs_fs";
@@ -67,7 +67,7 @@
             type = "zfs_fs";
             options.mountpoint = "legacy";
             mountpoint = "/home";
-           # postCreateHook = "zfs snapshot zroot/home@blank";
+           # postCreateHook = "zfs snapshot rtorrent/home@blank";
           };
           incus = {
             type = "zfs_fs";
