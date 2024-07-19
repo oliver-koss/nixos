@@ -21,7 +21,7 @@ with lib;
       ./incus.nix
     ];
 
-#  services.wordpress.sites."localhost" = {};
+  services.wordpress.sites."kai" = {};
 
   systemd.services.pat.wantedBy = mkForce [];
 
@@ -195,6 +195,9 @@ with lib;
                 "googleearth-pro-7.3.4.8248"
                 "python-2.7.18.8"
 		"clion-2024.1"
+                "python3.12-youtube-dl-2021.12.17"
+                "temurin-bin-20.0.2"
+                "googleearth-pro-7.3.6.9796"
               ];
 
 #kdeconnect
@@ -234,5 +237,7 @@ with lib;
   networking.firewall.allowedTCPPorts =  [ 5060 5062 ];
 
   virtualisation.docker.enable = true;
+
+  services.pcscd.enable = true;
 
 }

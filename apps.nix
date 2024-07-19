@@ -94,6 +94,8 @@
     gnucash
     lutris
     jellyfin-media-player
+    yubioath-flutter
+    android-tools
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
