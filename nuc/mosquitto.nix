@@ -12,4 +12,8 @@
       }
     ];
   };
+ 
+  networking.firewall.extraInputRules = ''
+    ip src 192.168.178.0/24 tcp dport 1883 allow
+  '';
 }
