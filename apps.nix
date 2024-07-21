@@ -96,6 +96,7 @@
     jellyfin-media-player
     yubioath-flutter
     android-tools
+    chirp
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks
