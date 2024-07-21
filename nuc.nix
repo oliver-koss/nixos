@@ -20,6 +20,7 @@ with lib;
       ./node_exporter.service.nix
       ./minecraft.nix
 #      ./pi/kodi.nix
+      ./nuc
 
     inputs.disko.nixosModules.disko
     ./nuc/disko.nix
