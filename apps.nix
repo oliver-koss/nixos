@@ -97,6 +97,7 @@
     yubioath-flutter
     android-tools
     chirp
+    mqttui
   ]) ++ (with pkgs.gnome; [
     gnome-disk-utility
     gnome-tweaks

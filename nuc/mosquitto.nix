@@ -14,6 +14,6 @@
   };
  
   networking.firewall.extraInputRules = ''
-    ip src 192.168.178.0/24 tcp dport 1883 allow
+    ip saddr { 192.168.178.0/24, 172.17.0.0/16 } tcp dport 1883 accept
   '';
 }
