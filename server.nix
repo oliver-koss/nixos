@@ -67,7 +67,12 @@
         - job_name: 'prometheus-nuc'
           scrape_interval: 5s
           static_configs:
-          - targets: ['nuc.oliver-koss.at:9100']
+          - targets: ['nuc.ygg.oliver-koss.at:9100']
+        - job_name: 'tasmota-maciej'
+          scrape_interval: 5s
+          static_configs:
+          - targets: ['nuc.ygg.oliver-koss.at:9092']
+
     ";
   };
 
