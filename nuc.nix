@@ -133,6 +133,10 @@ with lib;
 
   virtualisation.docker.enable = true;
 
+  environment.systemPackages = with pkgs; [
+    yt-dlp
+  ];
+
   services.prometheus.exporters.fritzbox = {
     enable = true;
     gatewayAddress = "192.168.178.1";

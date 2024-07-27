@@ -11,5 +11,16 @@
     docker-compose
     asterisk
     cloudlog
+    nload
+    wget
+    iftop
+    iotop
   ]);
+
+  programs.htop = {
+    enable = true;
+    settings = {
+      hide_userland_threads = true;
+    };
+  };
 }
