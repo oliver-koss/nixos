@@ -156,6 +156,7 @@ with lib;
     gedit
     pulsar
     yaru-theme
+    networkmanagerapplet
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
