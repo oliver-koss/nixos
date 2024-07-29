@@ -19,6 +19,7 @@
 #      ./cloudlog.nix
       ./node_exporter.service.nix
       ./wordpress.nix
+      ./misc/maciej.nix
     ];
 
   virtualisation.docker.enable = true;
