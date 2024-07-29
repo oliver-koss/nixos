@@ -8,7 +8,10 @@ with lib;
       "panel.oliver-koss.at" = {
         enableACME = true;
         forceSSL = true;
-        locations."/".proxyPass = "http://localhost:8080";
+        locations."/" = {
+          proxyPass = "http://localhost:8080";
+          proxyWebsockets = true;
+        };
       };
     };
 
