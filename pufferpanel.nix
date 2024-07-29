@@ -32,7 +32,10 @@ in
       };
     };
 
-    systemd.services.pufferpanel.path = javaBin;
+    systemd.services.pufferpanel = {
+      path = javaBin;
+      restartIfChanged = false;
+    };
 
     # not necesairly required
     systemd.tmpfiles.rules = [
