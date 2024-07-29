@@ -52,4 +52,14 @@ in
       };
     };
   };
+
+  services.nginx.virtualHosts = {
+    "panel.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:10000/";
+      };
+    };
+  };
+
+
 }

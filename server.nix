@@ -14,7 +14,7 @@
       ./admin-pw.nix
       ./nextcloud.nix
       ./server-apps.nix
-      ./pufferpanel.nix
+#      ./pufferpanel.nix
       ./asterisk
 #      ./cloudlog.nix
       ./node_exporter.service.nix
