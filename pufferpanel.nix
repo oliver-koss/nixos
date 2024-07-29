@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 
 with lib;
 
@@ -33,6 +33,11 @@ in
     };
 
     systemd.services.pufferpanel.path = javaBin;
+
+    # not necesairly required
+    systemd.tmpfiles.rules = [
+      "L /pufferpath - - - - ${pkgs.symlinkJoin { name = "pufferpath"; paths = config.systemd.services.pufferpanel.path; }}"
+    ];
 
     networking.firewall.allowedTCPPorts =  [ 8080 443 ];
   };
