@@ -56,6 +56,7 @@ with lib;
     neofetch
     p7zip
     ncdu
+    rsync
   ];
 
   services.netdata.enable = true;
