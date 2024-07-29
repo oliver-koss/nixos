@@ -191,6 +191,7 @@ with lib;
                 "pulsar-1.114.0"
                 "pulsar-1.109.0"
                 "pulsar-1.117.0"
+                "pulsar-1.119.0"
                 "googleearth-pro-7.3.4.8248"
                 "python-2.7.18.8"
 		"clion-2024.1"
