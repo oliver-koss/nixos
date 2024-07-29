@@ -40,5 +40,6 @@ in
     ];
 
     networking.firewall.allowedTCPPorts =  [ 8080 443 ];
+    networking.firewall.allowedTCPPortRanges = [ { from = 25000; to = 26000; } ];
   };
 }
