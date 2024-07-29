@@ -1,6 +1,6 @@
 {
   imports = [
     ./mosquitto.nix
-    ./pufferpanel.nix
+#    ./pufferpanel.nix
   ];
 }
