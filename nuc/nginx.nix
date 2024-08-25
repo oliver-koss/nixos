@@ -26,6 +26,9 @@ in
       locations."/" = {
         proxyPass = "http://localhost:2283/";
       };
+      extraConfig = ''
+        client_max_body_size 100g;
+      '';
     };
   };
 
