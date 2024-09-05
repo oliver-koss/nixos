@@ -21,7 +21,7 @@ with lib;
       ./incus.nix
     ];
 
-  services.wordpress.sites."kai" = {};
+#  services.wordpress.sites."kai" = {};
 
   systemd.services.pat.wantedBy = mkForce [];
 
@@ -60,17 +60,23 @@ with lib;
   #   useXkbConfig = true; # use xkbOptions in tty.
   # };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm = {
-    enable = true;
-    wayland = true;
-  };
-
   virtualisation.incus.enable = true;
   virtualisation.incus.ui.enable = true;
 
-  services.xserver.videoDrivers = ["nvidia"];
+
+  # Enable the X11 windowing system.
+  services.xserver = {
+    enable = true;
+    videoDrivers = ["nvidia"];
+  };
+
+  services.desktopManager.plasma6.enable = true;
+
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
+
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
@@ -80,15 +86,6 @@ with lib;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-
-  services.xserver = {
-    desktopManager.gnome.enable = true;
-#    displayManager.sddm.enable = true;
-    desktopManager.plasma5.enable = true;
-  };
-
-#  services.xserver.displayManager.sddm.enable = true;
-#  services.xserver.desktopManager.plasma5.enable = true;
   programs.ssh.askPassword = pkgs.lib.mkForce "pkgs.plasma5.ksshaskpass.out/bin/ksshaskpass";
 
   # allow building pi stuffs on laptop
@@ -193,6 +190,7 @@ with lib;
                 "pulsar-1.109.0"
                 "pulsar-1.117.0"
                 "pulsar-1.119.0"
+                "pulsar-1.120.0"
                 "googleearth-pro-7.3.4.8248"
                 "python-2.7.18.8"
 		"clion-2024.1"

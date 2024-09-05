@@ -96,14 +96,16 @@
     jellyfin-media-player
     yubioath-flutter
     android-tools
-    chirp
+#    chirp
     mqttui
-  ]) ++ (with pkgs.gnome; [
+    eza
     gnome-disk-utility
     gnome-tweaks
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [
     ksshaskpass
+  ]) ++ (with pkgs.kdePackages; [
+    qtwebengine
   ]);
 }
