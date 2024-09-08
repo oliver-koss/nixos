@@ -57,7 +57,14 @@ with lib;
     p7zip
     ncdu
     rsync
+
+    #alias
+    eza
   ];
+
+  programs.bash.shellAliases = {
+    "l" = "eza -l --icons";
+  };
 
   services.netdata.enable = true;
 }

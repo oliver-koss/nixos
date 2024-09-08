@@ -98,7 +98,6 @@
     android-tools
 #    chirp
     mqttui
-    eza
     gnome-disk-utility
     gnome-tweaks
   ]) ++ (with pkgs.gnomeExtensions; [
