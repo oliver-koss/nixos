@@ -100,6 +100,7 @@
     mqttui
     gnome-disk-utility
     gnome-tweaks
+    aegis-cli
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [
