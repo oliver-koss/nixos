@@ -5,4 +5,5 @@ final: prev: {
   m365py = prev.callPackage ./m365py.nix {};
   jdownloader = prev.callPackage ./jdownloader {};
   fritzbox-exporter = prev.callPackage ./fritzbox {};
+  aegis-cli = prev.callPackage ./aegis-cli {};
 }
