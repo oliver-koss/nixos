@@ -75,7 +75,7 @@
     helvum
     pavucontrol
     pulsemixer
-    transmission-gtk
+    transmission_3-gtk
     rpi-imager #raspberry pi imager
     ffmpeg
 #    fritzbox-exporter
@@ -101,6 +101,7 @@
     gnome-disk-utility
     gnome-tweaks
     aegis-cli
+    pan
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [

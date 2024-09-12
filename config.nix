@@ -75,7 +75,15 @@ with lib;
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
+#    theme = "reactionary";
   };
+
+#  services.xserver.displayManager.sddm.settings = {
+#    Theme = {
+#      Current = "reactionary";
+#      ThemeDir = "/home/oliver/.config/themes";
+#    };
+#  };
 
   hardware.nvidia = {
     modesetting.enable = true;
@@ -91,7 +99,7 @@ with lib;
   # allow building pi stuffs on laptop
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+  environment.plasma6.excludePackages = with pkgs.libsForQt5; [
    elisa
    gwenview
    okular
@@ -221,6 +229,9 @@ with lib;
           - targets: ['192.168.43.31']
     ";
   };
+
+  services.sabnzbd.enable = true;
+
 #  hardware.printers = {
 #  ensurePrinters = [
 #    {

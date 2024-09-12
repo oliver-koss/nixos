@@ -6,4 +6,5 @@ final: prev: {
   jdownloader = prev.callPackage ./jdownloader {};
   fritzbox-exporter = prev.callPackage ./fritzbox {};
   aegis-cli = prev.callPackage ./aegis-cli {};
+  reactionary = prev.callPackage ./apps/reactionary {};
 }
