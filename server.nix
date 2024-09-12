@@ -20,6 +20,7 @@
       ./node_exporter.service.nix
       ./wordpress.nix
       ./misc/maciej.nix
+      ./server
     ];
 
   virtualisation.docker.enable = true;
