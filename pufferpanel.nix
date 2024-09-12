@@ -3,8 +3,16 @@
 with lib;
 
 let
-  javaDrv = filterAttrs (n: p: (match "jdk[0-9]+" n != null) && !p.meta.insecure) pkgs;
-  javaBin = mapAttrsToList (name_: p: let 
+/*
+javaDrv = filterAttrs (n: p: (match "jdk[0-9]+" n != null) && let
+  res = builtins.tryEval (!p.meta.insecure);
+in res.success and res.value) pkgs;
+*/
+  javaDrv = filterAttrs (n: p: let
+    res = builtins.tryEval ((match "jdk[0-9]+" n != null) && !p.meta.insecure);
+  in
+    res.success and res.value) pkgs;
+  javaBin = mapAttrsToList (name_: p: let
     name = replaceStrings [ "jdk" ] [ "java" ] name_;
   in pkgs.runCommand name {} ''
     mkdir -p $out/bin
