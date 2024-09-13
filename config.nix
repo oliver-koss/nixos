@@ -253,5 +253,6 @@ with lib;
   networking.hosts = {
     "116.204.196.240" = [ "watch.oliver-koss.at" "nuc.oliver-koss.at" ];"2a02:1748:dd4e:2040::afaf" = [ "watch.oliver-koss.at" "nuc.oliver-koss.at" ];
   };
+  services.jellyfin.enable = true;
 
 }
