@@ -1,3 +1,3 @@
 {
-  services.enable.calibre-web = true;
+  services.calibre-web.enable = true;
 }
