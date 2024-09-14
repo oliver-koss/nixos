@@ -2,6 +2,6 @@
   imports = [
     ./mosquitto.nix
 #    ./pufferpanel.nix
-    ./calibre-web.nix
+#    ./calibre-web.nix
   ];
 }
