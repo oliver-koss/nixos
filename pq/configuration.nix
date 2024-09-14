@@ -46,4 +46,7 @@
   system.autoUpgrade.rebootWindow.lower = "04:00";
   system.autoUpgrade.rebootWindow.upper = "06:00";
   system.autoUpgrade.flake = "github:oliver-koss/nixos/master";
+
+  # maybe fix disk stuff
+  services.journald.storage = "volatile";
 }
