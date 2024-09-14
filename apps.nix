@@ -102,6 +102,7 @@
     gnome-tweaks
     aegis-cli
     pan
+    python3
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [

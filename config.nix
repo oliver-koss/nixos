@@ -19,6 +19,7 @@ with lib;
       ./node_exporter.service.nix
       ./gpu.nix
       ./incus.nix
+#      ./backup-rar.nix
     ];
 
 #  services.wordpress.sites."kai" = {};
@@ -230,7 +231,6 @@ with lib;
     ";
   };
 
-  services.sabnzbd.enable = true;
 
 #  hardware.printers = {
 #  ensurePrinters = [
@@ -253,6 +253,5 @@ with lib;
   networking.hosts = {
     "116.204.196.240" = [ "watch.oliver-koss.at" "nuc.oliver-koss.at" ];"2a02:1748:dd4e:2040::afaf" = [ "watch.oliver-koss.at" "nuc.oliver-koss.at" ];
   };
-  services.jellyfin.enable = true;
 
 }
