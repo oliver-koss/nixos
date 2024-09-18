@@ -135,6 +135,7 @@ with lib;
 
   environment.systemPackages = with pkgs; [
     yt-dlp
+    calibre
   ];
 
   services.prometheus.exporters.fritzbox = {

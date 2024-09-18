@@ -65,11 +65,20 @@ in
   };
 
   services.nginx.virtualHosts = {
+    "read.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:5000/";
+      };
+    };
+  };
+
+  services.nginx.virtualHosts = {
     "calibre.oliver-koss.at" = h {
       locations."/" = {
         proxyPass = "http://localhost:8083/";
       };
     };
   };
+
 
 }

@@ -103,6 +103,7 @@
     aegis-cli
     pan
     python3
+    foliate
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [
