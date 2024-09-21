@@ -68,15 +68,15 @@
       chain POSTROUTING {
         type nat hook postrouting priority srcnat; policy accept;
         ip saddr 10.7.0.0/24 oifname "e*" masquerade
-        ip6 saddr 2a09:7c47:0:15::/64 ip6 saddr != 2a09:7c47:0:15::1 oifname "e*" masquerade
+        # ip6 saddr 2a09:7c47:0:15::/64 ip6 saddr != 2a09:7c47:0:15::1 oifname "e*" masquerade
       }
 
       chain PREROUTING {
         type nat hook prerouting priority dstnat; policy accept;
         ip daddr 45.144.31.173 tcp dport { 51413 } dnat to 10.7.0.2
         ip daddr 45.144.31.173 udp dport { 51413 } dnat to 10.7.0.2
-        ip6 daddr 2a09:7c47:0:15::1 tcp dport { 51413 } dnat to 2a09:7c47:0:15::2
-        ip6 daddr 2a09:7c47:0:15::1 udp dport { 51413 } dnat to 2a09:7c47:0:15::2
+        # ip6 daddr 2a09:7c47:0:15::1 tcp dport { 51413 } dnat to 2a09:7c47:0:15::2
+        # ip6 daddr 2a09:7c47:0:15::1 udp dport { 51413 } dnat to 2a09:7c47:0:15::2
       }
     '';
   };
