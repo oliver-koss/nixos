@@ -10,6 +10,10 @@ in {
   };
 
   config = mkMerge [ {
+    boot.kernel.sysctl = {
+      "net.ipv6.conf.all.forwarding" = true;
+    };
+
     systemd.services.ns = {
       serviceConfig = {
         RemainAfterExit = true;
@@ -35,7 +39,7 @@ in {
       	chain POSTROUTING {
       		type nat hook postrouting priority srcnat; policy accept;
           ip saddr 10.0.7.0/24 oifname "e*" masquerade
-      		ip6 saddr fd07::/24 oifname "e*" masquerade
+      		ip6 saddr fd07::/64 oifname "e*" masquerade
       	}
       '';
     };
