@@ -52,6 +52,7 @@ in {
   } {
     systemd.services = genAttrs config.torrentNS (_: {
       requires = [ "ns.service" ];
+      after = [ "ns.service" ];
       serviceConfig.NetworkNamespacePath = "/var/run/netns/tz";
     });
   } ];

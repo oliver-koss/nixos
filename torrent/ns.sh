@@ -1,9 +1,9 @@
 #! /bin/sh
 
-set -euo pipefail
+set -euxo pipefail
 
 n() {
-  n "$1"
+  ip netns exec tz /bin/sh -c "$1"
 }
 
 case "$1" in
