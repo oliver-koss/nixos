@@ -17,7 +17,7 @@ in {
     systemd.services.ns = {
       serviceConfig = {
         RemainAfterExit = true;
-        ExecPreStart = "${ns} up";
+        ExecStartPre = "${ns} up";
         ExecStart = "${pkgs.coreutils}/bin/true";
         ExecStop = "${ns} down";
         RestartSec = 30;
