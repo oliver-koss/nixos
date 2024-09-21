@@ -133,6 +133,24 @@ with lib;
 
   virtualisation.docker.enable = true;
 
+  systemd.services.docker-iptables-fix = {
+    path = with pkgs; [ iptables-nftables-compat ];
+    requires = [ "docker.service" ];
+    wantedBy = [ "multi-user.target" ];
+    after = [ "network.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+    };
+    script = ''
+      for i in $(seq 1 100); do
+        sleep 2s
+        iptables -P FORWARD ACCEPT
+        ip6tables -P FORWARD ACCEPT
+      done
+    '';
+  };
+
   environment.systemPackages = with pkgs; [
     yt-dlp
     calibre
