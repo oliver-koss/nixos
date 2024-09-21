@@ -26,8 +26,9 @@ case "$1" in
       # n "ip r a dev tzinner default via 10.0.7.1"
       # n "ip -6 r a dev tzinner default via fd07::1"
       n "ip r a dev tzinner 192.168.178.1 via 10.0.7.1"
-      n "ip -6 r a dev tzinner fd83:e647:3f34:0::/64 via fd07::1"
-      n "ip -6 r a dev tzinner 2a09:7c47:0:15::1 via fd07::1"
+      n "ip -6 r a dev tzinner fd83:e647:3f34:0::/64 via fd07::1" # local
+      n "ip -6 r a dev tzinner 2a02:1748:dd4e:2040::/60 via fd07::1" # local
+      n "ip -6 r a dev tzinner 2a09:7c47:0:15::1 via fd07::1" # pq
 
     n "ip a a 127.0.0.1/8 dev lo"
       n "ip a a ::1/128 dev lo"
