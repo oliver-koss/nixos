@@ -57,6 +57,8 @@ with lib;
     p7zip
     ncdu
     rsync
+    wget
+    dua
 
     #alias
     eza
