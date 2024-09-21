@@ -19,6 +19,7 @@ case "$1" in
       ip netns exec tz /bin/sh -c "ip r a dev tzinner default via 10.0.7.1"
       ip netns exec tz /bin/sh -c "ip -6 r a dev tzinner default via fd07::1"
       ip netns exec tz /bin/sh -c "ip r a dev tzinner 192.168.178.1 via 10.0.7.1"
+      ip netns exec tz /bin/sh -c "ip -6 r a dev tzinner fd83:e647:3f34:0::/64 via fd07::1"
 
     ip netns exec tz /bin/sh -c "ip a a 127.0.0.1/8 dev lo"
       ip netns exec tz /bin/sh -c "ip a a ::1/128 dev lo"
