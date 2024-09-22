@@ -49,14 +49,19 @@
           allowedIPs = [ "10.7.0.2/32" "2a09:7c47:0:15::2/128" ];
         }
         {
-          # mkg
+          # m
           publicKey = "xtzVc6vqJy4rx/ZY9uvCwDX/ftwPuC53lA9qvwT1KBs=";
           allowedIPs = [ "10.7.0.3/32" "2a09:7c47:0:15::3/128" ];
         }
         {
-          # oli
+          # o
           publicKey = "hP5+a0KfPBT77JlIkrK352fxOe6QHQ82g2TH+I7/kyk=";
           allowedIPs = [ "10.7.0.4/32" "2a09:7c47:0:15::4/128" ];
+        }
+        {
+          # n
+          publicKey = "LZ/QSVEznNXicc1yrcNDtphpugUKOQahLEL3u7mXiTU=";
+          allowedIPs = [ "10.7.0.5/32" "2a09:7c47:0:15::5/128" ];
         }
       ];
     };
