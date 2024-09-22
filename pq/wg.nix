@@ -83,5 +83,17 @@
     '';
   };
 
+  services.resolved.extraConfig = ''
+    DNSStubListenerExtra=10.7.0.1
+    DNSStubListenerExtra=2a09:7c47:0:15::1
+  '';
+
+  networking.firewall.extraInputRules = ''
+    ip saddr 10.7.0.0/24 tcp dport 53 accept
+    ip saddr 10.7.0.0/24 udp dport 53 accept
+    ip6 saddr 2a09:7c47:0:15::/64 tcp dport 53 accept
+    ip6 saddr 2a09:7c47:0:15::/64 udp dport 53 accept
+  '';
+
   environment.systemPackages = with pkgs; [ ipcalc ];
 }

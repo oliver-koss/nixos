@@ -1,10 +1,5 @@
 { config, pkgs, lib, ... }: with lib; let
   ns = pkgs.writeShellScript "ns" (builtins.readFile ./ns.sh);
-  resolv = pkgs.writeText "resolv.conf" ''
-    nameserver 2a09:7c47:0:15::1
-    nameserver 10.7.0.1
-    options edns0
-  '';
 in {
   options = {
     torrentNS = mkOption {
@@ -15,6 +10,10 @@ in {
   };
 
   config = mkMerge [ {
+    boot.kernel.sysctl = {
+      "net.ipv6.conf.all.forwarding" = true;
+    };
+
     systemd.services.ns = {
       serviceConfig = {
         RemainAfterExit = true;
@@ -35,18 +34,26 @@ in {
       after = [ "network.target" ];
     };
 
+    networking.nftables.tables.tznat = {
+      family = "inet";
+      content = ''
+      	chain POSTROUTING {
+      		type nat hook postrouting priority srcnat; policy accept;
+          ip saddr 10.0.7.0/24 oifname "e*" masquerade
+      		ip6 saddr fd07::/64 oifname "e*" masquerade
+      	}
+      '';
+    };
+
     environment.systemPackages = with pkgs; [
       ipcalc
       wireguard-tools
     ];
-
-    system.build.torrentNSResolv = resolv;
   } {
     systemd.services = genAttrs config.torrentNS (_: {
       requires = [ "ns.service" ];
       after = [ "ns.service" ];
       serviceConfig.NetworkNamespacePath = "/var/run/netns/tz";
-      serviceConfig.BindReadOnlyPaths = [ "${resolv}:/etc/resolv.conf" ];
     });
   } ];
 }
