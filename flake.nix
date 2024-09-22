@@ -102,6 +102,16 @@
         constituents = map (c: c.config.system.build.toplevel) (builtins.attrValues nixosConfigurations);
       };
     };
+
+    packages.x86_64-linux = {
+      pq-iso = (nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
+        modules = [
+          ./iso.nix
+          ./pq/base.nix
+        ];
+      }).config.system.build.isoImage;
+    };
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
  #   homeConfigurations = {
