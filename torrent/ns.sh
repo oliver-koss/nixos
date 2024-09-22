@@ -33,6 +33,8 @@ case "$1" in
     n "ip a a 127.0.0.1/8 dev lo"
       n "ip a a ::1/128 dev lo"
 
+# TODO: create wg interface in main ns and move to tz ns
+# ref: https://www.wireguard.com/netns/#the-new-namespace-solution
     n "wg-quick up /var/pq.conf"
 	;;
   down)
