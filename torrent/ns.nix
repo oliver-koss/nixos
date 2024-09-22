@@ -38,6 +38,9 @@ in {
     environment.systemPackages = with pkgs; [
       ipcalc
       wireguard-tools
+      # debug
+      iptraf-ng
+      tcpdump
     ];
 
     system.build.torrentNSResolv = resolv;

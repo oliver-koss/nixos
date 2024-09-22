@@ -59,6 +59,7 @@ with lib;
     rsync
     wget
     dua
+    dig
 
     #alias
     eza
