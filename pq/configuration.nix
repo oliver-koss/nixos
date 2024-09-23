@@ -1,4 +1,7 @@
-{ inputs, modulesPath, ... }:
+{ inputs, modulesPath, lib, ... }:
+
+with lib;
+
 {
   imports = [
     (modulesPath + "/profiles/qemu-guest.nix")
@@ -21,6 +24,8 @@
   boot.initrd.kernelModules = [ "nvme" ];
 
   boot.tmp.cleanOnBoot = true;
+
+  services.netdata.enable = mkForce false;
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;

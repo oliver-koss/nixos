@@ -30,5 +30,16 @@
         };
       };
     };
+
+    nodev = {
+      "/var/log" = {
+        fsType = "tmpfs";
+        mountOptions = [
+          "defaults"
+          "mode=755"
+          "size=200M"
+        ];
+      };
+    };
   };
 }
