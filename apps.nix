@@ -104,6 +104,8 @@
     pan
     python3
     foliate
+    mutt
+    mutt-wizard
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [
