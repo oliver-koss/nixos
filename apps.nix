@@ -16,7 +16,6 @@
     tdesktop
     libreoffice
     prismlauncher
-    htop
     hypnotix
     rhythmbox
     darktable
@@ -38,8 +37,6 @@
     ipscan
     ffmpeg
     tartube
-    nix-init
-    gh #github CLI Tool
     openjdk8-bootstrap
     googleearth-pro
     arduino-ide #new IDE
@@ -54,8 +51,6 @@
  #   minetest
     viking
     marble
-    ncdu
-    yt-dlp #youtube-dl
     mediathekview
     audacity
 
@@ -74,7 +69,6 @@
     jdownloader
     helvum
     pavucontrol
-    pulsemixer
     transmission_3-gtk
     rpi-imager #raspberry pi imager
     ffmpeg
@@ -97,15 +91,11 @@
     yubioath-flutter
     android-tools
 #    chirp
-    mqttui
     gnome-disk-utility
     gnome-tweaks
-    aegis-cli
     pan
     python3
     foliate
-    mutt
-    mutt-wizard
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [

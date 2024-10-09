@@ -20,6 +20,7 @@ with lib;
       ./gpu.nix
       ./incus.nix
 #      ./backup-rar.nix
+      ./cli-tools.nix
     ];
 
 #  services.wordpress.sites."kai" = {};
