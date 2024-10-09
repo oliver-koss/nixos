@@ -4,11 +4,6 @@
       fsType = "zfs";
     };
 
-  fileSystems."/archive" =
-    { device = "archive/data";
-      fsType = "zfs";
-    };
-
   systemd.services.hardlink-storage = {
     script = ''
       hardlink -v -c /storage
