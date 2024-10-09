@@ -25,7 +25,7 @@ with lib;
   };
 
   systemd.services.transmission.serviceConfig = {
-    BindPaths = mkForce [ "/var/lib/transmission/.config/transmission-daemon" "/storage" "/run" ];
+    BindPaths = mkForce [ "/var/lib/transmission/.config/transmission-daemon" "/storage" "/run" "/archive" ];
     BindReadOnlyPaths = mkForce [ "/nix/store" "/etc" "${config.system.build.torrentNSResolv}:/etc/resolv.conf" ];
   };
 

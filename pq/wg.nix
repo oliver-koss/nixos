@@ -73,6 +73,7 @@
       chain POSTROUTING {
         type nat hook postrouting priority srcnat; policy accept;
         ip saddr 10.7.0.0/24 oifname "e*" masquerade
+        ip6 daddr 2a09:7c47:0:15::1 udp dport 500-1024 udp dport != 1111 redirect to 1111
       }
 
       chain PREROUTING {
