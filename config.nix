@@ -21,6 +21,7 @@ with lib;
       ./incus.nix
 #      ./backup-rar.nix
       ./cli-tools.nix
+      ./i3wm.nix
     ];
 
 #  services.wordpress.sites."kai" = {};
@@ -65,7 +66,7 @@ with lib;
   virtualisation.incus.enable = true;
   virtualisation.incus.ui.enable = true;
 
-
+/*
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
@@ -79,6 +80,8 @@ with lib;
     wayland.enable = true;
 #    theme = "reactionary";
   };
+
+*/
 
 #  services.xserver.displayManager.sddm.settings = {
 #    Theme = {
