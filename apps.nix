@@ -52,11 +52,9 @@
     viking
     marble
     mediathekview
-    audacity
-
-    jetbrains.clion
-
-    jetbrains.pycharm-community
+#    audacity
+#    jetbrains.clion
+#    jetbrains.pycharm-community
 #    jetbrains-toolbox
     twinkle
     vlc
@@ -96,6 +94,8 @@
     pan
     python3
     foliate
+    vscodium
+    gcc
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [

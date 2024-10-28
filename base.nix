@@ -12,7 +12,7 @@ with lib;
 
   users.users.oliver = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "dialout" "incus-admin" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "dialout" "incus-admin" "docker" ]; # Enable ‘sudo’ for the user.
     openssh.authorizedKeys.keys = splitString "\n"
       (builtins.readFile ./oliver.pub);
   };

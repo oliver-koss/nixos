@@ -202,6 +202,7 @@ with lib;
                 "pulsar-1.119.0"
                 "pulsar-1.120.0"
                 "pulsar-1.121.0"
+		"pulsar-1.122.0"
                 "googleearth-pro-7.3.4.8248"
                 "python-2.7.18.8"
 		"clion-2024.1"
@@ -255,5 +256,7 @@ with lib;
   networking.hosts = {
     "116.204.196.240" = [ "watch.oliver-koss.at" "nuc.oliver-koss.at" ];"2a02:1748:dd4e:2040::afaf" = [ "watch.oliver-koss.at" "nuc.oliver-koss.at" ];
   };
+
+  programs.nix-ld.enable = true;
 
 }
