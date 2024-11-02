@@ -60,6 +60,7 @@ with lib;
     wget
     dua
     dig
+    onefetch
 
     #alias
     eza

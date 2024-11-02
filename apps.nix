@@ -20,7 +20,6 @@
     rhythmbox
     darktable
     calibre
-#    prometheus
     nextcloud-client
     gimp
     geogebra6
@@ -42,35 +41,26 @@
     arduino-ide #new IDE
     arduino #old IDE
     r3ctl
- #   tor-browser
     libglibutil
     stdenv
-    poetry
+#    poetry
     discord
     nanovna-saver
  #   minetest
     viking
-    marble
+#    marble
     mediathekview
-#    audacity
-#    jetbrains.clion
-#    jetbrains.pycharm-community
-#    jetbrains-toolbox
-    twinkle
     vlc
     gst_all_1.gstreamer
     gst_all_1.gst-libav
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
-#    blender
-    jdownloader
     helvum
     pavucontrol
     transmission_3-gtk
     rpi-imager #raspberry pi imager
     ffmpeg
-#    fritzbox-exporter
     screen
     dnsmasq
     putty
@@ -84,7 +74,7 @@
     gpsbabel-gui #garmin-integration
 #    zombietrackergps
     gnucash
-    lutris
+#    lutris
     jellyfin-media-player
     yubioath-flutter
     android-tools
@@ -96,6 +86,7 @@
     foliate
     vscodium
     gcc
+    gdb
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [
