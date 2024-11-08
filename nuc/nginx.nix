@@ -80,5 +80,14 @@ in
     };
   };
 
+  services.nginx.virtualHosts = {
+    "youtube.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:8945/";
+      };
+    };
+  };
+
+
 
 }
