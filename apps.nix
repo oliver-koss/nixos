@@ -76,7 +76,7 @@
     gnucash
 #    lutris
     jellyfin-media-player
-    yubioath-flutter
+#    yubioath-flutter
     android-tools
 #    chirp
     gnome-disk-utility
