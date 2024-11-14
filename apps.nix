@@ -87,6 +87,7 @@
     vscodium
     gcc
     gdb
+    gnome-terminal
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [

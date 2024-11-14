@@ -216,7 +216,7 @@ with lib;
 
 #prometheus service
   services.prometheus = {
-    enable   = true;
+    enable   = false;
     port     = 9090;
     configText = "
       global:
