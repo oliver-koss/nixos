@@ -68,6 +68,7 @@ with lib;
 
   programs.bash.shellAliases = {
     "l" = "eza -l --icons";
+    "lsn" = "nautilus .";
   };
 
   services.netdata.enable = true;

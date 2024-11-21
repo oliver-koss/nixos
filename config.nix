@@ -93,7 +93,8 @@ with lib;
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+#    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
   programs.ssh.askPassword = pkgs.lib.mkForce "pkgs.plasma5.ksshaskpass.out/bin/ksshaskpass";

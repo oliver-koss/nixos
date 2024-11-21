@@ -19,7 +19,7 @@
     hypnotix
     rhythmbox
     darktable
-    calibre
+#    calibre
     nextcloud-client
     gimp
     geogebra6

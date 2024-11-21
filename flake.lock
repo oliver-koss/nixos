@@ -50,11 +50,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1731746438,
-        "narHash": "sha256-f3SSp1axoOk0NAI7oFdRzbxG2XPBSIXC+/DaAXnvS1A=",
+        "lastModified": 1732109232,
+        "narHash": "sha256-iYh6h8yueU8IyOfNclbiBG2+fBFcjjUfXm90ZBzk0c0=",
         "owner": "nix-community",
         "repo": "disko",
-        "rev": "cb64993826fa7a477490be6ccb38ba1fa1e18fa8",
+        "rev": "a0c384e0a3b8bcaed30a6bcf3783f8a7c8b35be4",
         "type": "github"
       },
       "original": {
@@ -256,11 +256,11 @@
         "xzar-client": "xzar-client"
       },
       "locked": {
-        "lastModified": 1729620943,
-        "narHash": "sha256-N1zlbnaKMo5vRIkdZKwuNNBa2KU/irM25HVQM+tRUWs=",
+        "lastModified": 1731021405,
+        "narHash": "sha256-uiXaoPAQhzjYvA7W0161YBvJ8Xj2d+H5se6NzGDMfdQ=",
         "ref": "refs/heads/master",
-        "rev": "bd562801910976fa4514cbbde1984e2c4beb27a0",
-        "revCount": 218,
+        "rev": "82dc77b761e5f444419b875113a6725895c144fe",
+        "revCount": 220,
         "type": "git",
         "url": "https://git.xeredo.it/xeredo/xnix.git"
       },
