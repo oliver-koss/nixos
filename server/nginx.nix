@@ -11,6 +11,15 @@ in
 {
   services.nginx.enable = true;
 
+  services.nginx.enableReload = true;
+  services.nginx.recommendedBrotliSettings = true;
+  services.nginx.recommendedGzipSettings = true;
+  services.nginx.recommendedOptimisation = true;
+  services.nginx.recommendedProxySettings = true;
+  services.nginx.recommendedTlsSettings = true;
+  services.nginx.recommendedZstdSettings = true;
+
+
 #  networking.firewall.allowedTCPPorts = [ 80 443 8080 ];
 #  networking.firewall.allowedUDPPorts = [ 443 ];
 
