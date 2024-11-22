@@ -22,4 +22,12 @@ in
     };
   };
 
+  services.nginx.virtualHosts = {
+    "kluse.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:2283/";
+      };
+    };
+  };
+
 }
