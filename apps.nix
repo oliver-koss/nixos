@@ -88,6 +88,8 @@
     gcc
     gdb
     gnome-terminal
+    jetbrains.clion
+    maxima
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [
