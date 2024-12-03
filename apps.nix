@@ -90,6 +90,11 @@
     gnome-terminal
     jetbrains.clion
     maxima
+    pwndbg
+    gnumake
+    clang
+    valgrind
+    clang-tools
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [
