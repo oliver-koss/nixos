@@ -88,13 +88,16 @@
     gcc
     gdb
     gnome-terminal
-    jetbrains.clion
+#    jetbrains.clion
     maxima
     pwndbg
     gnumake
     clang
     valgrind
     clang-tools
+    texliveFull
+#    nheko
+    texlivePackages.getmap
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [
