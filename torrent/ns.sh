@@ -36,8 +36,8 @@ case "$1" in
     n "ip a a 10.7.0.2/32 dev pq"
       n "ip r r 10.7.0.0/24 dev pq"
 
-    n "ip -6 a a 2a09:7c47:0:15::2/128 dev pq"
-      n "ip -6 r r 2a09:7c47:0:15::1/64 dev pq"
+    n "ip -6 a a 2a09:7c47:0:a::2/128 dev pq"
+      n "ip -6 r r 2a09:7c47:0:a::1/64 dev pq"
 
     n "ip r a default dev pq"
       n "ip -6 r a default dev pq"
