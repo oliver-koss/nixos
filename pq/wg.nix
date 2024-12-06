@@ -1,4 +1,12 @@
-{ pkgs, ... }: {
+{ config, pkgs, lib, ... }:
+let
+  inherit (config.pq) ipv4 ipv6 privateIPv4 clients interface;
+in with lib; {
+  imports = [
+    ./options.nix
+    ./values.nix
+  ];
+
   boot.kernel.sysctl = {
     "net.ipv4.conf.all.forwarding" = true;
     "net.ipv4.conf.default.forwarding" = true;
@@ -15,7 +23,7 @@
   networking.firewall.trustedInterfaces = [ "wg0" ];
   networking.firewall.filterForward = true;
   networking.firewall.extraForwardRules = ''
-    iifname { "wg0", "ens3" } oifname { "wg0", "ens3" } accept
+    iifname { "wg0", "${interface}" } oifname { "wg0", "${interface}" } accept
   '';
 
   systemd.services.ndp-proxy = {
@@ -23,7 +31,7 @@
     after = [ "network.target" ];
     serviceConfig = {
       Restart = "always";
-      ExecStart = "${pkgs.callPackage ./ndp {}}/bin/ndp-proxy -i ens3 -m 64 -n 2a09:7c47:0:15::";
+      ExecStart = "${pkgs.callPackage ./ndp {}}/bin/ndp-proxy -i ${interface} -m ${toString ipv6.prefixLength} -n ${ipv6.prefix}";
     };
   };
 
@@ -31,7 +39,7 @@
     # "wg0" is the network interface name. You can name the interface arbitrarily.
     wg0 = {
       # Determines the IP address and subnet of the server's end of the tunnel interface.
-      ips = [ "10.7.0.1/24" ];
+      ips = [ "${privateIPv4.prefix}1/24" ];
 
       # The port that WireGuard listens to. Must be accessible by the client.
       listenPort = 1111;
@@ -42,28 +50,10 @@
       # recommended.
       privateKeyFile = "/var/wg-priv";
 
-      peers = [
-        {
-          # nuc
-          publicKey = "7A+1fP6CXdSbkZv9qlPM4Ra+MMsLod6gOt4Q9pMFUBQ=";
-          allowedIPs = [ "10.7.0.2/32" "2a09:7c47:0:15::2/128" ];
-        }
-        {
-          # m
-          publicKey = "xtzVc6vqJy4rx/ZY9uvCwDX/ftwPuC53lA9qvwT1KBs=";
-          allowedIPs = [ "10.7.0.3/32" "2a09:7c47:0:15::3/128" ];
-        }
-        {
-          # o
-          publicKey = "hP5+a0KfPBT77JlIkrK352fxOe6QHQ82g2TH+I7/kyk=";
-          allowedIPs = [ "10.7.0.4/32" "2a09:7c47:0:15::4/128" ];
-        }
-        {
-          # n
-          publicKey = "LZ/QSVEznNXicc1yrcNDtphpugUKOQahLEL3u7mXiTU=";
-          allowedIPs = [ "10.7.0.5/32" "2a09:7c47:0:15::5/128" ];
-        }
-      ];
+      peers = (mapAttrsToList (key: cfg: {
+        publicKey = cfg.publicKey;
+        allowedIPs = [ "${privateIPv4.prefix}${toString cfg.id}/32" "${ipv6.prefix}${toString cfg.id}/128" ];
+      }) clients);
     };
   };
 
@@ -72,28 +62,30 @@
     content = ''
       chain POSTROUTING {
         type nat hook postrouting priority srcnat; policy accept;
-        ip saddr 10.7.0.0/24 oifname "e*" masquerade
-        ip6 daddr 2a09:7c47:0:15::1 udp dport 500-1024 udp dport != 1111 redirect to 1111
+        ip saddr ${privateIPv4.prefix}0/24 oifname "${interface}" masquerade
       }
 
       chain PREROUTING {
         type nat hook prerouting priority dstnat; policy accept;
-        ip daddr 45.144.31.173 tcp dport { 51413 } dnat to 10.7.0.2
-        ip daddr 45.144.31.173 udp dport { 51413 } dnat to 10.7.0.2
+        iifname "${interface}" ip6 daddr ${ipv6.prefix}${ipv6.suffix} udp dport 500-1024 udp dport != 1111 redirect to :1111
+        ${concatMapStringsSep "\n" (cfg: if cfg.portsV4 != [] then ''
+          ip daddr ${ipv4} tcp dport { ${concatMapStringsSep ", " (port: toString port) (cfg.portsV4)} } dnat to ${privateIPv4.prefix}${toString cfg.id}
+          ip daddr ${ipv4} udp dport { ${concatMapStringsSep ", " (port: toString port) (cfg.portsV4)} } dnat to ${privateIPv4.prefix}${toString cfg.id}
+        '' else "") (attrValues clients)}
       }
     '';
   };
 
   services.resolved.extraConfig = ''
-    DNSStubListenerExtra=10.7.0.1
-    DNSStubListenerExtra=2a09:7c47:0:15::1
+    DNSStubListenerExtra=${privateIPv4.prefix}1
+    DNSStubListenerExtra=${ipv6.prefix}${ipv6.suffix}
   '';
 
   networking.firewall.extraInputRules = ''
-    ip saddr 10.7.0.0/24 tcp dport 53 accept
-    ip saddr 10.7.0.0/24 udp dport 53 accept
-    ip6 saddr 2a09:7c47:0:15::/64 tcp dport 53 accept
-    ip6 saddr 2a09:7c47:0:15::/64 udp dport 53 accept
+    ip saddr ${privateIPv4.prefix}0/24 tcp dport 53 accept
+    ip saddr ${privateIPv4.prefix}0/24 udp dport 53 accept
+    ip6 saddr ${ipv6.prefix}/${toString ipv6.prefixLength} tcp dport 53 accept
+    ip6 saddr ${ipv6.prefix}/${toString ipv6.prefixLength} udp dport 53 accept
   '';
 
   environment.systemPackages = with pkgs; [ ipcalc ];
