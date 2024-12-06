@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 set -euxo pipefail
-# current disko is broken so we use a pinned commit
-nix run github:nix-community/nixos-anywhere/69ad3f4a50cfb711048f54013404762c9a8e201e -- --option pure-eval "false" --flake .#pq-vpn root@pq.furrytel.me
+# NOTE: replace with root if using offical iso
+nix run github:nix-community/nixos-anywhere/main -- --option pure-eval "false" --flake .#pq-vpn $(id -un)@pq.furrytel.me
 
 
 # instructions:
