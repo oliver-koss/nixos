@@ -16,7 +16,7 @@
     tdesktop
     libreoffice
     prismlauncher
-    hypnotix
+#    hypnotix
     rhythmbox
     darktable
 #    calibre
@@ -31,24 +31,21 @@
 #      (python3.pkgs.callPackage ./ninebot {})
 #      ]))
     (writeShellScriptBin "ninebot" "exec python3 -m ninebot_ble \"$@\"")
-    esptool
     gparted
     ipscan
     ffmpeg
-    tartube
+#    tartube
     openjdk8-bootstrap
     googleearth-pro
-    arduino-ide #new IDE
-    arduino #old IDE
+#    arduino-ide #new IDE
+#    arduino #old IDE
     r3ctl
     libglibutil
     stdenv
 #    poetry
     discord
-    nanovna-saver
  #   minetest
     viking
-#    marble
     mediathekview
     vlc
     gst_all_1.gstreamer
@@ -71,33 +68,21 @@
     kdenlive
     usbutils
     transmission-remote-gtk
-    gpsbabel-gui #garmin-integration
+#    gpsbabel-gui #garmin-integration
 #    zombietrackergps
-    gnucash
-#    lutris
+#    gnucash
     jellyfin-media-player
-#    yubioath-flutter
     android-tools
-#    chirp
     gnome-disk-utility
-    gnome-tweaks
+#    gnome-tweaks
     pan
     python3
     foliate
-    vscodium
-    gcc
-    gdb
     gnome-terminal
 #    jetbrains.clion
     maxima
-    pwndbg
-    gnumake
-    clang
-    valgrind
-    clang-tools
-    texliveFull
 #    nheko
-    texlivePackages.getmap
+#    xstarbound
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [

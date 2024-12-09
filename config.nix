@@ -12,7 +12,7 @@ with lib;
       ./hardware-configuration.nix
       ./base.nix
       ./apps.nix
-      ./funk.nix
+      ./apps
       ./wine.nix
       ./pat.service.nix
       ./misc/builder.nix
@@ -22,6 +22,7 @@ with lib;
 #      ./backup-rar.nix
       ./cli-tools.nix
 #      ./i3wm.nix
+#      ./xstarbound.nix
     ];
 
 #  services.wordpress.sites."kai" = {};

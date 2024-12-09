@@ -5,6 +5,7 @@
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     #nixpkgs.url = "github:oliver-koss/nixpkgs/lcd-i2c";
+#    xstarbound.url = "github:xstarbound/xstarbound";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     xnix.url = "git+https://git.xeredo.it/xeredo/xnix.git";

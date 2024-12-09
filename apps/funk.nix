@@ -15,5 +15,6 @@
     hamlib_4
     qsstv
     xastir
+    nanovna-saver
   ];
 }
