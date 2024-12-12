@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = (with pkgs; [
+    # @blocksort asc
     vscodium
     gcc
     gdb
@@ -11,5 +12,6 @@
     gnumake
     clang
     esptool
+    
   ]);
 }
