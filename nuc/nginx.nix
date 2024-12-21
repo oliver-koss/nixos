@@ -88,6 +88,20 @@ in
     };
   };
 
+  services.nginx.virtualHosts = {
+    "aprsc.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:14502/";
+      };
+    };
+  };
 
+  services.nginx.virtualHosts = {
+    "aprsc-panel.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:14501/";
+      };
+    };
+  };
 
 }
