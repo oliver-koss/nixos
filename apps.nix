@@ -83,6 +83,8 @@
     maxima
 #    nheko
 #    xstarbound
+    python312Packages.meshtastic
+    freecad
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [
