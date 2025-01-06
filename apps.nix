@@ -19,7 +19,7 @@
 #    hypnotix
     rhythmbox
     darktable
-#    calibre
+    calibre
     nextcloud-client
     gimp
     geogebra6
@@ -46,7 +46,7 @@
     discord
  #   minetest
     viking
-    mediathekview
+#    mediathekview
     vlc
     gst_all_1.gstreamer
     gst_all_1.gst-libav
@@ -55,13 +55,13 @@
     gst_all_1.gst-plugins-ugly
     helvum
     pavucontrol
-    transmission_3-gtk
+#    transmission_3-gtk
     rpi-imager #raspberry pi imager
     ffmpeg
     screen
     dnsmasq
     putty
-    uucp
+#    uucp
     ppp
     glxinfo
     wireguard-tools
@@ -83,8 +83,9 @@
     maxima
 #    nheko
 #    xstarbound
-    python312Packages.meshtastic
+#    python312Packages.meshtastic
     freecad
+    ungoogled-chromium
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [
