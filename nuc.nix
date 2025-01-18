@@ -100,7 +100,6 @@ with lib;
   services.printing.enable = true;
 
   # Enable sound.
-  hardware.pulseaudio.enable = mkForce false;
   services.pipewire = {
     enable = true;
     pulse.enable = true;

@@ -124,7 +124,6 @@ with lib;
   # Enable sound.
   security.rtkit.enable = true;
   xdg.portal.enable = true;
-  hardware.pulseaudio.enable = mkForce false;
   services.pipewire = {
     enable = true;
     pulse.enable = true;
