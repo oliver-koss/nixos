@@ -72,4 +72,5 @@ with lib;
   };
 
   services.netdata.enable = true;
+  services.netdata.package = pkgs.netdataCloud;
 }
