@@ -61,6 +61,7 @@ with lib;
     dua
     dig
     onefetch
+    waypipe
 
     #alias
     eza
