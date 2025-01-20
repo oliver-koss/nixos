@@ -54,6 +54,8 @@ with lib;
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.memtest86.enable = true;
+  boot.loader.systemd-boot.netbootxyz.enable = true;
 
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
@@ -98,7 +100,6 @@ with lib;
   services.printing.enable = true;
 
   # Enable sound.
-  hardware.pulseaudio.enable = mkForce false;
   services.pipewire = {
     enable = true;
     pulse.enable = true;

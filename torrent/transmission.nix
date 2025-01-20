@@ -18,6 +18,9 @@ with lib;
       watch-dir-enabled = true;
       rpc-bind-address = "::";
       incomplete-dir = "/storage/Downloading";
+      download-queue-enabled = false;
+      peer-limit-global = 2000;
+      peer-limit-per-torrent = 500;
       # spusu 1tb (~700gb for torrent) limit
       # speed-limit-up = 1618;
       # speed-limit-up-enabled = true;

@@ -61,6 +61,7 @@ with lib;
     dua
     dig
     onefetch
+    waypipe
 
     #alias
     eza
@@ -73,4 +74,5 @@ with lib;
   };
 
   services.netdata.enable = true;
+  services.netdata.package = pkgs.netdataCloud;
 }
