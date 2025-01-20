@@ -14,7 +14,7 @@
     pat
     hamlib_4
     qsstv
-    xastir
+#    xastir
     nanovna-saver
   ];
 }

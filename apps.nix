@@ -86,6 +86,8 @@
 #    python312Packages.meshtastic
     freecad
     ungoogled-chromium
+    josm #OSM Editor
+    minetest
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [
