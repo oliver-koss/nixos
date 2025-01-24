@@ -77,6 +77,10 @@ in
       locations."/" = {
         proxyPass = "http://localhost:8083/";
       };
+      extraConfig = ''
+        client_max_body_size 10g;
+      '';
+
     };
   };
 

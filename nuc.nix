@@ -21,6 +21,7 @@ with lib;
       ./minecraft.nix
 #      ./pi/kodi.nix
       ./nuc
+#      ./asterisk
 
     inputs.disko.nixosModules.disko
     ./nuc/disko.nix

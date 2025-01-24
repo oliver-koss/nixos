@@ -15,7 +15,7 @@
       ./nextcloud.nix
       ./server-apps.nix
 #      ./pufferpanel.nix
-      ./asterisk
+#      ./asterisk
 #      ./cloudlog.nix
       ./node_exporter.service.nix
       ./wordpress.nix
@@ -81,5 +81,7 @@
 #  networking.firewall.allowedTCPPorts =  [ 9090 ];
 
   services.localtimed.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
 
 }

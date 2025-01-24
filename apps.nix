@@ -84,10 +84,13 @@
 #    nheko
 #    xstarbound
 #    python312Packages.meshtastic
-    freecad
+#    freecad
     ungoogled-chromium
     josm #OSM Editor
     minetest
+    inkscape
+    twinkle
+    kicad
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [

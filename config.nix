@@ -23,6 +23,7 @@ with lib;
       ./cli-tools.nix
 #      ./i3wm.nix
 #      ./xstarbound.nix
+#      ./asterisk
     ];
 
 #  services.wordpress.sites."kai" = {};
