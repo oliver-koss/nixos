@@ -163,4 +163,6 @@ with lib;
     gatewayAddress = "192.168.178.1";
   };
   hardware.enableRedistributableFirmware = true;
+
+  services.docuum.enable = true;
 }
