@@ -91,6 +91,9 @@
     inkscape
     twinkle
     kicad
+    sysstat
+    vnstat
+    transmission
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [

@@ -210,12 +210,14 @@ with lib;
 		"pulsar-1.122.0"
 		"pulsar-1.123.0"
                 "pulsar-1.124.0"
+                "pulsar-1.125.0"
                 "googleearth-pro-7.3.4.8248"
                 "python-2.7.18.8"
 		"clion-2024.1"
                 "python3.12-youtube-dl-2021.12.17"
                 "temurin-bin-20.0.2"
                 "googleearth-pro-7.3.6.9796"
+                "googleearth-pro-7.3.6.10201"
 		"olm-3.2.16"
               ];
 
