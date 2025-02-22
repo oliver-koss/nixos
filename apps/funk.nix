@@ -16,5 +16,8 @@
     qsstv
 #    xastir
     nanovna-saver
+    gpredict
+    gqrx
+    gnuradio
   ];
 }

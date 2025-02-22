@@ -94,6 +94,8 @@
     sysstat
     vnstat
     transmission
+    signal-desktop
+    anydesk
   ]) ++ (with pkgs.gnomeExtensions; [
     appindicator
   ]) ++ (with pkgs.libsForQt5; [

@@ -12,6 +12,7 @@
     gnumake
     clang
     esptool
-    
+    arduino-cli
+    minicom
   ]);
 }

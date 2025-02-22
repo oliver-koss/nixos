@@ -271,4 +271,12 @@ with lib;
 
   services.flatpak.enable = true;
 
+  users.users.tizen = {
+  isNormalUser  = true;
+  home  = "/home/tizen";
+  description  = "tizen";
+  extraGroups  = [ "wheel" "networkmanager" ];
+
+};
+
 }
