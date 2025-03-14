@@ -44,12 +44,12 @@ in
 #        USER = "noreply@${srv.DOMAIN}";
 #      };
     };
-    mailerPasswordFile = config.age.secrets.forgejo-mailer-password.path;
+#    mailerPasswordFile = config.age.secrets.forgejo-mailer-password.path;
   };
 
-  age.secrets.forgejo-mailer-password = {
-    file = ../secrets/forgejo-mailer-password.age;
-    mode = "400";
-    owner = "forgejo";
-  };
+#  age.secrets.forgejo-mailer-password = {
+#    file = ../secrets/forgejo-mailer-password.age;
+#    mode = "400";
+#    owner = "forgejo";
+#  };
 }
