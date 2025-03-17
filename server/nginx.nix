@@ -41,6 +41,9 @@ in
 
   services.nginx.virtualHosts = {
     "git.oliver-koss.at" = h {
+      extraConfig = ''
+        client_max_body_size 10G;
+      '';
       locations."/" = {
         proxyPass = "http://localhost:3000/";
       };

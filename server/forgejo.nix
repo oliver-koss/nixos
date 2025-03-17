@@ -9,7 +9,7 @@ in
       forceSSL = true;
       enableACME = true;
       extraConfig = ''
-        client_max_body_size 512M;
+        client_max_body_size 10G;
       '';
       locations."/".proxyPass = "http://localhost:${toString srv.HTTP_PORT}";
     };
