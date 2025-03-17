@@ -80,7 +80,8 @@
 
 #  networking.firewall.allowedTCPPorts =  [ 9090 ];
 
-  services.localtimed.enable = true;
+#  services.localtimed.enable = true;
+  time.timeZone = "Europe/Vienna";
 
   nixpkgs.config.allowUnfree = true;
 
