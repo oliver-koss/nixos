@@ -8,5 +8,6 @@
   services.openssh = {
     openFirewall = true;
     ports = [ 22222 ];
+    enable = true;
   };
 }
