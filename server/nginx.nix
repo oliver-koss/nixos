@@ -19,7 +19,8 @@ in
   services.nginx.recommendedTlsSettings = true;
   services.nginx.recommendedZstdSettings = true;
 
-
+  # forgejo
+  networking.firewall.allowedTCPPorts = [ 22 ];
 #  networking.firewall.allowedTCPPorts = [ 80 443 8080 ];
 #  networking.firewall.allowedUDPPorts = [ 443 ];
 
