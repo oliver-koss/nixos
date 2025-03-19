@@ -168,4 +168,10 @@ with lib;
     enable = true;
     ui.enable = true;
   };
+    networking.firewall = {
+      extraForwardRules = ''
+        iifname { "incusbr0", "incusbr1", "eth0" } oifname { "incusbr0", "incusbr1", "eth0" } accept
+      '';
+      trustedInterfaces = [ "incusbr0" "incusbr1" ];
+    };
 }
