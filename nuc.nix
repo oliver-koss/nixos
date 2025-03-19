@@ -163,4 +163,9 @@ with lib;
     gatewayAddress = "192.168.178.1";
   };
   hardware.enableRedistributableFirmware = true;
+
+  virtualisation.incus = {
+    enable = true;
+    ui.enable = true;
+  };
 }
