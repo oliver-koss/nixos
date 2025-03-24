@@ -51,4 +51,16 @@ in
     };
   };
 
+  services.nginx.virtualHosts = {
+    "tex.oliver-koss.at" = h {
+      extraConfig = ''
+        client_max_body_size 10G;
+      '';
+      locations."/" = {
+        proxyPass = "http://localhost:8000/";
+      };
+    };
+  };
+
+
 }
