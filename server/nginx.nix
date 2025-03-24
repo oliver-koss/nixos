@@ -57,7 +57,7 @@ in
         client_max_body_size 10G;
       '';
       locations."/" = {
-        proxyPass = "http://localhost:8000/";
+        proxyPass = "http://localhost:8005/";
       };
     };
   };
