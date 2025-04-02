@@ -25,9 +25,9 @@
   networking.useDHCP = false;
   networking.useNetworkd = true;
 
-  system.userActivationScripts = { wgVpnStub = {
+  system.userActivationScripts = { wgStub = {
       text = ''
-        ${pkgs.coreutils}/bin/touch /var/wg-vpn
+        ${pkgs.coreutils}/bin/touch /var/wg-priv
       '';
       deps = [];
     };
