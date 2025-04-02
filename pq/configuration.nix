@@ -1,4 +1,4 @@
-{ inputs, modulesPath, lib, ... }:
+{ inputs, modulesPath, lib, pkgs, ... }:
 
 with lib;
 
