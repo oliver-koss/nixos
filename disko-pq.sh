@@ -2,7 +2,7 @@
 
 set -euxo pipefail
 # NOTE: replace with root if using offical iso
-nix run github:nix-community/nixos-anywhere/main -- --option pure-eval "false" --flake .#pq-vpn $(id -un)@pq.furrytel.me
+nix run github:nix-community/nixos-anywhere/main -- --option pure-eval "false" --flake .#pq-vpn $(id -un)@pq.furrytel.me --no-substitute-on-destination
 
 
 # instructions:

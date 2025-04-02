@@ -16,10 +16,21 @@
     ];
   };
 
+  users.users.root.initialPassword = "helloworld1984";
+
   boot.kernelPackages = lib.mkForce pkgs.linuxPackages_latest;
   networking.hostName = "pq-vpn";
   system.stateVersion = "24.11";
   nixpkgs.hostPlatform = "x86_64-linux";
   networking.useDHCP = false;
   networking.useNetworkd = true;
+
+  system.userActivationScripts = { wgVpnStub = {
+      text = ''
+        ${pkgs.coreutils}/bin/touch /var/wg-vpn
+      '';
+      deps = [];
+    };
+  };
+
 }
