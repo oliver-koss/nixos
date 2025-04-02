@@ -36,5 +36,5 @@ with lib;
   # maybe fix disk stuff
   services.journald.storage = "volatile";
 
-  environment.systemPackages = with pkgs; [ iptraf-ng ];
+  environment.systemPackages = with pkgs; [ iptraf-ng nload ];
 }
