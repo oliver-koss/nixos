@@ -1,7 +1,7 @@
 {
   pq = {
-    ipv4 = "45.150.64.237";
-    ipv6.prefix = "2a09:7c47:0:a::";
+    ipv4 = "91.207.183.227";
+    ipv6.prefix = "2a09:7c47:0:4::";
     interface = "ens3";
     clients = {
       nuc = {

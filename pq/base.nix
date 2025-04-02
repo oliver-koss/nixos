@@ -5,13 +5,13 @@
 
   systemd.network.enable = true;
   systemd.network.networks."10-wan" = {
-    matchConfig.Name = "ens3";
+    matchConfig.Name = "e*";
     address = [
-      "2a09:7c47:0:a::1/32"
-      "45.150.64.237/24"
+      "2a09:7c47:0:4::1/32"
+      "91.207.183.227/24"
     ];
     routes = [
-      { routeConfig.Gateway = "45.150.64.1"; }
+      { routeConfig.Gateway = "91.207.183.1"; }
       { routeConfig.Gateway = "2a09:7c47::1"; }
     ];
   };

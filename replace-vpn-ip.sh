@@ -6,7 +6,7 @@ NEWV4="$1"
 NEWV6="$2"
 
 OLDV4=$(cat pq/values.nix  | grep ipv4 | grep -o "[0-9][0-9][0-9.]*")
-OLDv6=$(cat pq/values.nix  | grep ipv6 | grep -o "[0-9][0-9a-f][0-9a-f][0-9a-f:]*")
+OLDV6=$(cat pq/values.nix  | grep ipv6 | grep -o "[0-9][0-9a-f][0-9a-f][0-9a-f:]*")
 
 SELF=$(dirname $(readlink -f "$0"))
 
