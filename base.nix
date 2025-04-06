@@ -65,6 +65,8 @@ with lib;
 
     #alias
     eza
+
+    fzf
   ];
 
   programs.bash.shellAliases = {
