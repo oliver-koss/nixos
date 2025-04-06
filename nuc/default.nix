@@ -4,5 +4,6 @@
 #    ./pufferpanel.nix
 #    ./calibre-web.nix
 #    ./kavita.nix
+    ./immich.nix
   ];
 }

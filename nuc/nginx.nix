@@ -108,4 +108,13 @@ in
     };
   };
 
+  services.nginx.virtualHosts = {
+    "immich-nix.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:2383/";
+      };
+    };
+  };
+
+
 }
