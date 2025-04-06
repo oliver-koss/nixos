@@ -75,6 +75,10 @@ with lib;
     "code" = "codium .";
   };
 
+  environment.etc."bashrc".text = ''
+    eval "$(fzf --bash)"
+  '';
+
   services.netdata.enable = true;
   services.netdata.package = pkgs.netdataCloud;
 }
