@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   imports = [
     ./mosquitto.nix
 #    ./pufferpanel.nix
@@ -6,4 +6,11 @@
 #    ./kavita.nix
     ./immich.nix
   ];
+
+  systemd.services.mount-boot = {
+    startAt = "daily";
+    serviceConfig = {
+      ExecStart = "${pkgs.mount}/bin/mount /boot";
+    };
+  };
 }
