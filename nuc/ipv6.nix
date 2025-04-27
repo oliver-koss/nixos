@@ -9,6 +9,7 @@
   networking.wireguard.interfaces = {
     # "wg0" is the network interface name. You can name the interface arbitrarily.
     uplink0 = {
+      metric = 5;
       # Determines the IP address and subnet of the client's end of the tunnel interface.
       ips = [ "10.100.0.4/24" "2a01:4f8:c012:2caf:4000::2/128" ];
       listenPort = 1111; # to match firewall allowedUDPPorts (without this wg uses random port numbers)
