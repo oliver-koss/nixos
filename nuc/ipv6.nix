@@ -18,7 +18,7 @@
       # Note: The private key can also be included inline via the privateKey option,
       # but this makes the private key world-readable; thus, using privateKeyFile is
       # recommended.
-      privateKeyFile = "/var/wg-priv";
+      privateKeyFile = "/var/ipv6-key";
 
       peers = [
         # For a client configuration, one peer entry for the server will suffice.
