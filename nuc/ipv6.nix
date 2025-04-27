@@ -5,6 +5,7 @@
     allowedUDPPorts = [ 1111 ]; # Clients and peers can use the same port, see listenport
   };
   # Enable WireGuard
+  networking.wireguard.enable = true;
   networking.wireguard.interfaces = {
     # "wg0" is the network interface name. You can name the interface arbitrarily.
     uplink0 = {
