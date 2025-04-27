@@ -17,7 +17,7 @@ with lib;
       ./torrent
       ./torrent/ns.nix
       ./nuc/nginx.nix
-      ./nuc/wg.nix
+      #./nuc/wg.nix
       ./node_exporter.service.nix
       ./minecraft.nix
 #      ./pi/kodi.nix
