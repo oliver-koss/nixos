@@ -219,11 +219,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1745930157,
-        "narHash": "sha256-y3h3NLnzRSiUkYpnfvnS669zWZLoqqI6NprtLQ+5dck=",
+        "lastModified": 1746141548,
+        "narHash": "sha256-IgBWhX7A2oJmZFIrpRuMnw5RAufVnfvOgHWgIdds+hc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "46e634be05ce9dc6d4db8e664515ba10b78151ae",
+        "rev": "f02fddb8acef29a8b32f10a335d44828d7825b78",
         "type": "github"
       },
       "original": {
@@ -256,11 +256,11 @@
         "xzar-client": "xzar-client"
       },
       "locked": {
-        "lastModified": 1731021405,
-        "narHash": "sha256-uiXaoPAQhzjYvA7W0161YBvJ8Xj2d+H5se6NzGDMfdQ=",
+        "lastModified": 1746218274,
+        "narHash": "sha256-wO2OuQFc4M2nXnzgEX+rH3m2HV1MbPobq9nWxBWGj4o=",
         "ref": "refs/heads/master",
-        "rev": "82dc77b761e5f444419b875113a6725895c144fe",
-        "revCount": 220,
+        "rev": "5676002cce1845fb87d6338fa6450eb0559c65a2",
+        "revCount": 221,
         "type": "git",
         "url": "https://git.xeredo.it/xeredo/xnix.git"
       },
