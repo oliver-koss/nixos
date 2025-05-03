@@ -71,9 +71,9 @@ with lib;
   nix.gc.options = "--delete-older-than 14d";
 
   system.autoUpgrade.enable = true;
-  # system.autoUpgrade.allowReboot = true;
-  # system.autoUpgrade.rebootWindow.lower = "04:00";
-  # system.autoUpgrade.rebootWindow.upper = "06:00";
+  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.rebootWindow.lower = "04:00";
+  system.autoUpgrade.rebootWindow.upper = "06:00";
   system.autoUpgrade.flake = "github:oliver-koss/nixos/master";
 
   boot.tmp.useTmpfs = true;
