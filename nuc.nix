@@ -175,4 +175,7 @@ with lib;
       '';
       trustedInterfaces = [ "incusbr0" "incusbr1" ];
     };
+
+  # attempt to make docker stop properly on reboot
+  virtualisation.docker.liveRestore = false;
 }
