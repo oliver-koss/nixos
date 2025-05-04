@@ -24,6 +24,7 @@
                 type = "filesystem";
                 format = "ext4";
                 mountpoint = "/";
+                extraArgs = [ "-N" "6029312" ];
               };
             };
           };
