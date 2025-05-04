@@ -5,6 +5,7 @@
 #    ./calibre-web.nix
 #    ./kavita.nix
     ./immich.nix
+    ./rdp.nix
   ];
 
   systemd.services.mount-boot = {
