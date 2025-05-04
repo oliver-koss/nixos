@@ -7,7 +7,7 @@
       nuc = {
         publicKey = "7A+1fP6CXdSbkZv9qlPM4Ra+MMsLod6gOt4Q9pMFUBQ=";
         id = 2;
-        portsV4 = [ 51413 ];
+        portsV4 = [ 51413 54015 54016 ];
       };
       m = {
         publicKey = "xtzVc6vqJy4rx/ZY9uvCwDX/ftwPuC53lA9qvwT1KBs=";
