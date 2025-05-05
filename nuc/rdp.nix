@@ -15,12 +15,10 @@ sudo grdctl --system rdp set-tls-cert /var/lib/gnome-remote-desktop/rdp-tls.crt
 sudo grdctl --system rdp set-tls-cert /var/lib/gnome-remote-desktop/rdp-tls.crt
 sudo grdctl --system rdp set-tls-key /var/lib/gnome-remote-desktop/rdp-tls.key
 
-sudo systemctl daemon-reload
-sudo systemctl enable --now gnome-remote-desktop.service
 sudo grdctl --system rdp set-credentials "name" "password"
 
 sudo systemctl restart gnome-remote-desktop.service
-sudo systemctl status gnome-remote-desktop.service`
+sudo systemctl status gnome-remote-desktop.service
 
 sudo grdctl --system rdp enable
 sudo grdctl --system status
@@ -39,7 +37,10 @@ sudo grdctl --system status
   services.gnome.gnome-remote-desktop.enable = true;
   networking.firewall.allowedTCPPorts = [ 3389 ];
   networking.firewall.allowedUDPPorts = [ 3389 ];
-  systemd.services.gnome-remote-desktop.wantedBy = [ "graphical.target" ];
+  systemd.services.gnome-remote-desktop = {
+    restartIfChanged = false;
+    wantedBy = [ "graphical.target" ];
+  };
 
   services.cinnamon.apps.enable = true;
   services.gnome.core-utilities.enable = true;
