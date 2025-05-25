@@ -18,7 +18,7 @@
 #      ./asterisk
 #      ./cloudlog.nix
       ./node_exporter.service.nix
-      ./wordpress.nix
+#      ./wordpress.nix
       ./misc/maciej.nix
       ./server
     ];
