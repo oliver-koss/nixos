@@ -256,11 +256,11 @@
         "xzar-client": "xzar-client"
       },
       "locked": {
-        "lastModified": 1748099083,
-        "narHash": "sha256-sSIqfKk7ftJnVRyynAJg854cICkVbjIf3s3z0AZoWM8=",
+        "lastModified": 1748185065,
+        "narHash": "sha256-Cfi2YFNP72uC//bEE9A78fKVlEbldR5eX6WrhLmWHWY=",
         "ref": "refs/heads/master",
-        "rev": "d5815f830747c82133145544e34127836bdb0f30",
-        "revCount": 223,
+        "rev": "a1e1f8f99704536056b608b961c1dcd8335be4cc",
+        "revCount": 224,
         "type": "git",
         "url": "https://git.xeredo.it/xeredo/xnix.git"
       },
