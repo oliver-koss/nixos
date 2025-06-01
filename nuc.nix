@@ -10,7 +10,7 @@ with lib;
   imports =
     [ # Include the results of the hardware scan.
       ./nuc/hardware-configuration.nix
-      ./nuc/ipv6.nix
+#      ./nuc/ipv6.nix
       ./base.nix
       ./misc/maciej.nix
       ./misc/ygg-v4.nix
