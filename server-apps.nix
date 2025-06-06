@@ -15,6 +15,7 @@
     wget
     iftop
     iotop
+    speedtest-cli
   ]);
 
   programs.htop = {
