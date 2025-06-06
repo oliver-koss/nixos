@@ -157,6 +157,7 @@ with lib;
   environment.systemPackages = with pkgs; [
     yt-dlp
     calibre
+    speedtest-cli
   ];
 
   services.prometheus.exporters.fritzbox = {
