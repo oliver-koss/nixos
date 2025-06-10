@@ -21,9 +21,9 @@ with lib;
       download-queue-enabled = false;
       peer-limit-global = 2000;
       peer-limit-per-torrent = 500;
-      # spusu 1tb (~700gb for torrent) limit
-      # speed-limit-up = 1618;
-      # speed-limit-up-enabled = true;
+      # spusu 1te (~700gb for torrent) limit
+      speed-limit-up = 1618;
+      speed-limit-up-enabled = true;
     };
   };
 
