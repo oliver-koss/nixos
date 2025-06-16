@@ -5,6 +5,7 @@
     ./storage.nix
     ./transmission.nix
     ./sabnzbd.nix
+    ./slskd.nix
   ];
 
               nixpkgs.config.permittedInsecurePackages = [
