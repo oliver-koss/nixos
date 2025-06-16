@@ -29,7 +29,7 @@ in
 
     "slsk.oliver-koss.at" = h {
       locations."/" = {
-        proxyPass = mkForce "http://10.0.7.2:${config.services.slskd.settings.web.port}/";
+        proxyPass = mkForce "http://10.0.7.2:${builtins.toString config.services.slskd.settings.web.port}/";
       };
     };
 
