@@ -4,8 +4,8 @@ with lib;
 
 let
   h = a: a // {
-    enableACME = true;
-    forceSSL = true;
+    enableACME = mkForce true;
+    forceSSL = mkForce true;
   };
 in
 {
