@@ -29,6 +29,7 @@ in
     };
     domain = "slsk.oliver-koss.at";
   };
+  users.users.slskd.extraGroups = [ "radarr" "sonarr" "users" ];
 
   networking.firewall.allowedTCPPorts = ports;
   networking.firewall.allowedUDPPorts = ports;
