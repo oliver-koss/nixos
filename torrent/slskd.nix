@@ -11,7 +11,7 @@ in
       };
       global = {
         download = {
-          slots = 2;
+          # slots = 2;
         };
         upload = {
           slots = 5;
