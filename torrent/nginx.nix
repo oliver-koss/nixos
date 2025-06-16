@@ -27,6 +27,12 @@ in
       };
     };
 
+    "slsk.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = mkForce "http://10.0.7.2:${config.services.slskd.settings.web.port}/";
+      };
+    };
+
     "radarr.oliver-koss.at" = h {
       locations."/" = {
         proxyPass = "http://localhost:7878/";
