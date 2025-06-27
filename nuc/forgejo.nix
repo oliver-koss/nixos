@@ -9,11 +9,12 @@
   };
 
   services.forgejo = {
-    enable = false;
+    enable = true;
+    lfs.enable = true;
     settings = {
     };
     database = {
-      type = "postgresql";
+      type = "postgres";
       socket = "/run/postgresql";
       name = "forgejo";
       user = "forgejo";
