@@ -84,6 +84,19 @@
         ];
       };
 
+      backup-nuc = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; }; # Pass flake inputs to our config
+        modules = [
+          mkg-mod.nixosModules.yggdrasil
+          mkg-mod.nixosModules.firewall-ips
+          nixos-hardware.nixosModules.common-cpu-intel
+          acme.nixosModules.acme-shim
+          # > Our main nixos configuration file <
+          ./backup-nuc.nix
+        ];
+      };
+
+
       pq-vpn = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; }; # Pass flake inputs to our config
         modules = [
