@@ -7,4 +7,17 @@
        }];
      ensureDatabases = [ "forgejo" ];
   };
+
+  services.forgejo = {
+    enable = false;
+    settings = {
+    };
+    database = {
+      type = "postgresql";
+      socket = "/run/postgresql";
+      name = "forgejo";
+      user = "forgejo";
+    };
+  };
+
 }
