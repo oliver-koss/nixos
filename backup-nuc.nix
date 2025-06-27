@@ -175,4 +175,9 @@ with lib;
 
   # attempt to make docker stop properly on reboot
   virtualisation.docker.liveRestore = false;
+
+  boot.supportedFilesystems = {
+    zfs = true;
+  };
+
 }
