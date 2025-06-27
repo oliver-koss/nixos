@@ -6,6 +6,7 @@
 #    ./kavita.nix
     ./immich.nix
     ./rdp.nix
+    ./forgejo.nix
   ];
 
   systemd.services.mount-boot = {
