@@ -59,7 +59,7 @@ with lib;
   boot.loader.systemd-boot.memtest86.enable = true;
   boot.loader.systemd-boot.netbootxyz.enable = true;
 
-  boot.initrd.luks.devices."luks-ab53ddbd-cd4e-40fa-9c67-22a49e201406".device = "/dev/disk/by-uuid/ab53ddbd-c>
+  boot.initrd.luks.devices."luks-ab53ddbd-cd4e-40fa-9c67-22a49e201406".device = "/dev/disk/by-uuid/ab53ddbd-cd4e-40fa-9c67-22a49e201406";
 
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
@@ -72,11 +72,11 @@ with lib;
   nix.gc.automatic = true;
   nix.gc.options = "--delete-older-than 14d";
 
-#  system.autoUpgrade.enable = true;
-#  system.autoUpgrade.allowReboot = true;
-#  system.autoUpgrade.rebootWindow.lower = "04:00";
-#  system.autoUpgrade.rebootWindow.upper = "06:00";
-#  system.autoUpgrade.flake = "github:oliver-koss/nixos/master";
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.rebootWindow.lower = "04:00";
+  system.autoUpgrade.rebootWindow.upper = "06:00";
+  system.autoUpgrade.flake = "github:oliver-koss/nixos/master";
 
   boot.tmp.useTmpfs = true;
 
