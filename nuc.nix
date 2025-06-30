@@ -20,6 +20,7 @@ with lib;
       #./nuc/wg.nix
       ./node_exporter.service.nix
       ./minecraft.nix
+      ./nextcloud.nix
 #      ./pi/kodi.nix
       ./nuc
 #      ./asterisk
