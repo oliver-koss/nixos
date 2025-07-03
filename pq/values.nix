@@ -21,6 +21,10 @@
         publicKey = "LZ/QSVEznNXicc1yrcNDtphpugUKOQahLEL3u7mXiTU=";
         id = 5;
       };
+      t = {
+        publicKey = "PqIYG/6Mxb+Yqtcck66t5iC4W4vhnl6c4K25k1wm/H8=";
+        id = 6;
+      };
     };
   };
 }
