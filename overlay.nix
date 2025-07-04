@@ -7,4 +7,5 @@ final: prev: {
   fritzbox-exporter = prev.callPackage ./fritzbox {};
   aegis-cli = prev.callPackage ./aegis-cli {};
   reactionary = prev.callPackage ./apps/reactionary {};
+  r0c = prev.callPackage ./apps/r0c {};
 }
