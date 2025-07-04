@@ -24,6 +24,7 @@
       t = {
         publicKey = "PqIYG/6Mxb+Yqtcck66t5iC4W4vhnl6c4K25k1wm/H8=";
         id = 6;
+        portsV4 = [ 51414 ];
       };
     };
   };
