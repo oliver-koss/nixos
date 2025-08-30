@@ -36,5 +36,8 @@ with lib;
   # maybe fix disk stuff
   services.journald.storage = "volatile";
 
+  nix.gc.automatic = true;
+  nix.gc.options = "--delete-older-than 14d";
+
   environment.systemPackages = with pkgs; [ iptraf-ng nload ];
 }
