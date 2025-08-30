@@ -12,6 +12,7 @@
       m = {
         publicKey = "xtzVc6vqJy4rx/ZY9uvCwDX/ftwPuC53lA9qvwT1KBs=";
         id = 3;
+        portsV4 = [ 54545 ];
       };
       o = {
         publicKey = "hP5+a0KfPBT77JlIkrK352fxOe6QHQ82g2TH+I7/kyk=";
