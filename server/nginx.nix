@@ -17,7 +17,6 @@ in
   services.nginx.recommendedOptimisation = true;
   services.nginx.recommendedProxySettings = true;
   services.nginx.recommendedTlsSettings = true;
-  services.nginx.recommendedZstdSettings = true;
 
   # forgejo
   networking.firewall.allowedTCPPorts = [ 22 ];
