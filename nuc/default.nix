@@ -7,6 +7,7 @@
     ./immich.nix
     ./rdp.nix
     ./forgejo.nix
+    ./ipv6.nix
   ];
 
   systemd.services.mount-boot = {
