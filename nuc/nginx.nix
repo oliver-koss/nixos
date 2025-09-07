@@ -51,6 +51,9 @@ in
     "tubearch.mkg20001.io" = h {
       locations."/" = {
         proxyPass = "http://localhost:8333/";
+        extraConfig = ''
+          proxy_set_header Referer $http_referer;
+        '';
       };
     };
   };
