@@ -39,7 +39,7 @@ with lib;
 
   services.docuum = {
     enable = true;
-    threshold = "10 GB";
+    threshold = "20 GB";
   };
 
 #  services.transmission.enable = mkForce false;
@@ -89,7 +89,8 @@ with lib;
     extraPackages = with pkgs; [
       intel-media-driver
       # vaapiIntel
-      vaapiVdpau
+      # vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
       intel-compute-runtime # OpenCL filter support (hardware tonemapping and subtitle burn-in)
     ];
