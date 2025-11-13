@@ -21,7 +21,7 @@ in
         enableACME = true;
         forceSSL = true;
         locations."/" = {
-          proxyPass = "http://localhost:8080";
+          proxyPass = "http://localhost:10000";
           proxyWebsockets = true;
         };
       };
@@ -30,7 +30,7 @@ in
     services.pufferpanel = {
       enable = true;
       environment = {
-        PUFFER_WEB_HOST = "localhost:8080";
+        PUFFER_WEB_HOST = "localhost:10000";
         PUFFER_PANEL_REGISTRATIONENABLED = "false";
       };
     };
@@ -45,7 +45,7 @@ in
       "L /pufferpath - - - - ${pkgs.symlinkJoin { name = "pufferpath"; paths = config.systemd.services.pufferpanel.path; }}"
     ];
 
-    networking.firewall.allowedTCPPorts =  [ 8080 443 ];
+#    networking.firewall.allowedTCPPorts =  [ 8080 443 ];
     networking.firewall.allowedTCPPortRanges = [ { from = 25000; to = 26000; } ];
   };
 }
