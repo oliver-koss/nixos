@@ -19,7 +19,7 @@ with lib;
       ./nuc/nginx.nix
       #./nuc/wg.nix
       ./node_exporter.service.nix
-      ./minecraft.nix
+#      ./minecraft.nix
       ./admin-pw.nix
       ./nextcloud.nix
 #      ./pi/kodi.nix
@@ -39,7 +39,7 @@ with lib;
 
   services.docuum = {
     enable = true;
-    threshold = "20 GB";
+    threshold = "30 GB";
   };
 
 #  services.transmission.enable = mkForce false;
