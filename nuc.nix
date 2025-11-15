@@ -161,6 +161,7 @@ with lib;
     yt-dlp
     calibre
     speedtest-cli
+    pufferpanel
   ];
 
   services.prometheus.exporters.fritzbox = {
