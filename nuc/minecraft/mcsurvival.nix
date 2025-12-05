@@ -3,7 +3,7 @@
     enable = true;
     eula = true;
     declarative = true;
-#    openFirewall = true;
+    openFirewall = true;
  
     package = pkgs.papermcServers.papermc-1_18_2;
     dataDir = "/mc/mcsurvival";
@@ -22,7 +22,5 @@
  
     jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
   };
-
-  networking.firewall.allowedTCPPorts =  [ 25585 ];
 
 }
