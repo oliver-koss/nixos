@@ -3,15 +3,17 @@
     enable = true;
     eula = true;
     declarative = true;
+#    openFirewall = true;
  
     package = pkgs.papermcServers.papermc-1_18_2;
     dataDir = "/mc/mcsurvival";
  
     serverProperties = {
+      server-port = 25585;
       gamemode = "survival";
-      difficulty = "hard";
+      difficulty = "easy";
       simulation-distance = 10;
-      level-seed = "4";
+      white-list = true;
     };
  
     whitelist = {
@@ -21,6 +23,6 @@
     jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
   };
 
-  networking.firewall.allowedTCPPorts =  [ 25565 ];
+  networking.firewall.allowedTCPPorts =  [ 25585 ];
 
 }
