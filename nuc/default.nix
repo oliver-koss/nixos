@@ -9,6 +9,7 @@
     ./forgejo.nix
     ./ipv6.nix
     ./minecraft/mcsurvival.nix
+    ./ygg-ra.nix
   ];
 
   systemd.services.mount-boot = {
