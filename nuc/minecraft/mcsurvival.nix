@@ -17,7 +17,7 @@
     };
  
     whitelist = {
-      vimjoyer = "3f96da12-a55c-4871-8e26-09256adac319";
+      oli_550 = "f002985a-bc2e-4861-a3bd-08eff0b663aa";
     };
  
     jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
