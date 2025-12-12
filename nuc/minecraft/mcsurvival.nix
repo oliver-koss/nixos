@@ -18,6 +18,7 @@
  
     whitelist = {
       oli_550 = "f002985a-bc2e-4861-a3bd-08eff0b663aa";
+      stonedust = "7835abb8-708e-425d-9624-0f2f8613a633";
     };
  
     jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
