@@ -6,7 +6,11 @@
             settings = {
                 devices = [
                     {
-                        username = "fritzexporter_nuc";
+                        name = "fritzbox_6850";
+                        hostname = "192.168.178.1";
+                        username = "metrics";
+                        password_file = "/var/fritexporter-key";
+
                     }
                 ];
                 
