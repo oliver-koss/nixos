@@ -38,15 +38,24 @@
         # Listening Address
         http_addr = "0.0.0.0";
         # and Port
-        http_port = 3000;
+        http_port = 3590;
         # Grafana needs to know on which domain and URL it's running
-#        domain = "your.domain";
+        domain = "grafana.oliver-koss.at";
 #        root_url = "https://your.domain/grafana/"; # Not needed if it is `https://your.domain/`
 #        serve_from_sub_path = true;
         };
     };
     security = {
       adminUser = "admin";
+    };
+    };
+
+    services.nginx.virtualHosts."grafana.oliver-koss.at" = {
+    forceSSL = true;
+    enableACME = true;
+    locations."/" = {
+        proxyPass = "http://${toString config.services.grafana.settings.server.http_addr}:${toString config.services.grafana.settings.server.http_port}";
+        proxyWebsockets = true;
     };
     };
 
