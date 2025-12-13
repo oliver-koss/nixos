@@ -42,6 +42,8 @@ with lib;
         "206:c97d:47a1:ff37:9cc6:df87:3c8a:3fd9"
         # mkg
         "201:39a5:2fa6:ffb0:41e8:475c:e129:f30d"
+        # oliver-x220i
+        "200:bf21:3442:ac07:10df:6a67:26c4:548b"
       ];
     };
   };
