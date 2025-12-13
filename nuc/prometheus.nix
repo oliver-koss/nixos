@@ -1,4 +1,7 @@
+{ config, pkgs, ... }:
 {
-  services.prometheus.enable = true;
-  port     = 9090;
+    services.prometheus = {
+        enable  = true;
+        port    = 9090;
+    }
 }
