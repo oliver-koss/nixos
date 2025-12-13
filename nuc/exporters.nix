@@ -3,6 +3,6 @@
     services.prometheus.exporters = {
         fritz = {
             enable = true;
-        }
+        };
     };
 }
