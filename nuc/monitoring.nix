@@ -13,7 +13,8 @@
                 static_configs = [{
                     targets = [ "localhost:${toString config.services.prometheus.exporters.node.port}" ];
                 }];
-
+            }
+            {
                 job_name = "fritz";
                 static_configs = [{
                     targets = [ "localhost:${toString config.services.prometheus.exporters.fritz.port}" ];
