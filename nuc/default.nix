@@ -10,7 +10,7 @@
     ./ipv6.nix
     ./minecraft/mcsurvival.nix
     ./ygg-ra.nix
-    ./prometheus.nix
+    ./monitoring.nix
   ];
 
   systemd.services.mount-boot = {
