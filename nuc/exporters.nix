@@ -3,7 +3,14 @@
     services.prometheus.exporters = {
         fritz = {
             enable = true;
-            settings = [];
+            settings = {
+                devices = [
+                    {
+                        username = "fritzexporter_nuc";
+                    }
+                ];
+                
+            }
         };
     };
 }
