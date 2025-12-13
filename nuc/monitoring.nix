@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 {
+    imports = [
+    ./exporters.nix
+    ];
+    
     services.prometheus = {
         enable  = true;
         port    = 9090;
