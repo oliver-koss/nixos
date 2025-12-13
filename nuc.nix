@@ -18,7 +18,7 @@ with lib;
       ./torrent/ns.nix
       ./nuc/nginx.nix
       #./nuc/wg.nix
-      ./node_exporter.service.nix
+#      ./node_exporter.service.nix
 #      ./minecraft.nix
       ./admin-pw.nix
       ./nextcloud.nix
@@ -164,10 +164,10 @@ with lib;
     pufferpanel
   ];
 
-  services.prometheus.exporters.fritzbox = {
-    enable = true;
-    gatewayAddress = "192.168.178.1";
-  };
+#  services.prometheus.exporters.fritzbox = {
+#    enable = true;
+#    gatewayAddress = "192.168.178.1";
+#  };
   hardware.enableRedistributableFirmware = true;
 
   virtualisation.incus = {
