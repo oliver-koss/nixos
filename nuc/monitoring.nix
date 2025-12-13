@@ -45,9 +45,6 @@
 #        serve_from_sub_path = true;
         };
     };
-    security = {
-      adminUser = "admin";
-    };
     };
 
     services.nginx.virtualHosts."grafana.oliver-koss.at" = {
