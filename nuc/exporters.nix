@@ -9,7 +9,7 @@
                         name = "fritzbox_6850";
                         hostname = "192.168.178.1";
                         username = "metrics";
-                        password_file = "/var/fritexporter-key";
+                        password_file = "/var/fritzexporter-key";
 
                     }
                 ];
