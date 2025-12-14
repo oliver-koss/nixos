@@ -129,5 +129,12 @@ in
     };
   };
 
+  services.nginx.virtualHosts = {
+    "uptime.oliver-koss.at" = h {
+      locations."/" = {
+        proxyPass = "http://localhost:4000/";
+      };
+    };
+  };
 
 }
