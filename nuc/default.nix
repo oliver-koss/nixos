@@ -11,6 +11,7 @@
     ./minecraft/mcsurvival.nix
     ./ygg-ra.nix
     ./monitoring.nix
+    ./uptime-kuma.nix
   ];
 
   systemd.services.mount-boot = {
