@@ -132,7 +132,7 @@ in
   services.nginx.virtualHosts = {
     "uptime.oliver-koss.at" = h {
       locations."/" = {
-        proxyPass = "http://localhost:4000/";
+        proxyPass = "http://localhost:3001/";
       };
     };
   };
