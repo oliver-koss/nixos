@@ -105,8 +105,8 @@ with lib;
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   environment.plasma6.excludePackages = with pkgs.libsForQt5; [
-   elisa
-   gwenview
+#   elisa
+#   gwenview
    okular
    oxygen
    khelpcenter
