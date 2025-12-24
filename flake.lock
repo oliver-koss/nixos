@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1697198256,
-        "narHash": "sha256-ZIG5nDw+0HAOMYkfyg/d2QYV6M5dowNxqYJwzs8FNl4=",
+        "lastModified": 1763574211,
+        "narHash": "sha256-nIFxhR14byfPQ5s6RW2zyJuIlKbbn5K6hXHf2r2fvJk=",
         "ref": "refs/heads/master",
-        "rev": "5e6e4850cc0d4dfccbfc1c4cb4c7297f5fa14c72",
-        "revCount": 57,
+        "rev": "9007d2efb66a9941219366c40f28e2e0487482dd",
+        "revCount": 60,
         "type": "git",
         "url": "https://git.xeredo.it/xeredo/nixdeploy/acme-distributor"
       },
@@ -30,11 +30,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1697198256,
-        "narHash": "sha256-ZIG5nDw+0HAOMYkfyg/d2QYV6M5dowNxqYJwzs8FNl4=",
+        "lastModified": 1763574211,
+        "narHash": "sha256-nIFxhR14byfPQ5s6RW2zyJuIlKbbn5K6hXHf2r2fvJk=",
         "ref": "refs/heads/master",
-        "rev": "5e6e4850cc0d4dfccbfc1c4cb4c7297f5fa14c72",
-        "revCount": 57,
+        "rev": "9007d2efb66a9941219366c40f28e2e0487482dd",
+        "revCount": 60,
         "type": "git",
         "url": "https://git.xeredo.it/xeredo/nixdeploy/acme-distributor"
       },
@@ -256,11 +256,11 @@
         "xzar-client": "xzar-client"
       },
       "locked": {
-        "lastModified": 1731021405,
-        "narHash": "sha256-uiXaoPAQhzjYvA7W0161YBvJ8Xj2d+H5se6NzGDMfdQ=",
+        "lastModified": 1763574334,
+        "narHash": "sha256-sI0xzQvg6px1pg1KxuMKl5h46xQUBtEaeQDiMkyx2dM=",
         "ref": "refs/heads/master",
-        "rev": "82dc77b761e5f444419b875113a6725895c144fe",
-        "revCount": 220,
+        "rev": "adb2a8e3b0b243493625858082357479bb97bc26",
+        "revCount": 233,
         "type": "git",
         "url": "https://git.xeredo.it/xeredo/xnix.git"
       },
