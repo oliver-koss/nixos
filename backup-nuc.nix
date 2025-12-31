@@ -29,6 +29,8 @@ with lib;
 #    ({
 #      _module.args.disks = [ "/dev/disk/by-id/ata-Intenso_SSD_Sata_III_2022042201044" ];
 #    })
+      inputs.disko.nixosModules.disko
+      ./backup-nuc/disko.nix
 
     ];
 
