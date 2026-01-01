@@ -18,6 +18,7 @@
   fileSystems."/backup" =
     { device = "/dev/mapper/backup-backup_raid0";
       fsType = "ext4";
+      options = [ "nofail" ];
     };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
