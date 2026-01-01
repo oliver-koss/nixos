@@ -159,6 +159,7 @@ with lib;
 
   environment.systemPackages = with pkgs; [
     speedtest-cli
+    borgbackup
   ];
 
   hardware.enableRedistributableFirmware = true;
