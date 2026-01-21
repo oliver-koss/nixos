@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }: with lib; let
   ns = pkgs.writeShellScript "ns" (builtins.readFile ./ns.sh);
   resolv = pkgs.writeText "resolv.conf" ''
-    nameserver 2a09:7c47:0:4::1
+    # nameserver 2a09:7c47:0:4::1
     nameserver 10.7.0.1
     options edns0
   '';
