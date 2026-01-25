@@ -137,4 +137,13 @@ in
     };
   };
 
+#  services.nginx.virtualHosts = {
+#    "archive.oliver-koss.at" = h {
+#      locations."/" = {
+#        proxyPass = "http://localhost:3004/";
+#      };
+#    };
+#  };
+
+
 }
