@@ -29,6 +29,8 @@ with lib;
 #    ({
 #      _module.args.disks = [ "/dev/disk/by-id/ata-Intenso_SSD_Sata_III_2022042201044" ];
 #    })
+      inputs.disko.nixosModules.disko
+      ./backup-nuc/disko.nix
 
     ];
 
@@ -59,8 +61,6 @@ with lib;
   boot.loader.systemd-boot.memtest86.enable = true;
   boot.loader.systemd-boot.netbootxyz.enable = true;
 
-  boot.initrd.luks.devices."luks-ab53ddbd-cd4e-40fa-9c67-22a49e201406".device = "/dev/disk/by-uuid/ab53ddbd-cd4e-40fa-9c67-22a49e201406";
-
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
   # console = {
@@ -89,7 +89,8 @@ with lib;
     extraPackages = with pkgs; [
       intel-media-driver
       # vaapiIntel
-      vaapiVdpau
+      #vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
       intel-compute-runtime # OpenCL filter support (hardware tonemapping and subtitle burn-in)
     ];
@@ -158,6 +159,7 @@ with lib;
 
   environment.systemPackages = with pkgs; [
     speedtest-cli
+    borgbackup
   ];
 
   hardware.enableRedistributableFirmware = true;
