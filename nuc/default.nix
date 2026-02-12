@@ -7,7 +7,7 @@
     ./immich.nix
     ./rdp.nix
     ./forgejo.nix
-    ./ipv6.nix
+    # ./ipv6.nix
     ./minecraft/mcsurvival.nix
     ./ygg-ra.nix
     ./monitoring.nix
