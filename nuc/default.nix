@@ -12,6 +12,7 @@
     ./ygg-ra.nix
     ./monitoring.nix
     ./uptime-kuma.nix
+    ./irc.nix
   ];
 
   systemd.services.mount-boot = {

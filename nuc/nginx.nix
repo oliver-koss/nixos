@@ -137,6 +137,26 @@ in
     };
   };
 
+  services.nginx.virtualHosts = {
+    "irc.oliver-koss.at" = h {
+      locations."/" = {
+#        root = "/nix/store/v99rzys4sw68k8nrlp3q9jzgjrl5dbxv-gamja-1.0.0-beta.11";
+      };
+      locations."/socket/" = {
+        proxyPass = "http://localhost:5011";
+	extraConfig = ''
+          proxy_read_timeout 600s;
+          proxy_http_version 1.1;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection "Upgrade";
+          proxy_set_header Host $host;
+          proxy_set_header X-Forwarded-For $remote_addr;
+          proxy_set_header X-Forwarded-Proto $scheme;
+        '';
+      };
+    };
+  };
+
 #  services.nginx.virtualHosts = {
 #    "archive.oliver-koss.at" = h {
 #      locations."/" = {
