@@ -140,7 +140,7 @@ in
   services.nginx.virtualHosts = {
     "irc.oliver-koss.at" = h {
       locations."/" = {
-#        root = "/nix/store/v99rzys4sw68k8nrlp3q9jzgjrl5dbxv-gamja-1.0.0-beta.11";
+        root = "/nix/store/v99rzys4sw68k8nrlp3q9jzgjrl5dbxv-gamja-1.0.0-beta.11";
       };
       locations."/socket/" = {
         proxyPass = "http://localhost:5011";

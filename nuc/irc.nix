@@ -3,8 +3,8 @@
   services.soju = {
     enable = true;
     hostName = "irc.oliver-koss.at";
-#    listen = ["ircs://0.0.0.0:6697" "wss://localhost:5011"];
-    listen = ["ircs://0.0.0.0:6697"];
+    listen = ["ircs://0.0.0.0:6697" "wss://localhost:5011"];
+#    listen = ["ircs://0.0.0.0:6697"];
     tlsCertificate = "/var/lib/acme/irc.oliver-koss.at/fullchain.pem";
     tlsCertificateKey = "/var/lib/acme/irc.oliver-koss.at/key.pem";
 #    extraConfig = "
