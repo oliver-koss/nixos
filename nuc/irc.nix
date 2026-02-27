@@ -1,10 +1,12 @@
 { pkgs, lib, ...}: {
 
+  networking.firewall.allowedTCPPorts = [ 113 ];
+
   services.soju = {
     enable = true;
     hostName = "irc.oliver-koss.at";
-    listen = ["ircs://0.0.0.0:6697" "wss://0.0.0.0:5011"];
-#    listen = ["ircs://0.0.0.0:6697"];
+#    listen = ["ircs://0.0.0.0:6697" "wss://0.0.0.0:5011"];
+    listen = ["ircs://0.0.0.0:6697"];
     tlsCertificate = "/var/lib/acme/irc.oliver-koss.at/fullchain.pem";
     tlsCertificateKey = "/var/lib/acme/irc.oliver-koss.at/key.pem";
 #    extraConfig = "
@@ -17,6 +19,8 @@
   environment.systemPackages = with pkgs; [
     gamja
   ];
+
+  services.oidentd.enable = true;
 
   services.znc = {
     enable = false;

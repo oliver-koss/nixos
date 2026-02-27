@@ -159,7 +159,7 @@ with lib;
 
   environment.systemPackages = with pkgs; [
     yt-dlp
-    calibre
+#    calibre
     speedtest-cli
     pufferpanel
   ];
@@ -171,7 +171,7 @@ with lib;
   hardware.enableRedistributableFirmware = true;
 
   virtualisation.incus = {
-    enable = true;
+    enable = false;
     ui.enable = true;
   };
     networking.firewall = {
