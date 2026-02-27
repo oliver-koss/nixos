@@ -44,6 +44,8 @@ with lib;
         "201:39a5:2fa6:ffb0:41e8:475c:e129:f30d"
         # oliver-x220i
         "200:bf21:3442:ac07:10df:6a67:26c4:548b"
+        # oliver-arch-desktop
+        "200:f263:253c:5760:975f:8c2a:1cb4:f542"
       ];
     };
   };
