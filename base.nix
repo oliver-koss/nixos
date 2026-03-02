@@ -46,6 +46,8 @@ with lib;
         "200:bf21:3442:ac07:10df:6a67:26c4:548b"
         # oliver-arch-desktop
         "200:f263:253c:5760:975f:8c2a:1cb4:f542"
+        # oliver-pixel-5
+        "201:dee1:22bb:8679:c514:230:8825:22ab"
       ];
     };
   };

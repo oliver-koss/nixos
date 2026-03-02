@@ -16,7 +16,7 @@ config = {
   services.nextcloud = {
     enable = true;
 
-#    package = mkForce pkgs.nextcloud26;
+    package = mkForce pkgs.nextcloud33;
     config = {
 #      dbtype = mkForce "sqlite";
     };
