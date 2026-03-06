@@ -2,28 +2,30 @@
   "nodes": {
     "acme": {
       "inputs": {
-        "nix-node-package": "nix-node-package",
+        "flake-utils": "flake-utils",
         "nixpkgs": [
           "nixpkgs"
-        ]
+        ],
+        "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1763574211,
-        "narHash": "sha256-nIFxhR14byfPQ5s6RW2zyJuIlKbbn5K6hXHf2r2fvJk=",
-        "ref": "refs/heads/master",
-        "rev": "9007d2efb66a9941219366c40f28e2e0487482dd",
-        "revCount": 60,
-        "type": "git",
-        "url": "https://git.xeredo.it/xeredo/nixdeploy/acme-distributor"
+        "lastModified": 1772782705,
+        "narHash": "sha256-PNH92WX3z6uXV0XW4wd7Ne4jJF1fEZCRVH2yzrass8M=",
+        "owner": "mkg20001",
+        "repo": "acme-distributor",
+        "rev": "f34c7a626604d3f23358c22e8ed9a3f758ad577d",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://git.xeredo.it/xeredo/nixdeploy/acme-distributor"
+        "owner": "mkg20001",
+        "ref": "trunk",
+        "repo": "acme-distributor",
+        "type": "github"
       }
     },
     "acme_2": {
       "inputs": {
-        "nix-node-package": "nix-node-package_2",
+        "nix-node-package": "nix-node-package",
         "nixpkgs": [
           "xnix",
           "nixpkgs"
@@ -60,6 +62,24 @@
       "original": {
         "owner": "nix-community",
         "repo": "disko",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
         "type": "github"
       }
     },
@@ -139,22 +159,6 @@
     },
     "nix-node-package_2": {
       "locked": {
-        "lastModified": 1645439390,
-        "narHash": "sha256-mYkNbWBzQkv7O0mVZ4llqo9ZNeeo/IWPJk5WMa34SgQ=",
-        "owner": "mkg20001",
-        "repo": "nix-node-package",
-        "rev": "03285e212016db5f28530563b58cfcc5706ff73f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mkg20001",
-        "ref": "master",
-        "repo": "nix-node-package",
-        "type": "github"
-      }
-    },
-    "nix-node-package_3": {
-      "locked": {
         "lastModified": 1706303050,
         "narHash": "sha256-LCELgjzunxEsZQNRYJmVJ6FRVVurEsffed9aB8kPheE=",
         "owner": "mkg20001",
@@ -169,7 +173,7 @@
         "type": "github"
       }
     },
-    "nix-node-package_4": {
+    "nix-node-package_3": {
       "locked": {
         "lastModified": 1631348881,
         "narHash": "sha256-bG/wwzf14M1aCNVaL/KD1F+3uiY734d6G23g4eLWBI8=",
@@ -185,7 +189,7 @@
         "type": "github"
       }
     },
-    "nix-node-package_5": {
+    "nix-node-package_4": {
       "locked": {
         "lastModified": 1645439390,
         "narHash": "sha256-mYkNbWBzQkv7O0mVZ4llqo9ZNeeo/IWPJk5WMa34SgQ=",
@@ -244,11 +248,47 @@
         "xnix": "xnix"
       }
     },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "acme",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1772679930,
+        "narHash": "sha256-FxYmdacqrdDVeE9QqZKTIpNLjv2B8GSKssgwlZuTR98=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "9b741db17141331fdb26270a1b66b81be8be9edd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "xnix": {
       "inputs": {
         "acme": "acme_2",
         "mkg": "mkg",
-        "nix-node-package": "nix-node-package_3",
+        "nix-node-package": "nix-node-package_2",
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -271,7 +311,7 @@
     },
     "xup": {
       "inputs": {
-        "nix-node-package": "nix-node-package_4",
+        "nix-node-package": "nix-node-package_3",
         "nixpkgs": [
           "xnix",
           "nixpkgs"
@@ -293,7 +333,7 @@
     },
     "xzar-client": {
       "inputs": {
-        "nix-node-package": "nix-node-package_5",
+        "nix-node-package": "nix-node-package_4",
         "nixpkgs": [
           "xnix",
           "nixpkgs"

@@ -22,7 +22,7 @@ with lib;
 
   nix.settings.experimental-features = "nix-command flakes";
 
-  nixpkgs.overlays = [(import ./overlay.nix) inputs.acme.overlay ];
+  nixpkgs.overlays = [(import ./overlay.nix) inputs.acme.overlays.default ];
   security.sudo.wheelNeedsPassword = false;
 
   networking.nftables.enable = true;

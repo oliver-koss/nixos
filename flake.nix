@@ -18,7 +18,7 @@
     mkg-mod.url = "github:mkg20001/mkg-mod/master";
     mkg-mod.inputs.nixpkgs.follows = "nixpkgs";
 
-    acme.url = "git+https://git.xeredo.it/xeredo/nixdeploy/acme-distributor";
+    acme.url = "github:mkg20001/acme-distributor/trunk";
     acme.inputs.nixpkgs.follows = "nixpkgs";
 
     disko.url = "github:nix-community/disko";
