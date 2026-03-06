@@ -59,7 +59,7 @@ with lib;
     mtr
     tcpdump
     htop
-    neofetch
+    fastfetch
     p7zip
     ncdu
     rsync
