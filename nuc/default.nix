@@ -13,6 +13,7 @@
     ./monitoring.nix
     ./uptime-kuma.nix
     ./irc.nix
+    ./part-db.nix
   ];
 
   systemd.services.mount-boot = {
