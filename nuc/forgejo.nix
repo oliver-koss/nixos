@@ -1,4 +1,4 @@
-{ lib ,...}: with lib; {
+{ config, lib ,...}: with lib; {
   services.postgresql = {
     enable = true;
     ensureUsers = [{
@@ -31,7 +31,7 @@
     server.HTTP_PORT = 3000;
     server.ROOT_URL = "https://git.oliver-koss.at/";
     server.DISABLE_SSH = false;
-    server.START_SSH_SERVER = false;
+    server.START_SSH_SERVER = true;
     server.SSH_PORT = 22;
     server.SSH_LISTEN_PORT = 22;
     server.LFS_START_SERVER = true;
@@ -93,6 +93,17 @@
       name = "forgejo";
       user = "forgejo";
     };
+  };
+
+  networking.firewall.allowedTCPPorts = [ 22 ];
+
+  systemd.sockets.forgejo = {
+    requiredBy = [ "forgejo.service" ];
+    wantedBy = [ "sockets.target" ];
+
+    listenStreams = [
+      (toString config.services.forgejo.settings.server.SSH_PORT)
+    ];
   };
 
 }
