@@ -9,11 +9,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1772794829,
-        "narHash": "sha256-00/y4FHKnmilb51EVAbf/kOWDC26dyS1Gur09JSRm5g=",
+        "lastModified": 1773239493,
+        "narHash": "sha256-Cgzpla1gbAfEC9IjXqWd4Dh2KMoUsGZyDsLsecmSf48=",
         "owner": "mkg20001",
         "repo": "acme-distributor",
-        "rev": "079aca0f0a118ecc034492a8d5cb2d6b570a919a",
+        "rev": "7efef379950ff858013b17a54fc8a2578963d011",
         "type": "github"
       },
       "original": {
@@ -33,11 +33,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1772794829,
-        "narHash": "sha256-00/y4FHKnmilb51EVAbf/kOWDC26dyS1Gur09JSRm5g=",
+        "lastModified": 1773239493,
+        "narHash": "sha256-Cgzpla1gbAfEC9IjXqWd4Dh2KMoUsGZyDsLsecmSf48=",
         "owner": "mkg20001",
         "repo": "acme-distributor",
-        "rev": "079aca0f0a118ecc034492a8d5cb2d6b570a919a",
+        "rev": "7efef379950ff858013b17a54fc8a2578963d011",
         "type": "github"
       },
       "original": {
@@ -336,11 +336,11 @@
         "xzar-client": "xzar-client"
       },
       "locked": {
-        "lastModified": 1772804153,
-        "narHash": "sha256-66zi9/hBt0ABWjzcpnefFoBiEx9n9ioYuJAEUSra57s=",
+        "lastModified": 1773239629,
+        "narHash": "sha256-YuT9r3GmFQzYICfRye1mDeLROQsKkZfUGomyGWZndA0=",
         "ref": "refs/heads/master",
-        "rev": "4097106c3b9432c0e41a5cb024e4bbca5548664a",
-        "revCount": 238,
+        "rev": "09d978b8349b83f34c12f6e9c5916411a7975cf4",
+        "revCount": 239,
         "type": "git",
         "url": "https://git.xeredo.it/xeredo/xnix.git"
       },
