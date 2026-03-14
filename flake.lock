@@ -9,11 +9,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1773239493,
-        "narHash": "sha256-Cgzpla1gbAfEC9IjXqWd4Dh2KMoUsGZyDsLsecmSf48=",
+        "lastModified": 1773419293,
+        "narHash": "sha256-BVptLV8FO+Got6mr0IbMY1gm+j1oliEy3pdD+XtJh84=",
         "owner": "mkg20001",
         "repo": "acme-distributor",
-        "rev": "7efef379950ff858013b17a54fc8a2578963d011",
+        "rev": "437ee0582782cc429e74d1e1f8863650ab7d690b",
         "type": "github"
       },
       "original": {
