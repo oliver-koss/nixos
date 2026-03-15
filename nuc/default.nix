@@ -14,6 +14,7 @@
     ./uptime-kuma.nix
     ./irc.nix
     ./part-db.nix
+    ./authelia.nix
   ];
 
   systemd.services.mount-boot = {
