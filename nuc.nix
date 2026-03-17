@@ -183,4 +183,10 @@ with lib;
 
   # attempt to make docker stop properly on reboot
   virtualisation.docker.liveRestore = false;
+
+  services.iperf3 = {
+    enable = true;
+    openFirewall = true;
+  };
+
 }
