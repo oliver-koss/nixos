@@ -16,15 +16,20 @@ services.authelia.instances = {
       authentication_backend.file = {
         path = "/etc/authelia/users.yml";
       };
-      storage = {
-        path = "/etc/authelia/db.sqlite";
-      };
+      storage.local.path = "/etc/authelia/db.sqlite";
       session = {
         domain = "sso.oliver-koss.at";
         expiration = "3600";
         inactivity = "300";
       };
       notifier.filesystem.filename = "/etc/authelia/emails.txt";
+      access_control = {
+        default_policy = "deny";
+        rules = {
+          domain = "*.oliver-koss.at";
+          policy = "one_factor";
+        };
+      };
     };
   };
 
