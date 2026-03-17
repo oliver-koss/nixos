@@ -1,4 +1,4 @@
-{ config, lib ,...}: with lib; {
+{ pkgs, config, lib ,...}: with lib; {
   services.postgresql = {
     enable = true;
     ensureUsers = [{
@@ -11,8 +11,15 @@
   services.forgejo = {
     enable = true;
 #    lfs.enable = true;
+    dump.enable = true;
+
+    package = pkgs.forgejo;
 
   settings = {
+    DEFAULT = {
+      APP_NAME = "Forgejo";
+      APP_SLOGAN = "Github, but oli";
+    };
 /*    APP_NAME = "Forgejo";
     RUN_MODE = "prod";
     APP_SLOGAN = "Github, but oli";
