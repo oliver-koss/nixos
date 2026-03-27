@@ -171,7 +171,7 @@ with lib;
   hardware.enableRedistributableFirmware = true;
 
   virtualisation.incus = {
-    enable = false;
+    enable = true;
     ui.enable = true;
   };
     networking.firewall = {
