@@ -73,6 +73,7 @@ with lib;
     eza
 
     fzf
+    iperf
   ];
 
   programs.bash.shellAliases = {
