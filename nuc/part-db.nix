@@ -1,7 +1,7 @@
 { pkgs, lib, ...}: {
 
   services.part-db = {
-    enable = true;
+    enable = false;
     enableNginx = false;
   };
 }
