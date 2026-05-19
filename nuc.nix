@@ -173,7 +173,6 @@ with lib;
   virtualisation.incus = {
     enable = true;
     ui.enable = true;
-    bucketSupport = false;
   };
     networking.firewall = {
       extraForwardRules = ''
