@@ -40,36 +40,12 @@ in
   };
 
   services.nginx.virtualHosts = {
-    "yt.oliver-koss.at" = h {
-      locations."/" = {
-        proxyPass = "http://localhost:8000/";
-      };
-    };
-  };
-
-  services.nginx.virtualHosts = {
     "tubearch.mkg20001.io" = h {
       locations."/" = {
         proxyPass = "http://localhost:8333/";
         extraConfig = ''
           proxy_set_header Referer $http_referer;
         '';
-      };
-    };
-  };
-
-#  services.nginx.virtualHosts = {
-#    "panel.oliver-koss.at" = h {
-#      locations."/" = {
-#        proxyPass = "http://localhost:10000/";
-#      };
-#    };
-#  };
-
-  services.nginx.virtualHosts = {
-    "read.oliver-koss.at" = h {
-      locations."/" = {
-        proxyPass = "http://localhost:5000/";
       };
     };
   };
@@ -83,38 +59,6 @@ in
         client_max_body_size 10g;
       '';
 
-    };
-  };
-
-  services.nginx.virtualHosts = {
-    "youtube.oliver-koss.at" = h {
-      locations."/" = {
-        proxyPass = "http://localhost:8945/";
-      };
-    };
-  };
-
-  services.nginx.virtualHosts = {
-    "aprsc.oliver-koss.at" = h {
-      locations."/" = {
-        proxyPass = "http://localhost:14502/";
-      };
-    };
-  };
-
-  services.nginx.virtualHosts = {
-    "aprsc-panel.oliver-koss.at" = h {
-      locations."/" = {
-        proxyPass = "http://localhost:14501/";
-      };
-    };
-  };
-
-  services.nginx.virtualHosts = {
-    "immich-nix.oliver-koss.at" = h {
-      locations."/" = {
-        proxyPass = "http://localhost:2383/";
-      };
     };
   };
 
