@@ -4,7 +4,7 @@
 #    ./pufferpanel.nix
 #    ./calibre-web.nix
 #    ./kavita.nix
-    ./immich.nix
+#    ./immich.nix
     ./rdp.nix
     ./forgejo.nix
     ./ipv6.nix
@@ -13,8 +13,8 @@
     ./monitoring.nix
     ./uptime-kuma.nix
     ./irc.nix
-    ./part-db.nix
-    ./authelia.nix
+#    ./part-db.nix
+#    ./authelia.nix
   ];
 
   systemd.services.mount-boot = {
