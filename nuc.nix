@@ -162,6 +162,7 @@ with lib;
 #    calibre
     speedtest-cli
     pufferpanel
+    jellyfin-ffmpeg
   ];
 
 #  services.prometheus.exporters.fritzbox = {
