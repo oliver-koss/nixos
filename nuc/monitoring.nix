@@ -54,6 +54,9 @@
 #        root_url = "https://your.domain/grafana/"; # Not needed if it is `https://your.domain/`
 #        serve_from_sub_path = true;
         };
+      security = {
+        secret_key = "SW2YcwTIb9zpOOhoPsMm";
+      };
     };
     };
 
