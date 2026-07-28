@@ -20,6 +20,13 @@
                     targets = [ "localhost:${toString config.services.prometheus.exporters.fritz.port}" ];
                 }];
             }
+            {
+                job_name = "fronius-bkw3a";
+                static_configs = [{
+                    targets = [ "10.23.23.92:9089" ];
+                }];
+            }
+
         ];
     };
 
@@ -42,7 +49,7 @@
     };
 
     services.grafana = {
-    enable = false;
+    enable = true;
     settings = {
         server = {
         # Listening Address
