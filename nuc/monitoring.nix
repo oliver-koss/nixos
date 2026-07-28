@@ -23,7 +23,13 @@
             {
                 job_name = "fronius-bkw3a";
                 static_configs = [{
-                    targets = [ "10.23.23.92:9089" ];
+                    targets = [ "10.23.23.92:9081" ];
+                }];
+            }
+            {
+                job_name = "fronius-bkw3";
+                static_configs = [{
+                    targets = [ "10.23.23.92:9088" ];
                 }];
             }
 
