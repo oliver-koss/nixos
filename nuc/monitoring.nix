@@ -36,6 +36,10 @@
         ];
     };
 
+    services.victoriametrics = {
+      enable = true;
+    };
+
     services.prometheus.exporters.node = {
         enable = true;
         port = 9000;
