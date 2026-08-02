@@ -7,6 +7,12 @@
     services.prometheus = {
         enable  = true;
         port    = 9090;
+        remoteWrite = [
+          {
+            name = "victoriametris_nuc";
+            url = "http://localhost:8428/api/v1/write";
+          }
+        ];
         scrapeConfigs = [
             {
                 job_name = "node";
@@ -38,6 +44,7 @@
 
     services.victoriametrics = {
       enable = true;
+      retentionPeriod = "10y";
     };
 
     services.prometheus.exporters.node = {
