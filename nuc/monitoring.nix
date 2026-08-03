@@ -38,6 +38,38 @@
                     targets = [ "10.23.23.92:9088" ];
                 }];
             }
+            {
+                job_name = "shelly-openmetrics-exporter";
+                basic_auth = {
+                  username = "admin";
+                  password_file = "/var/shelly_key";
+                };
+                metrics_path = "/probe";
+                static_configs = [
+                {
+                  targets = [ "192.168.178.95" ];
+                  labels.service = "Maciej";
+                }
+                {
+                  targets = [ "192.168.178.96" ];
+                  labels.service = "Oliver";
+                }
+                ];
+                relabel_configs = [
+                  {
+                    source_labels = ["__address__"];
+                    target_label = "__param_target";
+                  }
+                  {
+                    source_labels = [ "__param_target" ];
+                    target_label  = "instance";
+                  }
+                  {
+                    target_label = "__address__";
+                    replacement = "10.23.23.92:54901";
+                  }
+                ];
+            }
 
         ];
     };
