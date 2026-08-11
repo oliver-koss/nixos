@@ -7,6 +7,7 @@
     services.prometheus = {
         enable  = true;
         port    = 9090;
+        retentionTime = "365d";
         remoteWrite = [
           {
             name = "victoriametris_nuc";
