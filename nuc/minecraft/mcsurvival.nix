@@ -3,7 +3,8 @@
     enable = true;
     eula = true;
     declarative = true;
-    openFirewall = true;
+    # openFirewall would also open 25585/udp, which nothing listens on
+    openFirewall = false;
  
     package = pkgs.papermcServers.papermc-1_18_2;
     dataDir = "/mc/mcsurvival";
@@ -24,4 +25,5 @@
     jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
   };
 
+  networking.firewall.allowedTCPPorts = [ 25585 ];
 }

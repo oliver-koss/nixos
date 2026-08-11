@@ -7,9 +7,11 @@ with lib;
     enable = true;
     package = pkgs.transmission_4;
 
-    openFirewall = true;
-    openRPCPort = true;
-    openPeerPorts = true;
+    # runs in the tz netns (see torrent/ns.nix); host firewall rules would be
+    # dead weight, and would expose the RPC port if the netns ever failed to come up
+    openFirewall = false;
+    openRPCPort = false;
+    openPeerPorts = false;
 
     credentialsFile = "/var/lib/secrets/transmission/settings.json";
 

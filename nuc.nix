@@ -180,7 +180,12 @@ with lib;
         iifname { "incusbr0", "incusbr1", "eth0" } oifname { "incusbr0", "incusbr1", "eth0" } accept
       '';
       trustedInterfaces = [ "incusbr0" "incusbr1" ];
+      # mDNS/SSDP/jellyfin discovery are link-local: LAN nic only, never over
+      # the public uplink0. jellyfin/avahi openFirewall would open them globally.
+      interfaces.enp3s0.allowedUDPPorts = [ 1900 5353 7359 ];
     };
+
+  services.avahi.openFirewall = false;
 
   # attempt to make docker stop properly on reboot
   virtualisation.docker.liveRestore = false;
@@ -190,4 +195,5 @@ with lib;
     openFirewall = true;
   };
 
+  services.openssh.settings.PasswordAuthentication = false;
 }

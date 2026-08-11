@@ -1,6 +1,3 @@
-let
-  ports = [ 54015 54016 ];
-in
 {
   services.slskd = {
     enable = true;
@@ -30,9 +27,6 @@ in
     domain = "slsk.oliver-koss.at";
   };
   users.users.slskd.extraGroups = [ "radarr" "sonarr" "users" ];
-
-  networking.firewall.allowedTCPPorts = ports;
-  networking.firewall.allowedUDPPorts = ports;
 
   torrentNS = [ "slskd" ];
 }
