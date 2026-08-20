@@ -4,7 +4,7 @@
     "net.ipv6.conf.all.forwarding" = 1;
   };
 
-  services.radvd = {
+  /*services.radvd = {
     enable = true;
     config = ''
     interface enp3s0
@@ -18,7 +18,7 @@
          route 200::/7 {};
     };
     '';
-  };
+  };*/
 
   networking.firewall.extraForwardRules = ''
     ip6 saddr 300::/7 ip6 daddr 200::/7 accept
