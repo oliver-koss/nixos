@@ -48,11 +48,11 @@
                 metrics_path = "/probe";
                 static_configs = [
                 {
-                  targets = [ "192.168.178.95" ];
+                  targets = [ "10.88.0.244" ];
                   labels.service = "Maciej";
                 }
                 {
-                  targets = [ "192.168.178.96" ];
+                  targets = [ "10.88.0.245" ];
                   labels.service = "Oliver";
                 }
                 ];
