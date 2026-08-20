@@ -35,8 +35,8 @@ sudo grdctl --system status
      freerdp
   ];
   services.gnome.gnome-remote-desktop.enable = true;
-  networking.firewall.allowedTCPPorts = [ 3389 ];
-  networking.firewall.allowedUDPPorts = [ 3389 ];
+#  networking.firewall.allowedTCPPorts = [ 3389 ];
+#  networking.firewall.allowedUDPPorts = [ 3389 ];
   systemd.services.gnome-remote-desktop = {
     restartIfChanged = false;
     wantedBy = [ "graphical.target" ];
