@@ -48,6 +48,8 @@ with lib;
         "200:f263:253c:5760:975f:8c2a:1cb4:f542"
         # oliver-pixel-5
         "201:dee1:22bb:8679:c514:230:8825:22ab"
+        # oliver-pixel-8
+        "200:eafc:8ac7:928b:dbb0:f643:cbf3:be9a"
       ];
     };
   };
