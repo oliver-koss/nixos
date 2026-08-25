@@ -15,6 +15,7 @@
     ./irc.nix
 #    ./part-db.nix
 #    ./authelia.nix
+    ./mktxp.service.nix
   ];
 
   systemd.services.mount-boot = {

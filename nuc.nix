@@ -163,6 +163,7 @@ with lib;
     speedtest-cli
     pufferpanel
     jellyfin-ffmpeg
+    mktxp
   ];
 
 #  services.prometheus.exporters.fritzbox = {
