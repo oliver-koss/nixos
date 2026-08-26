@@ -71,6 +71,13 @@
                   }
                 ];
             }
+            {
+                job_name = "mkt";
+                static_configs = [{
+                    targets = [ "localhost:49090" ];
+                }];
+            }
+
 
         ];
     };
