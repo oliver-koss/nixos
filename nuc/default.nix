@@ -16,6 +16,7 @@
 #    ./part-db.nix
 #    ./authelia.nix
     ./mktxp.service.nix
+    ./netbox.nix
   ];
 
   systemd.services.mount-boot = {

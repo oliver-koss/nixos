@@ -102,6 +102,18 @@ in
   };
 
 #  services.nginx.virtualHosts = {
+#    "netbox.oliver-koss.at" = h {
+#      locations = {
+#        "/" = {
+#          proxyPass = "http://localhost:8001/";
+#        };
+#        "/static/" = { alias = "${config.services.netbox.dataDir}/static/"; };
+#      };
+#    };
+#  };
+
+
+#  services.nginx.virtualHosts = {
 #    "archive.oliver-koss.at" = h {
 #      locations."/" = {
 #        proxyPass = "http://localhost:3004/";
