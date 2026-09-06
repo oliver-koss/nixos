@@ -2,7 +2,7 @@
 
   services.netbox = {
     enable = true;
-    package = pkgs.netbox_4_5;
+    package = pkgs.netbox;
     bind = "0.0.0.0:8001";
     secretKeyFile = "/var/lib/netbox/secret-key-file";
     # For netbox 4.5

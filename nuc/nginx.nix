@@ -101,16 +101,28 @@ in
     };
   };
 
-#  services.nginx.virtualHosts = {
-#    "netbox.oliver-koss.at" = h {
-#      locations = {
-#        "/" = {
-#          proxyPass = "http://localhost:8001/";
-#        };
-#        "/static/" = { alias = "${config.services.netbox.dataDir}/static/"; };
-#      };
-#    };
-#  };
+
+  services.nginx.virtualHosts = {
+    "dashboard.oliver-koss.at" = h {
+      basicAuth = { bkw3 = "baeckerweg3"; };
+      locations."/" = {
+        proxyPass = "http://10.23.23.92:5000/";
+      };
+    };
+  };
+
+
+
+  services.nginx.virtualHosts = {
+    "netbox.oliver-koss.at" = h {
+      locations = {
+        "/" = {
+          proxyPass = "http://localhost:8001/";
+        };
+        "/static/" = { alias = "${config.services.netbox.dataDir}/static/"; };
+      };
+    };
+  };
 
 
 #  services.nginx.virtualHosts = {
