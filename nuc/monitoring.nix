@@ -8,6 +8,7 @@
         enable  = true;
         port    = 9090;
         retentionTime = "365d";
+        checkConfig = "syntax-only";
         remoteWrite = [
           {
             name = "victoriametris_nuc";
@@ -77,7 +78,20 @@
                     targets = [ "localhost:49090" ];
                 }];
             }
-
+            {
+                job_name = "incus";
+                metrics_path = "/1.0/metrics";
+                scheme = "https";
+                static_configs = [{
+                    targets = [ "localhost:8443" ];
+                }];
+                tls_config = {
+                  ca_file = "/var/lib/incus/server.crt";
+                  cert_file = "/var/certs/incus/metrics.crt";
+                  key_file = "/var/certs/incus/metrics.key";
+                  server_name = "oliver-nuc";
+                };
+            }
 
         ];
     };
