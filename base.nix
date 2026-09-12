@@ -20,7 +20,7 @@ with lib;
   users.users.root.openssh.authorizedKeys.keys = splitString "\n"
     (builtins.readFile ./oliver.pub);
 
-  nix.settings.experimental-features = "nix-command flakes";
+  nix.settings.experimental-features = [ "nix-command flakes" ];
 
   nixpkgs.overlays = [(import ./overlay.nix) inputs.acme.overlays.default ];
   security.sudo.wheelNeedsPassword = false;
