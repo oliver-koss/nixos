@@ -92,6 +92,12 @@
                   server_name = "oliver-nuc";
                 };
             }
+            {
+                job_name = "smartctl";
+                static_configs = [{
+                    targets = [ "localhost:9633" ];
+                }];
+            }
 
         ];
     };
@@ -147,4 +153,13 @@
     };
     };
 
+    services.prometheus.exporters.smartctl = {
+      enable = true;
+      devices = [
+        "/dev/sda"
+        "/dev/sdb"
+        "/dev/sdc"
+        "/dev/sdd"
+      ];
+    };
 }
