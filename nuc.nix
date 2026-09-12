@@ -164,6 +164,7 @@ with lib;
     pufferpanel
     jellyfin-ffmpeg
     mktxp
+    incus-compose
   ];
 
 #  services.prometheus.exporters.fritzbox = {
