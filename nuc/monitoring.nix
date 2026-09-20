@@ -135,11 +135,26 @@
         http_port = 3590;
         # Grafana needs to know on which domain and URL it's running
         domain = "grafana.oliver-koss.at";
-#        root_url = "https://your.domain/grafana/"; # Not needed if it is `https://your.domain/`
+        root_url = "https://grafana.oliver-koss.at/";
 #        serve_from_sub_path = true;
         };
       security = {
         secret_key = "SW2YcwTIb9zpOOhoPsMm";
+      };
+      # zitadel: internal org -> internal project. the project requires a role
+      # assignment to authenticate, so only members with "core" get this far.
+      "auth.generic_oauth" = {
+        enabled = true;
+        name = "ZITADEL";
+        client_id = "391667067222294632";
+        client_secret = "$__file{/etc/grafana/oidc-secret}";
+        scopes = "openid profile email";
+        auth_url = "https://id.oliver-koss.at/oauth/v2/authorize";
+        token_url = "https://id.oliver-koss.at/oauth/v2/token";
+        api_url = "https://id.oliver-koss.at/oidc/v1/userinfo";
+        # "groups" is a flat role list, added by the zitadel action of the same name
+        role_attribute_path = "contains(groups[*], 'core') && 'Admin' || 'Viewer'";
+        allow_sign_up = true;
       };
     };
     };

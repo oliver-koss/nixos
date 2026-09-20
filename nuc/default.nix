@@ -18,6 +18,7 @@
     ./mktxp.service.nix
     ./netbox.nix
     ./zitadel.nix
+    ./oauth2-proxy.nix
   ];
 
   services.zitadel.enable = true;

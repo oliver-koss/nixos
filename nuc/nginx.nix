@@ -104,7 +104,6 @@ in
 
   services.nginx.virtualHosts = {
     "dashboard.oliver-koss.at" = h {
-      basicAuth = { bkw3 = "baeckerweg3"; };
       locations."/" = {
         proxyPass = "http://10.23.23.92:5000/";
       };
