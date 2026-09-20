@@ -58,6 +58,7 @@ in
     };
 
     services.nginx.virtualHosts.${domain} = {
+      serverAliases = [ "*.${domain}" ];
       enableACME = true;
       forceSSL = true;
       http2 = true;

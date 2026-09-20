@@ -15,6 +15,6 @@
                 "dotnet-sdk-6.0.428"
               ];
 
-  security.acme.distributor-server = "https://acme.s.xeredo.it";
-  security.acme.distributor-token = "esti75v4kzb3i5viznw3it5w4zv5j3wi5v";
+  security.acme.distributor-server = "https://acme.mkg20001.net";
+  security.acme.distributor-token = "1234";
 }
