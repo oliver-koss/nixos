@@ -20,6 +20,8 @@
     ./zitadel.nix
   ];
 
+  services.zitadel.enable = true;
+
   systemd.services.mount-boot = {
     startAt = "daily";
     serviceConfig = {
