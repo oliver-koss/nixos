@@ -39,9 +39,9 @@ in
     cookie.domain = ".oliver-koss.at";
     cookie.secure = true;
 
-    # pins the login to the internal org, so its login policy and branding
-    # apply instead of the instance default
-    scope = "openid email profile urn:zitadel:iam:org:domain:primary:internal.id.oliver-koss.at";
+    # pins the login to the internal org. org:id enforces membership only;
+    # the primary-domain scope would also force the @domain login suffix.
+    scope = "openid email profile urn:zitadel:iam:org:id:391663715017031784";
 
     redirectURL = "https://${authDomain}/oauth2/callback";
     httpAddress = "http://127.0.0.1:4180";

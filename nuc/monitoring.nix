@@ -148,8 +148,9 @@
         name = "ZITADEL";
         client_id = "391667067222294632";
         client_secret = "$__file{/etc/grafana/oidc-secret}";
-        # last scope pins the login to the internal org (policy + branding)
-        scopes = "openid profile email urn:zitadel:iam:org:domain:primary:internal.id.oliver-koss.at";
+        # last scope pins the login to the internal org, without forcing the
+        # @domain login suffix that the primary-domain scope would require
+        scopes = "openid profile email urn:zitadel:iam:org:id:391663715017031784";
         auth_url = "https://id.oliver-koss.at/oauth/v2/authorize";
         token_url = "https://id.oliver-koss.at/oauth/v2/token";
         api_url = "https://id.oliver-koss.at/oidc/v1/userinfo";
