@@ -22,6 +22,11 @@ let
     "usenet.oliver-koss.at"
     "calibre.oliver-koss.at"
     "dashboard.oliver-koss.at"
+    "watch.oliver-koss.at"
+    "jellyseerr.oliver-koss.at"
+    "git.oliver-koss.at"
+    "uptime.oliver-koss.at"
+    "irc.oliver-koss.at"
   ];
 in
 {

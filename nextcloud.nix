@@ -14,7 +14,7 @@ config = {
   };
 
   services.nextcloud = {
-    enable = true;
+    enable = false;
 
     package = mkForce pkgs.nextcloud33;
     config = {
